@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <g transform="matrix(1, 0, 0, 1, -5.562947, 3.337805)">
+    <text style="fill: rgb(255, 255, 255); font-family: &quot;Yu Gothic UI&quot;; font-size: 425.005px; font-weight: 700; line-height: 688.103px; white-space: pre;" transform="matrix(-0.831757, -0.280236, 0.319286, -0.947658, 224.168716, 440.887817)" x="53.3" y="313.033">E</text>
+    <text style="fill: rgb(255, 255, 255); font-family: &quot;Yu Gothic UI&quot;; font-size: 425px; font-weight: 700; white-space: pre;" x="96.692" y="403.708">A</text>
+    <text style="fill: rgb(255, 255, 255); font-family: &quot;Yu Gothic UI&quot;; font-size: 425.202px; font-weight: 700; line-height: 730.777px; white-space: pre;" transform="matrix(0.781021, -0.270114, 0.326853, 0.945077, -33.403896, 198.718323)" x="291.396" y="309.137" bx:origin="0.512 0.519">K</text>
+  </g>
+</svg>
