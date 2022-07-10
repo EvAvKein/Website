@@ -30,23 +30,20 @@
     transition: opacity 250ms ease-out;
   }
 
-  a.current {
-    cursor: default;
-  }
-  a.current img {
-    filter: var(--filterToTextSubColor);
-  }
+  a.current {cursor: default}
+  a.current {color: var(--textSubColor)}
+  a.current img {filter: var(--filterToTextSubColor)}
 
-  a.core_contentButton:hover img,
-  a.core_contentButton:focus img,
-  a.core_contentButton:active img {
+  a.core_contentButton:hover img, a.current img
+  a.core_contentButton:focus img, a.current img
+  a.core_contentButton:active img, a.current img {
     height: 70%;
     transition: height 250ms;
   }
 
-  a.core_contentButton:hover span,
-  a.core_contentButton:focus span,
-  a.core_contentButton:active span {
+  a.core_contentButton:hover span, a.current span
+  a.core_contentButton:focus span, a.current span
+  a.core_contentButton:active span, a.current span {
     user-select: auto;
     opacity: 1;
     transition: opacity 250ms ease-in-out 100ms;
