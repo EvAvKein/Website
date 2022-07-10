@@ -1,6 +1,6 @@
 <header>
   <div id="evavkeinWrapper">
-    <Evavkein minEmWidthExpandable={14}/>
+    <Evavkein minEmWidthExpandable={14} expanded={evavkeinExpanded}/>
   </div>
 
   <nav>
@@ -30,12 +30,21 @@
 
 <script lang="ts">
   import {onMount} from "svelte/internal";
+  import {afterNavigate} from "$app/navigation";
   import Evavkein from "./evavkein.svelte";
   import HeaderNavItem from "./headerNavItem.svelte";
 
   let currentPagePath = "";
+  let evavkeinExpanded = false;
   onMount(() => {
     currentPagePath = window.location.pathname;
+  });
+
+  afterNavigate((navData) => {
+    if (navData.from === null) {
+      evavkeinExpanded = true;
+      setTimeout(() => {evavkeinExpanded = false}, 2000);
+    };
   });
 </script>
 
