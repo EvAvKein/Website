@@ -94,7 +94,7 @@
   }
   button {
     display: block;
-    margin: 0 auto 1em;
+    margin: 0.5em auto 1em;
   }
 
   h3 {font-size: 1.75em}
