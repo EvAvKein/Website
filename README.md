@@ -1,5 +1,8 @@
 # EvAvKein Website
-This is the repo for my (Eve Aviv Keinan's) website, not hosted anywhere as of this Git version (but it will be soon!)
+This is the repo for my (Eve Aviv Keinan's) website, hosted at https://evavkein.vercel.app (until the domain transfer process for evavkein.com is complete).
+
+## READ BEFORE CLONING (since 10.7.22):
+Due to a breaking SvelteKit change, cloning and npm-installing results in non-functional code. See TODO.md's top task for more info.
 
 ## Contributions
 I welcome contributions (preferably brought up through GitHub issues first), such as:  

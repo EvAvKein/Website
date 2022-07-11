@@ -21,12 +21,12 @@
       bind:value={email}
     />
     <Notification text={notifText} desirablityStyle={notifDesirability}/>
-    {#if body && email}
+    {#if title || body || email} <!-- TODO: change condition to "body && email" once submission actually works -->
       <button transition:slide
         class="core_backgroundButton"
         type="button"
-        on:click={coinflip}
-      >Submit (not functional until upcoming Vercel integration, press to coinflip though!)</button>
+        on:click={fetchCoinflip}
+      >Submit (I haven't finished migrating to Vercel functionality yet, press to coinflip though!)</button>
     {/if}
   </form>
 
@@ -51,6 +51,7 @@
   import {slide} from "svelte/transition";
   import LabelledInput from "../labelledInput.svelte";
   import Notification from "../notification.svelte";
+  import {apiFetch} from "../../helpers/apiFetch";
 
   let title = "";
   let body = "";
@@ -59,21 +60,17 @@
   let notifText = "";
   let notifDesirability = undefined as boolean|undefined;
 
-  function coinflip() {
+  function fetchCoinflip() {
     notifText = "Flipping... Suspense...";
     notifDesirability = undefined;
 
-    setTimeout(() => {
-      const coinflipTruthiness = Math.random() > 0.5;
-
-      if (coinflipTruthiness) {
-        notifText = "Success :D";
-        notifDesirability = true;
-      } else {
-        notifText = "Failure :c";
-        notifDesirability = false;
-      };
-    }, 2000);
+    apiFetch("GET", "/coinflip")
+      .then((response:{outcome:boolean}) => {
+        setTimeout(() => {
+          notifText = response.outcome ? "Success :D" : "Failure :c";
+          notifDesirability = response.outcome;
+        }, 1000);
+      });
   };
 </script>
 
