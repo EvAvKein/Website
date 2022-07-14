@@ -40,9 +40,9 @@
       <img src="./github.svg" alt="GitHub icon">
       <div>/EvAvKein</div>
     </a>
-    <a href="mailto:evavkein@gmail.com" class="core_contentButton">
+    <a href="mailto:contact@evavkein.com" class="core_contentButton">
       <img src="./email.svg" alt="Email icon">
-      <div>evavkein@gmail.com</div>
+      <div>contact@evavkein.com</div>
     </a>
   </address>
 </main>
