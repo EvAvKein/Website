@@ -34,6 +34,7 @@
       <ul>
         <li>Cypress</li>
         <li>Git</li>
+        <li>Docker</li>
         <li>Shell</li>
         <li>Node.js</li>
       </ul>
