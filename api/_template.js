@@ -1,15 +1,23 @@
 export default (request, response) => {
-  if (request.method === "POST") {
+  switch (request.method) {
+    case "GET": {
 
-    response.json({/*  */});
-  } else if (request.method === "GET") {
+      response.json(/* */);
+      break;
+    };
+    case "POST": {
 
-    response.json({/*  */});
-  } else if (request.method === "PATCH") {
+      response.json(/* */);
+      break;
+    };
+    case "PATCH": {
 
-    response.json({/*  */});
-  } else {
-    response.json("invalid request");
+      response.json(/* */);
+      break;
+    };
+    default: {
+      response.json("invalid request");
+    };
   };
 };
 
