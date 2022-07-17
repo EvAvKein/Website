@@ -13,17 +13,15 @@
     <TechsTable/>
   </section>
   
-  <section id="employmentPitch">
-    <h2>Employment Pitch</h2>
+  <section id="dispositions">
+    <h2>Dispositions</h2>
       <p>
-        In an occupation as collaborative as software engineering, interpersonal skill can be just as important as technical skill.
-        The above projects represent my technical skill, and below is a list of reasons why I believe I'm dispositionally/interpersonally fit for the role:
+        The following are reasons why I believe I'm dispositionally/interpersonally fit for software engineering:
       </p>
       <ul>
         <li>I'm diligent (and communicative when appropriate) regarding the what/why/how of my conduct and its likely short-term & long-term consequences</li>
         <li>I'm mindful of how I communicate and interpret; Accounting for distinctions, implications, uncertainty, dynamics with the recipient(s) and their priorities, etc</li>
-        <li>I strongly value the long-term viability/well-being of both my code (readilibity, reusability, etc) and of myself (learning and refining core principles/patterns, comprehending code as opposed to copy-pasting whatever works, etc)</li>
-          <!-- ^ TODO: needs rephrasing. e.g abstrast into something like "strongly value the well-being of the people i affect and of myself" with programming-specific examples (because expanding on internal & interpersonal examples would be either incomplete or verbose) -->
+        <li>I strongly value the long-term well-being of myself and those I affect. In the context of programming, this guides my output (e.g readability, reusability) and motivates me to refine my approach to software engineering (e.g priorities, mindset)</li>
       </ul>
   </section>
 </main>
@@ -55,6 +53,10 @@
   }
 
   li + li {margin-top: 0.4em}
+
+  #dispositions h2 {
+    font-size: 2.75em;
+  }
   
   @media (min-width: 55rem) {
     main {
@@ -63,7 +65,7 @@
       grid-template-columns: 1.25fr 1fr;
       grid-template-areas:
         "projects techs"
-        "pitch pitch"
+        "dispositions dispositions"
       ;
       gap: 1em;
     }
@@ -73,6 +75,6 @@
       display: block;
       grid-area: techs;
     }
-    #employmentPitch {grid-area: pitch}
+    #dispositions {grid-area: dispositions}
   }
 </style>
