@@ -1,32 +1,34 @@
 <main>
   <h2>Contact</h2>
   <form>
-    <LabelledInput
-      id={"contactFormTitle"}
-      label={"Title (optional)"}
-      bind:value={title}
-    />
-    <hr>
-    <LabelledInput
-      id={"contactFormBody"}
-      type={"textarea"}
-      label={"Body"}
-      bind:value={body}
-      textareaMinLineHeight={10}
-    />
-    <hr>
-    <LabelledInput
-      id={"contactFormEmail"}
-      label={"Email"}
-      bind:value={email}
-    />
-    <Notification text={notifText} desirablityStyle={notifDesirability}/>
-    {#if title || body || email} <!-- TODO: change condition to "body && email" once submission actually works -->
+    {#if typeof notifDesirability !== "boolean"}
+      <LabelledInput
+        id={"contactFormTitle"}
+        label={"Title (optional)"}
+        bind:value={title}
+      />
+      <hr>
+      <LabelledInput
+        id={"contactFormBody"}
+        type={"textarea"}
+        label={"Body"}
+        bind:value={body}
+        textareaMinLineHeight={10}
+      />
+      <hr>
+      <LabelledInput
+        id={"contactFormEmail"}
+        label={"Email"}
+        bind:value={email}
+      />
+    {/if}
+    <Notification text={notifText} desirablityStyle={notifDesirability} baseDuration={null}/>
+    {#if body && email && typeof notifDesirability !== "boolean"}
       <button transition:slide
         class="core_backgroundButton"
         type="button"
-        on:click={fetchCoinflip}
-      >Submit (I haven't finished migrating to Vercel functionality yet, press to coinflip though!)</button>
+        on:click={submitForm}
+      >Submit</button>
     {/if}
   </form>
 
@@ -57,19 +59,24 @@
   let body = "";
   let email = "";
 
-  let notifText = "";
+  let notifText = "" as ""|typeof pendingNotif|typeof successNotif|typeof failureNotif;
+  const pendingNotif = "Processing...";
+  const successNotif = "Message sent! I usually reply within a day";
+  const failureNotif = "Message submission failed, you'll have to email me instead";
   let notifDesirability = undefined as boolean|undefined;
 
-  function fetchCoinflip() {
-    notifText = "Flipping... Suspense...";
+  function submitForm() {
+    notifText = pendingNotif;
     notifDesirability = undefined;
 
-    apiFetch("GET", "/coinflip")
+    apiFetch("POST", "/submitContactForm", {title: title, body: body, email: email})
       .then((response:{outcome:boolean}) => {
-        setTimeout(() => {
-          notifText = response.outcome ? "Success :D" : "Failure :c";
-          notifDesirability = response.outcome;
-        }, 1000);
+        notifText = response.outcome ? successNotif : failureNotif;
+        notifDesirability = response.outcome;
+      })
+      .catch(() => {
+        notifText = failureNotif;
+        notifDesirability = false;
       });
   };
 </script>
