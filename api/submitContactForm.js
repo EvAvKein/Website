@@ -50,5 +50,5 @@ export default async (request, response) => {
     }),
   });
 
-  response.json(sendgridResponse/*{outcome: sendgridResponse.ok}*/);
+  response.json({outcome: sendgridResponse.ok});
 };

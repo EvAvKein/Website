@@ -71,14 +71,10 @@
 
     apiFetch("POST", "/submitContactForm", {title: title, body: body, email: email})
       .then((response:{outcome:boolean}) => {
-        console.log(response);
-        return;
         notifText = response.outcome ? successNotif : failureNotif;
         notifDesirability = response.outcome;
       })
-      .catch((error) => {
-        console.log(error);
-        return;
+      .catch(() => {
         notifText = failureNotif;
         notifDesirability = false;
       });
