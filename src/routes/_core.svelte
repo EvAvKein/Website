@@ -8,7 +8,9 @@
   out:blur={{duration: 500}}
   on:introstart={noScrollWhilePageTransitions}
   >
-  <Header/>
+  {#if header}
+    <Header/>
+  {/if}
   <slot/>
 </div>
 
@@ -21,6 +23,8 @@
   export let headFavicon = "./eak.svg";
   export let headTitle = "EvAvKein";
   export let headDescription = "Eve Aviv Keinan's personal and portfolio website";
+
+  export let header = true;
   
   let body:HTMLElement;
   onMount(() => {
