@@ -3,42 +3,15 @@
     <Evavkein minEmWidthExpandable={14} expanded={evavkeinExpanded}/>
   </div>
 
-  <nav>
-    <HeaderNavItem
-      href={"/"}
-      imgSrc={"./about.svg"}
-      imgAlt={"Nondescript person icon"}
-      pageName={"Home"}
-      {currentPagePath}
-    />
-    <HeaderNavItem
-      href={"/portfolio"}
-      imgSrc={"./code.svg"}
-      imgAlt={"Computer code icon"}
-      pageName={"Portfolio"}
-      {currentPagePath}
-    />
-    <HeaderNavItem
-      href={"/contact"}
-      imgSrc={"./contact.svg"}
-      imgAlt={"Envelope icon"}
-      pageName={"Contact"}
-      {currentPagePath}
-    />
-  </nav>
+  <Nav/>
 </header>
 
 <script lang="ts">
-  import {onMount} from "svelte/internal";
   import {afterNavigate} from "$app/navigation";
+  import Nav from "./nav/nav.svelte";
   import Evavkein from "./evavkein.svelte";
-  import HeaderNavItem from "./headerNavItem.svelte";
 
-  let currentPagePath = "";
   let evavkeinExpanded = false;
-  onMount(() => {
-    currentPagePath = window.location.pathname;
-  });
 
   afterNavigate((navData) => {
     if (navData.from === null) {
@@ -82,13 +55,5 @@
     color: var(--highlightColor);
     font-size: 3em;
     line-height: 0.9em;
-  }
-
-  nav {
-    font-size: 1em;
-    padding: 0.25em 0.25em 0;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0.75em;
   }
 </style>

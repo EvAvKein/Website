@@ -1,5 +1,5 @@
 <a href={href}
-  class={currentPagePath === href ? "current" : 'core_contentButton'}
+  class={"core_contentButton" + (href === currentPagePath ? " current" : "")}
   tabindex={currentPagePath === href ? -1 : 0}
   >
   <img src={imgSrc} alt={imgAlt}/>
@@ -34,16 +34,16 @@
   a.current {color: var(--textSubColor)}
   a.current img {filter: var(--filterToTextSubColor)}
 
-  a.core_contentButton:hover img, a.current img
-  a.core_contentButton:focus img, a.current img
-  a.core_contentButton:active img, a.current img {
+  a.current img, a:hover img,
+  a.current img, a:focus img,
+  a.current img, a:active img {
     height: 70%;
     transition: height 250ms;
   }
 
-  a.core_contentButton:hover span, a.current span
-  a.core_contentButton:focus span, a.current span
-  a.core_contentButton:active span, a.current span {
+  a.current span, a:hover span,
+  a.current span, a:focus span,
+  a.current span, a:active span {
     user-select: auto;
     opacity: 1;
     transition: opacity 250ms ease-in-out 100ms;
