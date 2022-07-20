@@ -31,16 +31,12 @@
     body = document.getElementsByTagName("html")[0];
   });
   function noScrollWhilePageTransitions() {
-    body.style.scrollbarGutter = "stable";
     body.style.overflow = "hidden";
     setTimeout(() => {
       body.style.overflow = "auto";
-      body.style.scrollbarGutter = "auto";
     }, 500);
   };
 </script>
-
-<!-- global/core styles in static/_core.css -->
 
 <style>
   :global(:root) { /* filters created via https://codepen.io/sosuke/pen/Pjoqqp */
@@ -57,8 +53,6 @@
     --highlightSubColor: #d8b434;
     --filterToHighlightSubColor: brightness(0) saturate(100%) invert(62%) sepia(76%) saturate(412%) hue-rotate(9deg) brightness(102%) contrast(84%);
   }
-
-  :global(html) {scrollbar-gutter: stable}
 
   :global(body) {
     margin: 0;
