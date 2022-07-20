@@ -38,7 +38,7 @@
 
 <style>
   :global(body) {
-    --layoutFontSize: clamp(0.65em, 3vw, 1.25em);
+    --layoutFontSize: clamp(0.9em, 3vw, 1.25em);
   }
 
   header {
