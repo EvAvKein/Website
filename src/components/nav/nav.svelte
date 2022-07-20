@@ -40,12 +40,15 @@
 
 <style>
   nav {
-    padding: 0.25em 0.25em 0;
+    padding: 0.25em;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     gap: 0.75em;
   }
 
-  nav.vertical {flex-direction: column}
+  nav.vertical {
+    flex-direction: column;
+    gap: 1.25em;
+  }
 </style>

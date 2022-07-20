@@ -20,7 +20,10 @@
 </script>
 
 <style>
-  a {height: 3em}
+  a {
+    height: 3em;
+    text-align: center;
+  }
   a img {
     display: block;
     height: 100%;
