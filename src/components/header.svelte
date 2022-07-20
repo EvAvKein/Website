@@ -57,17 +57,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1.5em;
-  }
-  header:after {
-    z-index: 1000;
-    content: "";
-    position: absolute;
-    left: 0;
-    display: block;
-    bottom: -1em;
-    width: 100%;
-    height: 1em;
-    background-image: linear-gradient(to top, #00000000, var(--backgroundColor));
+    box-shadow: 0 0 1em 0.75em var(--backgroundColor);
   }
   
   #evavkeinWrapper {
