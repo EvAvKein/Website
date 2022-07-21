@@ -53,6 +53,7 @@
   table {
     display: table;
     border-collapse: collapse;
+    width: 100%;
   }
 
   img {
