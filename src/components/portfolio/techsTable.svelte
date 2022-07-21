@@ -41,6 +41,7 @@
     </td>
     <td>
       <ul>
+        <li>SvelteKit</li>
         <li>Svelte</li>
         <li>MongoDB</li>
         <li>Express.js</li>
