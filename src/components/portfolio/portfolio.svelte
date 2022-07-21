@@ -15,7 +15,7 @@
 
   <section id="resume">
     <h2>Resumé</h2>
-    <p>The summary is that I've done civil service and community management. For the resumé file with all its usual details, you're welcome to contact me</p>
+    <p>The summary is that I've done civil service and community management. For the full resumé file with all its usual details, you're welcome to contact me</p>
   </section>
   
   <section id="dispositions">
@@ -51,20 +51,22 @@
     font-size: 3.25em;
     margin-bottom: 0.1em;
   }
+  section + section {margin-top: 1em}
 
-  li + li {margin-top: 0.4em}
-
-  #dispositions h2 {
+  #dispositions h2, #resume h2 {
     font-size: 2.75em;
   }
+  li + li {margin-top: 0.4em}
   
   @media (min-width: 55rem) {
+    section + section {margin-top: 0}
     main {
       display: grid;
       justify-items: center;
       grid-template-columns: 1.25fr 1fr;
       grid-template-areas:
         "projects techs"
+        "projects resume"
         "dispositions dispositions"
       ;
       gap: 1em;
@@ -72,6 +74,7 @@
 
     #projects {grid-area: projects}
     #techs {grid-area: techs}
+    #resume {grid-area: resume}
     #dispositions {grid-area: dispositions}
   }
 </style>
