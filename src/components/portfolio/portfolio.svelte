@@ -12,6 +12,11 @@
     <h2>Technologies</h2>
     <TechsTable/>
   </section>
+
+  <section id="resume">
+    <h2>Resumé</h2>
+    <p>The summary is that I've done civil service and community management. For the resumé file with all its usual details, you're welcome to contact me</p>
+  </section>
   
   <section id="dispositions">
     <h2>Dispositions</h2>
@@ -47,11 +52,6 @@
     margin-bottom: 0.1em;
   }
 
-  #techs {
-    display: flex;
-    flex-direction: column
-  }
-
   li + li {margin-top: 0.4em}
 
   #dispositions h2 {
@@ -71,10 +71,7 @@
     }
 
     #projects {grid-area: projects}
-    #techs {
-      display: block;
-      grid-area: techs;
-    }
+    #techs {grid-area: techs}
     #dispositions {grid-area: dispositions}
   }
 </style>
