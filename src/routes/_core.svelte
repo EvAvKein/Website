@@ -127,7 +127,7 @@
     background-color: transparent;
     padding: 0;
   }
-  :global(.core_contentButton img) {
+  :global(.core_contentButton img, .core_contentButton svg) {
     height: inherit;
     filter: var(--filterToTextColor);
   }
@@ -137,10 +137,11 @@
   :global(.core_contentButton:active) {
     color: var(--highlightColor);
   }
-  :global(.core_contentButton:focus img), :global(.core_contentButton:hover img) {
+  :global(.core_contentButton:focus img, .core_contentButton:focus svg),
+  :global(.core_contentButton:hover img, .core_contentButton:hover svg) {
     filter: var(--filterToHighlightSubColor);
   }
-  :global(.core_contentButton:active img) {
+  :global(.core_contentButton:active img, .core_contentButton:active svg) {
     filter: var(--filterToHighlightColor);
   }
 </style>
