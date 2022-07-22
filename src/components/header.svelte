@@ -1,6 +1,6 @@
 <header>
   <div id="evavkeinWrapper">
-    <Evavkein minEmWidthExpandable={14} expanded={evavkeinExpanded}/>
+    <Evavkein minEmWidthExpandable={10} expanded={evavkeinExpanded}/>
   </div>
 
   <div id="headerNavWrapper">
@@ -72,7 +72,6 @@
     white-space: nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5em;
     box-shadow: 0 0 1em 0.75em var(--backgroundColor);
   }
   
