@@ -32,7 +32,8 @@
 </header>
 <section id="sidebar"
   class:sidebarOpen
->
+  inert={!sidebarOpen || null}
+> <!-- "inert" is currently labelled as invalid by svelte's IDE extension, i opened an issue about it https://github.com/sveltejs/language-tools/issues/1564 -->
   <Nav vertical={true}/>
 </section>
 
