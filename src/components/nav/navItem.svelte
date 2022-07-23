@@ -23,6 +23,7 @@
   a {
     height: 3em;
     text-align: center;
+    overflow: hidden;
   }
   a img {
     display: block;
