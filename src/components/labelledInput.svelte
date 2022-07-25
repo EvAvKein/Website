@@ -3,12 +3,14 @@
     <textarea style={`min-height: ${(textareaMinLineHeight || 1) * 1.15}em`}
       {id}
       bind:value={value}
+      placeholder=" "
     ></textarea>
   {:else if type === "text"}
     <input
       type="text"
       {id}
       bind:value={value}
+      placeholder=" "
     />
   {/if}
   <label for={id}>{label}</label>
