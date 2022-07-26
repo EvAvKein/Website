@@ -1,4 +1,7 @@
-<Core>
+<Core
+  headTitle="EvAvKein"
+  headDescription="The home page of Eve Aviv Keinan's personal and portfolio website"
+>
   <About/>
 </Core>
 

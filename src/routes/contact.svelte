@@ -1,4 +1,7 @@
-<Core headTitle="EvAvKein: Contact">
+<Core
+  headTitle="EvAvKein: Contact"
+  headDescription="Eve Aviv Keinan's contact page; including a contact form and a list of other contact methods"
+>
   <Contact/>
 </Core>
 
