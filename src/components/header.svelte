@@ -91,9 +91,9 @@
   #navButton #top, #navButton #bottom {transition: transform 250ms}
   #navButton #middle {transition: opacity 200ms}
   #navButton #bottom {transform-origin: bottom left}
-  .buttonOfOpenNav #top {transform: rotate(20deg)}
+  .buttonOfOpenNav #top {transform: rotate(21deg)}
   .buttonOfOpenNav #middle {opacity: 0}
-  .buttonOfOpenNav #bottom {transform: rotate(-20deg)}
+  .buttonOfOpenNav #bottom {transform: rotate(-21deg)}
 
   #sidebar {
     direction: rtl; /* for the scrollbar */
