@@ -107,7 +107,7 @@
     margin-top: 4em;
     padding: 1em 0 1em;
     z-index: 999;
-    transform: translateX(100%);
+    transform: translateX(125%);
     transition: transform 250ms;
     box-shadow: -0.25em 0 0.5em 0.5em var(--backgroundColor);
   }
