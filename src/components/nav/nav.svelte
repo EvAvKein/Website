@@ -23,6 +23,14 @@
     {currentPagePath}
     nameAlwaysVisible={namesAlwaysVisible}
   />
+  <NavItem
+    href={"/toolbox"}
+    imgSrc={"./toolbox.svg"}
+    imgAlt={"Toolbox icon"}
+    pageName={"Toolbox"}
+    {currentPagePath}
+    nameAlwaysVisible={namesAlwaysVisible}
+  />
 </nav>
 
 <script lang="ts">
