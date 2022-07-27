@@ -1,6 +1,6 @@
 <header>
   <div id="evavkeinWrapper">
-    <Evavkein minEmWidthExpandable={10} expanded={evavkeinExpanded}/>
+    <Evavkein minEmWidthExpandable={14.5} expanded={evavkeinExpanded}/>
   </div>
 
   <div id="headerNavWrapper">
