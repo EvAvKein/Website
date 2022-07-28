@@ -1,28 +1,12 @@
-<h1 bind:this={element}
-  class={(expandable ? "expandable" : "undefined") + " " + (expanded ? "expanded": "")}
->
+<h1 class={(expandable ? "expandable" : "undefined") + " " + (expanded ? "expanded": "")}>
   <span>Ev<span class="extra">e</span></span>
   <span>Av<span class="extra">iv</span></span>
   <span>Kein<span class="extra">an</span></span>
 </h1>
 
-<svelte:window bind:innerWidth={windowInnerPxWidth}/>
-
 <script lang="ts">
-  import {onMount} from "svelte";
-  export let minEmWidthExpandable:number;
+  export let expandable:boolean;
   export let expanded = false;
-
-  let element:HTMLElement;
-  let windowInnerPxWidth:number;
-
-  let fontPxSize = Infinity;
-  onMount(() => {
-    fontPxSize = Number.parseInt(window.getComputedStyle(element).fontSize);
-  });
-
-  $: currentWidthByElemEm = windowInnerPxWidth / fontPxSize;
-  $: expandable = currentWidthByElemEm > minEmWidthExpandable;
 </script>
 
 <style>

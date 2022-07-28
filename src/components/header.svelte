@@ -1,6 +1,6 @@
-<header>
+<header bind:this={header}>
   <div id="evavkeinWrapper">
-    <Evavkein minEmWidthExpandable={14.5} expanded={evavkeinExpanded}/>
+    <Evavkein expandable={headerEmWidth > 29} expanded={evavkeinExpanded}/>
   </div>
 
   <div id="headerNavWrapper">
@@ -30,6 +30,7 @@
     </svg>
   </button>
 </header>
+
 <section id="sidebar"
   class:sidebarOpen
   inert={!sidebarOpen || null}
@@ -38,9 +39,25 @@
 </section>
 
 <script lang="ts">
+  import {onMount} from "svelte";
   import {afterNavigate} from "$app/navigation";
   import Evavkein from "./evavkein.svelte";
   import Nav from "./nav/nav.svelte";
+
+  let sidebarOpen = false;
+
+  let header:HTMLElement;
+  let headerEmWidth:number;
+  onMount(() => {
+    const headerObserver = new ResizeObserver((entries) => {
+      const containerPxWidth = entries[0].contentRect.width;
+      const fontPxSize = Number.parseInt(window.getComputedStyle(header).fontSize);
+      headerEmWidth = containerPxWidth / fontPxSize;
+    });
+    headerObserver.observe(header);
+
+    return () => {headerObserver.disconnect()};
+  });
 
   let evavkeinExpanded = false;
   afterNavigate((navData) => {
@@ -49,8 +66,6 @@
       setTimeout(() => {evavkeinExpanded = false}, 2000);
     };
   });
-
-  let sidebarOpen = false;
 </script>
 
 <style>
@@ -113,7 +128,7 @@
   }
   #sidebar.sidebarOpen {transform: translateX(0)}
 
-  @media (min-width: 50em) {
+  @media (min-width: 55em) {
     #headerNavWrapper {display: initial}
     #navButton, #sidebar {display: none}
   }
