@@ -10,7 +10,7 @@
   </tr>
 
   <tr> 
-    <th>Substantial</th>
+    <th>Intermediate</th>
     <td>
       <ul>
         <li>Chrome DevTools</li>
