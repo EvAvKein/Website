@@ -5,7 +5,9 @@
     {console.log(event.target)}
   );`
 }</code>
-<!-- <hr> -->
+<hr>
+<h4>Highlight Element Boxes</h4>
+<code>{"* {box-shadow: 0 0 0 0.1em rgb(255 0 0 / 40%) !important}"}</code>
 
 
 <style>
@@ -21,5 +23,5 @@
     margin: 0.5em 0 1em;
   }
 
-  /* hr {border-color: var(--textSubColor)} */
+  hr {border-color: var(--textSubColor)}
 </style>
