@@ -6,7 +6,10 @@
   <main>
     <h1>404: Page not found!</h1>
     <p>Were you trying to visit one of these pages?</p>
-    <Nav namesAlwaysVisible={true}/>
+    <Nav type={"main"} namesAlwaysVisible={true}/>
+    <hr>
+    <p>...Or maybe even one of these?</p>
+    <Nav type={"misc"} namesAlwaysVisible={true}/>
   </main>
 </Core>
 
@@ -29,6 +32,14 @@
     text-align: center;
   }
 
-  h1 {text-decoration: underline}
-  p {margin: 1em 0 0.5em}
+  h1 {
+    text-decoration: underline;
+    margin-bottom: 0.75em;
+  }
+  p {margin-bottom: 0.5em}
+
+  hr {
+    width: 100%;
+    margin: 0.5em;
+  }
 </style>
