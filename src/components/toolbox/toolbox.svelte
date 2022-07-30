@@ -30,7 +30,7 @@
 </main>
 
 <script lang="ts">
-  import {blur, fade} from "svelte/transition";
+  import {fade} from "svelte/transition";
   import NavButton from "./navButton.svelte";
   import DebugSnippets from "./tools/debugSnippets.svelte";
 

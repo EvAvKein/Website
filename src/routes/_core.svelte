@@ -5,7 +5,7 @@
 </svelte:head>
 <div id="pageTransitionsWrapper"
   in:fade={{delay: 500, duration: 500}}
-  out:blur={{duration: 500}}
+  out:fade={{duration: 500}}
   on:introstart={noScrollWhilePageTransitions}
   >
   {#if header}
@@ -17,7 +17,7 @@
 
 <script lang="ts">
   import Header from "../components/header.svelte";
-  import {blur, fade} from "svelte/transition";
+  import {fade} from "svelte/transition";
   import {onMount} from "svelte";
 
   export let headFavicon = "./eak.svg";
