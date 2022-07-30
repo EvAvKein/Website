@@ -10,7 +10,7 @@
       class={"core_contentButton" + (sidebarOpen ? " buttonOfOpenNav" : "")}
       on:click={() => sidebarOpen = !sidebarOpen}
     >
-      <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
           <g id="top">
             <circle cx="5" cy="10" r="5" fill="white"/>
             <rect x="5" y="5" width="50" height="10" fill="white"/>
@@ -99,12 +99,16 @@
 
   #headerNav {
     display: flex;
-    gap: 1em;
+    gap: 0.75em;
   }
 
   #navButton {
     height: 2.5em;
     margin: 0.5em 0;
+  }
+  #navButton svg {
+    overflow: visible;
+    padding-inline: 0.3em;
   }
   #navButton #top, #navButton #bottom {transition: transform 250ms}
   #navButton #middle {transition: opacity 200ms}
