@@ -1,10 +1,11 @@
 {#if text}
-  <p class={'notification ' + styleClass}>
+  <p transition:slide class={'notification ' + styleClass}>
     {text}
   </p>
 {/if}
 
 <script setup lang="ts">
+  import {slide} from "svelte/transition";
   import {debounce} from "../helpers/debounce";
 
   export let text:string;
@@ -16,7 +17,7 @@
   $: if (text !== "" && baseDuration !== null) {
     debounce(
       () => {text = ""},
-      baseDuration || 3000 + (text.length * 150)
+      baseDuration || 5000 + (text.length * 150)
     )
   };
 
