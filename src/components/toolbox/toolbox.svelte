@@ -8,6 +8,11 @@
         id="debugSnippets"
         bind:current={current}
       />
+      <NavButton 
+        text="CSS Filter Generator"
+        id="cssHexToFilter"
+        bind:current={current}
+      />
     </nav>
     <section id="currentTool">
       {#key current}
@@ -17,6 +22,8 @@
         >
           {#if current === "debugSnippets"}
             <DebugSnippets/>
+          {:else if current === "cssHexToFilter"}
+            <FilterGenerator/>
           {:else}
             <div id="default">
               <img src="./arrow.svg" alt="Arrow pointing at the navigation buttons">
@@ -33,9 +40,10 @@
   import {fade} from "svelte/transition";
   import NavButton from "./navButton.svelte";
   import DebugSnippets from "./tools/debugSnippets.svelte";
+  import FilterGenerator from "./tools/cssHexToFilter/cssHexToFilter.svelte";
 
-  type toolID = ""|"debugSnippets";
-  let current:toolID;
+  type toolID = ""|"debugSnippets"|"cssHexToFilter";
+  let current = "" as toolID;
 </script>
 
 <style>
