@@ -1,7 +1,6 @@
 <Core
   headTitle="EvAvKein: 404"
   headDescription="Eve Aviv Keinan's website's error/404 page; including the site's navigation list"
-  header={false}
 >
   <main>
     <h1>404: Page not found!</h1>

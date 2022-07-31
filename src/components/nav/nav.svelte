@@ -43,17 +43,14 @@
 {/if}
 
 <script lang="ts">
-  import {onMount} from "svelte/internal";
+  import {page} from "$app/stores";
   import NavItem from "./navItem.svelte";
 
   export let type:"all"|"main"|"misc"|"none";
   export let namesAlwaysVisible = false;
   export let vertical = false;
 
-  let currentPagePath = "";
-  onMount(() => {
-    currentPagePath = window.location.pathname;
-  });
+  $: currentPagePath = $page.url.pathname;
 </script>
 
 <style>

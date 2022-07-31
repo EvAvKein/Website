@@ -15,7 +15,7 @@
   export let imgSrc:string
   export let imgAlt:string;
   export let pageName:string;
-  export let currentPagePath = null as string|null;
+  export let currentPagePath:string;
   export let nameAlwaysVisible = false;
 </script>
 

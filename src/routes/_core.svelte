@@ -8,23 +8,17 @@
   out:fade={{duration: 500}}
   on:introstart={noScrollWhilePageTransitions}
   >
-  {#if header}
-    <Header/>
-  {/if}
   <slot/>
 </div>
 
 
 <script lang="ts">
-  import Header from "../components/header.svelte";
   import {fade} from "svelte/transition";
   import {onMount} from "svelte";
 
   export let headFavicon = "./eak.svg";
   export let headTitle:string;
   export let headDescription:string;
-
-  export let header = true;
   
   let body:HTMLElement;
   onMount(() => {

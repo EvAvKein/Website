@@ -38,11 +38,13 @@
   <Nav type={headerEmWidth < 45 ? "all" : "misc"} vertical={true}/>
 </section>
 
+<slot/>
+
 <script lang="ts">
   import {onMount} from "svelte";
   import {afterNavigate} from "$app/navigation";
-  import Evavkein from "./evavkein.svelte";
-  import Nav from "./nav/nav.svelte";
+  import Evavkein from "../components/evavkein.svelte";
+  import Nav from "../components/nav/nav.svelte";
 
   let sidebarOpen = false;
 
