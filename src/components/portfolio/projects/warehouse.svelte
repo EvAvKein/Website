@@ -13,7 +13,7 @@
     {
       src: "website.svg",
       alt: "Browser icon",
-      url: "https://evavkein.github.io/Warehouse/"
+      url: "https://warehouse.evavkein.com"
     }
   ]}
 />
