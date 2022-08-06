@@ -15,30 +15,30 @@
       />
     </nav>
     <section id="currentTool">
-      {#key current}
-        <div
-          in:fade={{delay: 250, duration: 350}}
-          out:fade={{duration: 250}}
-        >
-          {#if current === "debugSnippets"}
-            <DebugSnippets/>
-          {:else if current === "cssHexToFilter"}
-            <FilterGenerator/>
-          {:else}
-            <div id="default">
-              <img src="./arrow.svg" alt="Arrow pointing at the navigation buttons">
-              <p >Check out any of these!</p>
-            </div>
-          {/if}
-        </div>
-      {/key}
+      {#if current === "debugSnippets"}
+        <TransWrapper>
+          <DebugSnippets/>
+        </TransWrapper>
+      {:else if current === "cssHexToFilter"}
+        <TransWrapper>
+          <FilterGenerator/>
+        </TransWrapper>
+      {:else}
+        <TransWrapper>
+          <div id="default">
+            <img src="./arrow.svg" alt="Arrow pointing at the navigation buttons">
+            <p>Check out any of these!</p>
+
+          </div>
+        </TransWrapper>
+      {/if}
     </section>
   </section>
 </main>
 
 <script lang="ts">
-  import {fade} from "svelte/transition";
   import NavButton from "./navButton.svelte";
+  import TransWrapper from "./transitionsWrapper.svelte";
   import DebugSnippets from "./tools/debugSnippets.svelte";
   import FilterGenerator from "./tools/cssHexToFilter/cssHexToFilter.svelte";
 
