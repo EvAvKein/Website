@@ -32,7 +32,7 @@
         <p id="lossInfo">Loss {lossScore}: {lossDescription}</p>
       </div>
     {/if}
-  <p id="initialColorDisclaimer"><strong>The generated filter assumes a black subject. If the subject isn't pure black, prepend "<code>brightness(0) saturate(100%)</code>" to the filter (which will firstly make it so)</strong></p>
+  <p id="initialColorDisclaimer"><strong>The generated filter assumes a black subject. If the subject isn't pure black, prepend <code>brightness(0) saturate(100%)</code> to the filter (which will firstly make it so)</strong></p>
   <hr>
   <p id="filterCodeCredit">
     Without <a href="https://codepen.io/sosuke/pen/Pjoqqp" target="_blank" class="core_contentButton">this CodePen post by Barrett Sonntag</a> and <a href="https://stackoverflow.com/a/43960991/604861" target="_blank" class="core_contentButton">this StackOverflow post by MultiplyByZer0</a> (which Sonntag cites), this wouldn't be here.<br>
@@ -136,10 +136,7 @@
     border-radius: 0.5em;
   }
 
-  code#filter {
-    color: var(--textSubColor);
-    display: block;
-  }
+  code{color: var(--textSubColor)}
 
   #initialColorDisclaimer {
     font-size: 1.1em;
