@@ -35,6 +35,7 @@
         <li>Cypress</li>
         <li>Git</li>
         <li>Docker</li>
+        <li>GitHub Actions</li>
         <li>Shell</li>
         <li>Node.js</li>
       </ul>
