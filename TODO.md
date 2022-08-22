@@ -1,5 +1,4 @@
 (In no particular order)
 
 ### Tasks:
-* **Periodically test latest SvelteKit & Vercel versions for compatibility**: Since this project's creation (using SvelteKit version 1.0.0-next.357), SvelteKit released a breaking change (1.0.0-next.367) which produced incompatibility with Vercel's (27.0.0) setup. This makes cloning + "npm install" currently result in dysfunctional code (even when package.json & package-lock.json are set to no higher than the working version).
-  * **Convert API to TypeScript**: Impossible due to tsconfig issue with Vercel which I was unable to locate. This TODO is not urgent, so it's waiting until SvelteKit & Vercel are back to have compatible latest versions, in which case I'll create a repro to either discover the bug is fixed, retry debugging the issue myself, or submit a GitHub issue.
+* **Convert API to TypeScript**: Impossible due to a tsconfig issue with Vercel which I was unable to locate. This task is not urgent, and checking/debugging it locally with `vercel dev` isn't possible anymore since SvelteKit switched to Vite and the Vercel CLI still uses the old commands... so I'm waiting until Vercel gets updated, in which case I'll create a repro to either discover the tsconfig issue is fixed, retry debugging the issue myself, or submit a GitHub issue.
