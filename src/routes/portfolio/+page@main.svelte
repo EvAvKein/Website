@@ -6,6 +6,6 @@
 </Core>
 
 <script lang="ts">
-  import Core from "./_core.svelte";
-  import Portfolio from "../components/portfolio/portfolio.svelte";
+  import Core from "../core.svelte";
+  import Portfolio from "../../components/portfolio/portfolio.svelte";
 </script>

@@ -13,7 +13,7 @@
 </Core>
 
 <script lang="ts">
-  import Core from "./_core.svelte";
+  import Core from "./core.svelte";
   import Nav from "../components/nav/nav.svelte";
 </script>
 

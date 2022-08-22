@@ -6,6 +6,6 @@
 </Core>
 
 <script lang="ts">
-  import Core from "./_core.svelte";
-  import Toolbox from "../components/toolbox/toolbox.svelte";
+  import Core from "../core.svelte";
+  import Toolbox from "../../components/toolbox/toolbox.svelte";
 </script>
