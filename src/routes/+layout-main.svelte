@@ -75,15 +75,25 @@
     --layoutFontSize: clamp(0.9em, 3vw, 1.25em);
   }
 
+  :global(main) { /* prevents viewport overflow caused by main's content from creating a scrollbar across the whole body, which was causing the header to jump/snap when navigating to and from pages with overflow */
+    position: fixed; 
+    overflow: auto;
+    top: 5.25em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
   header {
     position: sticky;
-    font-size: var(--layoutFontSize);
+    width: 100%;
     top: 0;
     left: 0;
-    width: calc(100% - 1em);
-    background-color: var(--backgroundColor);
+    font-size: var(--layoutFontSize);
+    box-sizing: border-box;
+    height: 4em;
     padding: 0.25em 0.5em;
-    margin: 0 0 1em;
+    background-color: var(--backgroundColor);
     z-index: 1000;
     display: flex;
     flex-wrap: nowrap;

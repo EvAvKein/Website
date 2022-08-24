@@ -6,30 +6,16 @@
 <div id="pageTransitionsWrapper"
   in:fade={{delay: 500, duration: 500}}
   out:fade={{duration: 500}}
-  on:introstart={noScrollWhilePageTransitions}
-  >
+>
   <slot/>
 </div>
 
-
 <script lang="ts">
   import {fade} from "svelte/transition";
-  import {onMount} from "svelte";
 
   export let headFavicon = "./eak.svg";
   export let headTitle:string;
   export let headDescription:string;
-  
-  let body:HTMLElement;
-  onMount(() => {
-    body = document.getElementsByTagName("html")[0];
-  });
-  function noScrollWhilePageTransitions() {
-    body.style.overflow = "hidden";
-    setTimeout(() => {
-      body.style.overflow = "auto";
-    }, 500);
-  };
 </script>
 
 <style>
