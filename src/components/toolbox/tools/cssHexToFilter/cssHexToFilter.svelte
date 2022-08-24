@@ -125,7 +125,7 @@
     padding: 0.5em 1em 1em;
     margin-block: 1em 0.25em;
     border-radius: 0.5em;
-    gap: 1.5em;
+    gap: clamp(0.75em, 2vw, 1.5em);;
   }
         
   .sample {
