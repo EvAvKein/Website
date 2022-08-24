@@ -73,16 +73,11 @@
 </script>
 
 <style>
-  :global(body) {
-    --layoutFontSize: clamp(0.9em, 3vw, 1.25em);
-  }
-
   header {
     position: sticky;
     width: 100%;
     top: 0;
     left: 0;
-    font-size: var(--layoutFontSize);
     box-sizing: border-box;
     height: 4em;
     padding: 0.25em 0.5em;
@@ -93,7 +88,7 @@
     white-space: nowrap;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 0.75em 0.5em var(--backgroundColor);
+    box-shadow: 0 0 0.5em 0.5em var(--backgroundColor);
   }
   
   #evavkeinWrapper {
@@ -125,7 +120,6 @@
   #sidebar {
     direction: rtl; /* for the scrollbar */
     overflow: auto;
-    font-size: var(--layoutFontSize);
     background-color: var(--backgroundColor);
     position: fixed;
     top: 0;
@@ -143,7 +137,7 @@
   main { /* prevents viewport overflow caused by main's content from creating a scrollbar across the whole body, which was causing the header to jump/snap when navigating to and from pages with overflow */
     position: fixed; 
     overflow: auto;
-    top: 4.5em;
+    top: 4em;
     bottom: 0;
     right: 0;
     left: 0;
