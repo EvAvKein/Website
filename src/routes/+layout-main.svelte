@@ -38,7 +38,9 @@
   <Nav type={headerEmWidth < 45 ? "all" : "misc"} vertical={true}/>
 </section>
 
-<slot/>
+<main>
+  <slot/>
+</main>
 
 <script lang="ts">
   import {onMount} from "svelte";
@@ -75,15 +77,6 @@
     --layoutFontSize: clamp(0.9em, 3vw, 1.25em);
   }
 
-  :global(main) { /* prevents viewport overflow caused by main's content from creating a scrollbar across the whole body, which was causing the header to jump/snap when navigating to and from pages with overflow */
-    position: fixed; 
-    overflow: auto;
-    top: 5.25em;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  }
-
   header {
     position: sticky;
     width: 100%;
@@ -100,7 +93,7 @@
     white-space: nowrap;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 1em 0.75em var(--backgroundColor);
+    box-shadow: 0 0 0.75em 0.5em var(--backgroundColor);
   }
   
   #evavkeinWrapper {
@@ -146,4 +139,13 @@
     box-shadow: -0.25em 0 0.5em 0.5em var(--backgroundColor);
   }
   #sidebar.sidebarOpen {transform: translateX(0)}
+
+  main { /* prevents viewport overflow caused by main's content from creating a scrollbar across the whole body, which was causing the header to jump/snap when navigating to and from pages with overflow */
+    position: fixed; 
+    overflow: auto;
+    top: 4.5em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 </style>

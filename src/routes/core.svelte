@@ -3,19 +3,31 @@
   <title>{headTitle}</title>
   <meta name="description" content={headDescription}>
 </svelte:head>
-<div id="pageTransitionsWrapper"
+<div
   in:fade={{delay: 500, duration: 500}}
   out:fade={{duration: 500}}
+  on:introstart={noScrollWhilePageTransitions}
 >
   <slot/>
 </div>
 
 <script lang="ts">
+  import {onMount} from "svelte";
   import {fade} from "svelte/transition";
 
   export let headFavicon = "./eak.svg";
   export let headTitle:string;
   export let headDescription:string;
+
+  let main:HTMLElement;
+  onMount(() => main = document.querySelector("main")!);
+
+  function noScrollWhilePageTransitions() {
+    main.style.overflow = "hidden";
+    setTimeout(() => {
+      main.style.overflow = "";
+    }, 500);
+  };
 </script>
 
 <style>

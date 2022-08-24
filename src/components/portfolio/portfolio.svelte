@@ -1,4 +1,4 @@
-<main>
+<section id="portfolio">
   <section id="projects">
     <h2>Projects</h2>
     <section id="projects">
@@ -29,7 +29,7 @@
         <li>I strongly value the long-term well-being of myself and those I affect. In the context of programming, this guides my output (e.g readability, reusability) and motivates me to refine my approach to software engineering (e.g priorities, mindset)</li>
       </ul>
   </section>
-</main>
+</section>
 
 <script lang="ts">
   import Distillogue from "./projects/distillogue.svelte";
@@ -40,7 +40,7 @@
 </script>
 
 <style>
-  main {
+  #portfolio {
     max-width: 70em;
     font-size: clamp(0.8em, 3vw, 1.1em);
     padding: 0 1em 0.5em;
@@ -60,7 +60,7 @@
   
   @media (min-width: 55rem) {
     section + section {margin-top: 0}
-    main {
+    #portfolio {
       display: grid;
       justify-items: center;
       grid-template-columns: 1.25fr 1fr;

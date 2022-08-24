@@ -1,7 +1,7 @@
-<main>
+<section id="toolbox">
   <h2>Toolbox</h2>
   <h3>Utilities I found useful</h3>
-  <section id="toolbox">
+  <section id="tools">
     <nav>
       <NavButton 
         text="Debug Snippets"
@@ -34,7 +34,7 @@
       {/if}
     </section>
   </section>
-</main>
+</section>
 
 <script lang="ts">
   import NavButton from "./navButton.svelte";
@@ -47,7 +47,7 @@
 </script>
 
 <style>
-  main {
+  #toolbox {
     max-width: 70em;
     font-size: clamp(0.8em, 2vw, 1.1em);
     padding: 0 1em 0.5em;
@@ -61,7 +61,7 @@
   }
   h2, h3 {text-align: center}
 
-  #toolbox {
+  #tools {
     --borderWidth: 0.75em;
     min-height: 20em;
     margin-top: 1em;
@@ -106,7 +106,7 @@
   }
 
   @media (min-width: 30em) {
-    #toolbox {
+    #tools {
       flex-direction: row;
       flex-grow: 1;
     }

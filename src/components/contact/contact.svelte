@@ -1,4 +1,4 @@
-<main>
+<section id="contact">
   <h2>Contact</h2>
   <form>
     {#if typeof notifDesirability !== "boolean"}
@@ -47,7 +47,7 @@
       <div>contact@evavkein.com</div>
     </a>
   </address>
-</main>
+</section>
 
 <script lang="ts">
   import {slide} from "svelte/transition";
@@ -82,7 +82,7 @@
 </script>
 
 <style>
-  main {
+  #contact {
     padding: 0 1em 0.5em;
     font-size: clamp(0.8em, 3vw, 1.1em);
     display: flex;

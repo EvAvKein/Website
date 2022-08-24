@@ -1,15 +1,15 @@
-<main>
+<section id="about">
   <h2>
     <div id="greeting">Hello, I'm Eve Aviv Keinan ^^</div>
     <div id="greetingParentheses">(Refer as Eve/Aviv, up to you!)</div>
   </h2>
-  <section>
+  <section id="bio">
     <div id="who"><Who/></div>
     <div id="what"><What/></div>
     <div id="how"><How/></div>
     <div id="where"><Where/></div>
   </section>
-</main>
+</section>
 
 <script lang="ts">
   import Who from "./QnAs/who.svelte";
@@ -19,7 +19,7 @@
 </script>
 
 <style>
-  main {
+  #about {
     max-width: 70em;
     font-size: clamp(0.8em, 2vw, 1.1em);
     padding: 0 1em 0.5em;
@@ -33,13 +33,13 @@
     color: var(--textSubColor);
   }
 
-  section {
+  #bio {
     margin-top: 2em;
     font-size: 1.25em;
   }
 
   @media (min-width: 50rem) {
-    section {
+    #bio {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
       grid-template-areas:
