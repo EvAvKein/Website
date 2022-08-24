@@ -42,7 +42,6 @@
 <style>
   #portfolio {
     max-width: 70em;
-    font-size: clamp(0.8em, 3vw, 1.1em);
     padding: 0 1em 0.5em;
     margin: 0 auto;
   }

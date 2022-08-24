@@ -20,7 +20,6 @@
 
 <style>
   main {
-    font-size: clamp(0.85em, 4vw, 2.5em);
     height: calc(100vh - 2em);
     width: calc(100vw - 2em);
     padding: 1em;

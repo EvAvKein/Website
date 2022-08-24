@@ -84,7 +84,6 @@
 <style>
   #contact {
     padding: 0 1em 0.5em;
-    font-size: clamp(0.8em, 3vw, 1.1em);
     display: flex;
     flex-direction: column;
     align-items: center;

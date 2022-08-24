@@ -55,6 +55,7 @@
     letter-spacing: 0.03em;
     background-color: var(--backgroundColor);
     text-underline-offset: 0.1em;
+    font-size: clamp(0.9em, 2.5vw, 1.1em);
   }
 
   :global(img) {
