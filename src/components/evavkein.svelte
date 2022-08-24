@@ -20,9 +20,7 @@
     width: fit-content;
     margin: 0;
     gap: 0;
-    transition: gap 1000ms,
-                font-size 250ms,
-                transform 550ms 550ms;
+    transition: gap 1000ms;
   }
   .extra {
     display: inline-block;
