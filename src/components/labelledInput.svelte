@@ -41,6 +41,7 @@
     margin-left: 0.5em;
     cursor: text;
     transition: transform 250ms;
+    white-space: nowrap;
   }
 
   input, textarea {
