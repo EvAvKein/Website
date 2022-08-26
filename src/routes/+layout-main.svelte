@@ -51,7 +51,7 @@
   let sidebarOpen = false;
 
   let header:HTMLElement;
-  let headerEmWidth:number;
+  let headerEmWidth = 0;
   onMount(() => {
     const headerObserver = new ResizeObserver((entries) => {
       const containerPxWidth = entries[0].contentRect.width;
