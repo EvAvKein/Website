@@ -15,6 +15,7 @@
       <ul>
         <li>Chrome DevTools</li>
         <li>Visual Studio Code</li>
+        <li>Cypress</li>
       </ul>
     </td>
     <td>
@@ -32,7 +33,6 @@
     <th>Foundational</th>
     <td>
       <ul>
-        <li>Cypress</li>
         <li>Git</li>
         <li>Docker</li>
         <li>GitHub Actions</li>
