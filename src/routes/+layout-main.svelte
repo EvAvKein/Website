@@ -135,8 +135,9 @@
   #sidebar.sidebarOpen {transform: translateX(0)}
 
   main { /* prevents viewport overflow caused by main's content from creating a scrollbar across the whole body, which was causing the header to jump/snap when navigating to and from pages with overflow */
-    position: fixed; 
-    overflow: auto;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
     top: 4em;
     bottom: 0;
     right: 0;
