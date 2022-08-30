@@ -1,0 +1,11 @@
+/* css imports aren't scoped to components, hence the class */
+
+.QnABox h2 {font-size: 2em}
+.QnABox h3 {
+  font-size: 1em;
+  color: var(--textSubColor);
+}
+
+.QnABox li + li {margin-top: 0.25em}
+
+.QnABox p {margin: 1em 0 0 1em}
