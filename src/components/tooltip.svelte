@@ -69,9 +69,11 @@
     display: block;
     margin: 0.1em;
     color: var(--textColor);
+    font-weight: initial;
+    text-decoration: initial;
     background-color: var(--backgroundSubColor);
-    padding: 0.4em;
-    border-radius: 0.4em;
+    padding: 0.5em;
+    border-radius: 0.5em;
     box-shadow: 0 0 0.2em 0.1em black;
   } 
 </style>
