@@ -1,4 +1,4 @@
-<span class="tooltipSubject" class:activated
+<div class="tooltipSubject" class:activated
   on:mouseenter={() => hovered = true}
   on:mouseleave={() => hovered = false}
   on:focus={() => focused = true}
@@ -17,7 +17,7 @@
       </span>
     </div>
   {/if}
-</span>
+</div>
 
 <script lang="ts">
   import {fade} from "svelte/transition";
@@ -48,6 +48,7 @@
 
 <style>
   .tooltipSubject {
+    display: inline-block; /* inline-blocking a div instead of using a span because the latter creates an extra space in some cases */
     cursor: help;
     outline: none;
     position: relative;
