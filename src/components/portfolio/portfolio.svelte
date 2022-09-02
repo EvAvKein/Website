@@ -15,13 +15,13 @@
 
   <section id="resume">
     <h2>Resumé</h2>
-    <p>The summary is that I've done civil service and community management. For the full resumé file with all its usual details, you're welcome to contact me</p>
+    <p>The summary is that I've done civil service and community management, you're welcome to contact me for the resumé file with all its usual details</p>
   </section>
   
   <section id="dispositions">
     <h2>Dispositions</h2>
       <p>
-        The following are reasons why I believe I'm dispositionally/interpersonally fit for software engineering:
+        The following are (some) reasons why I believe I'm dispositionally fit for software engineering:
       </p>
       <ul>
         <li>I'm diligent (and communicative when appropriate) regarding the what/why/how of my conduct and its likely short-term & long-term consequences</li>
@@ -37,6 +37,8 @@
   import Warehouse from "./projects/warehouse.svelte";
 
   import TechsTable from "./techsTable.svelte";
+
+  import Tooltip from "../tooltip.svelte";
 </script>
 
 <style>

@@ -1,9 +1,15 @@
 <section class="QnABox">
   <h2>Where?</h2>
   <h3>(Residence)</h3>
-  <p>Currently in Israel. Thanks to my French citizenship, I'll immigrate to the EU (likely Finland/Sweden) once I'm employed remotely/there</p>
+  <p>Currently in Israel. Thanks to my French citizenship, I'll immigrate to the EU 
+    <Tooltip>
+      <span slot="subject">(likely Finland/Sweden)</span>
+      <span slot="content">(for interpersonal & political reasons)</span>
+    </Tooltip>
+    once I'm employed remotely/there</p>
 </section>
 
 <script lang="ts">
   import "./_QnABoxMixin.css";
+  import Tooltip from "../../tooltip.svelte";
 </script>
