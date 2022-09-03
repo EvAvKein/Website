@@ -1,0 +1,18 @@
+<Project
+  logoSrc={"filterJobsFeeds.svg"}
+  logoAlt={"Icon of papers titled 'Job' dropped inside a filter"}
+  name={"Filter Jobs Feeds"}
+  technologies={"HTML, CSS, JS"}
+  description={"A (minimal) Chrome extension for filtering jobs feeds by blacklisting text"}
+  links={[
+    {
+      src: "github.svg",
+      alt: "Github icon",
+      url: "https://github.com/EvAvKein/FilterJobsFeeds"
+    }
+  ]}
+/>
+
+<script lang="ts">
+  import Project from "./_template.svelte";
+</script>

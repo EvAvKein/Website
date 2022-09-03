@@ -4,6 +4,7 @@
     <section id="projects">
       <Distillogue/>
       <Website/>
+      <FilterJobsFeeds/>
       <Warehouse/>
     </section>
   </section>
@@ -34,11 +35,10 @@
 <script lang="ts">
   import Distillogue from "./projects/distillogue.svelte";
   import Website from "./projects/website.svelte";
+  import FilterJobsFeeds from "./projects/filterJobsFeeds.svelte";
   import Warehouse from "./projects/warehouse.svelte";
 
   import TechsTable from "./techsTable.svelte";
-
-  import Tooltip from "../tooltip.svelte";
 </script>
 
 <style>
