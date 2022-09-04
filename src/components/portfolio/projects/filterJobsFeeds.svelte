@@ -9,6 +9,11 @@
       src: "github.svg",
       alt: "Github icon",
       url: "https://github.com/EvAvKein/FilterJobsFeeds"
+    },
+    {
+      src: "chrome.svg",
+      alt: "Google Chrome icon",
+      url: "https://chrome.google.com/webstore/detail/filter-jobs-feeds/edebgnaafidhaiepkjknfmdonoagkjhe"
     }
   ]}
 />
