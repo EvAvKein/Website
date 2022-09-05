@@ -37,9 +37,10 @@
     <th>Secondary</th>
     <td>
       <ul>
-        <li>Git</li>
         <li>Docker</li>
         <li>GitHub Actions</li>
+        <li>Figma</li>
+        <li>Git</li>
         <li>Shell</li>
         <li>Node.js</li>
       </ul>
