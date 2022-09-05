@@ -34,10 +34,15 @@
 
   <h3>...or find me at:</h3>
   <address>
-    <a href="https://mstdn.social/@EvAvKein" class="core_contentButton">
-      <img src="./mastodon.svg" alt="Mastodon icon">
-      <div>mstdn.social/@EvAvKein</div>
-    </a>
+    <Tooltip>
+      <a slot="subject"
+        href="https://mstdn.social/@EvAvKein" class="core_contentButton"
+      >
+        <img src="./mastodon.svg" alt="Mastodon icon">
+        <div>mstdn.social/@EvAvKein</div>
+      </a>
+      <span slot="content">I'm completely inactive on Mastodon and will delete that profile once I've set up blogging here</span>
+    </Tooltip>
     <a href="https://github.com/EvAvKein" class="core_contentButton">
       <img src="./github.svg" alt="GitHub icon">
       <div>/EvAvKein</div>
@@ -51,9 +56,10 @@
 
 <script lang="ts">
   import {slide} from "svelte/transition";
+  import {apiFetch} from "../../helpers/apiFetch";
   import LabelledInput from "../labelledInput.svelte";
   import Notification from "../notification.svelte";
-  import {apiFetch} from "../../helpers/apiFetch";
+  import Tooltip from "../tooltip.svelte";
 
   let title = "";
   let body = "";
