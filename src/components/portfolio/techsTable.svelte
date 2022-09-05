@@ -3,14 +3,18 @@
     <th>
       Category <img src="./arrow.svg" alt="Rightward arrow">
       <hr>
-      <img src="./arrow.svg" alt="Downward arrow"> Proficiency
+      <img src="./arrow.svg" alt="Downward arrow"> 
+      <Tooltip>
+        <span slot="subject">Proficiency</span>
+        <span slot="content">Proficiency categories kept vague because it's extremely subjective</span>
+      </Tooltip> 
     </th>
     <th>Tools</th>
     <th>Languages</th>
   </tr>
 
   <tr> 
-    <th>Intermediate</th>
+    <th>Primary</th>
     <td>
       <ul>
         <li>Chrome DevTools</li>
@@ -30,7 +34,7 @@
   </tr>
 
   <tr>
-    <th>Foundational</th>
+    <th>Secondary</th>
     <td>
       <ul>
         <li>Git</li>
@@ -50,6 +54,10 @@
     </td>
   </tr>
 </table>
+
+<script lang="ts">
+  import Tooltip from "../tooltip.svelte";
+</script>
 
 <style>
   table {
