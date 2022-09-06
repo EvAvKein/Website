@@ -54,6 +54,8 @@
   }
   section + section {margin-top: 1em}
 
+  #techs {overflow-x: auto}
+
   #dispositions h2, #resume h2 {
     font-size: 2.75em;
   }

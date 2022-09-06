@@ -82,10 +82,7 @@
     background-color: var(--textSubColor);
   }
 
-  td, th {
-    min-width: 7.5em;
-    padding: 0.75em 0.5rem 0.75em 0.5em;
-  }
+  td, th {padding: 0.75em 0.5rem 0.75em 0.5em}
   th ~ th:not(:first-child) {
     border-left: 0.2em solid var(--textSubColor);
   }
