@@ -4,7 +4,7 @@
   <p>Currently in Israel. Thanks to my French citizenship, I'll immigrate to the EU 
     <Tooltip>
       <span slot="subject">(likely Finland/Sweden)</span>
-      <span slot="content">(for interpersonal & political reasons)</span>
+      <span slot="content">(for interpersonal & politics reasons)</span>
     </Tooltip>
     once I'm employed remotely/there</p>
 </section>
