@@ -6,7 +6,7 @@
   <div id="headerNav">
     <Nav type={headerEmWidth < 45 ? "none" : "main"}/>
 
-    <button id="navButton"
+    <button id="navButton" aria-label="Open (extra) navigation"
       class={"core_contentButton" + (sidebarOpen ? " buttonOfOpenNav" : "")}
       on:click={() => sidebarOpen = !sidebarOpen}
     >
