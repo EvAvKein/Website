@@ -46,7 +46,7 @@
   };
 </script>
 
-<style>
+<style global> /* global for the ".tooltipSubject.activated img" selector to work */
   .tooltipSubject {
     display: inline-block; /* inline-blocking a div instead of using a span because the latter creates an extra space in some cases */
     cursor: help;
@@ -56,6 +56,7 @@
   }
 
   .tooltipSubject.activated {color: var(--highlightColor)}
+  .tooltipSubject.activated img {filter: var(--filterToHighlightColor)}
 
   .tooltipWrapper { /* wrapping to allow the tooltip to have a (functional) margin */
     cursor: default;
