@@ -67,8 +67,9 @@
     width: 100%;
   }
 
+  tr:first-child th:first-child {white-space: nowrap}
+
   img {
-    white-space: nowrap;
     height: 1em;
     width: auto;
     vertical-align: middle;
