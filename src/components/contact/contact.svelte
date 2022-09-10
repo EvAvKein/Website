@@ -117,12 +117,12 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: clamp(1.5rem, 3vw, 3em);
+    gap: clamp(1.5em, 3vw, 3em);
   }
   address a {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5em;
     font-size: 1.5em;
   }
   address img {

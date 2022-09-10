@@ -61,7 +61,7 @@
   }
   li + li {margin-top: 0.4em}
   
-  @media (min-width: 55rem) {
+  @media (min-width: 55em) {
     section + section {margin-top: 0}
     #portfolio {
       display: grid;

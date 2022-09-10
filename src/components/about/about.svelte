@@ -37,7 +37,7 @@
     font-size: 1.25em;
   }
 
-  @media (min-width: 50rem) {
+  @media (min-width: 50em) {
     #bio {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
