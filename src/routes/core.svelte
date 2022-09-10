@@ -36,8 +36,8 @@
     --filterToTextColor: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(244%) hue-rotate(180deg) brightness(115%) contrast(83%);
     --textSubColor: #bebebe;
     --filterToTextSubColor: brightness(0) saturate(100%) invert(85%) sepia(6%) saturate(0%) hue-rotate(252deg) brightness(89%) contrast(92%); 
-    --backgroundColor: #0a1018;
-    --filterToBackgroundColor: brightness(0) saturate(100%) invert(5%) sepia(10%) saturate(2898%) hue-rotate(175deg) brightness(87%) contrast(97%);
+    --backgroundColor: #050e18;
+    --filterToBackgroundColor: brightness(0) saturate(100%) invert(5%) sepia(12%) saturate(2899%) hue-rotate(171deg) brightness(92%) contrast(100%);
     --backgroundSubColor: #042b43;
     --filterToBackgroundSubColor: brightness(0) saturate(100%) invert(11%) sepia(28%) saturate(3585%) hue-rotate(178deg) brightness(102%) contrast(97%);
     --highlightColor: #f5cb32;
@@ -78,20 +78,20 @@
   }
 
   ::-webkit-scrollbar {
-    width: 1rem;
-    height: 1rem;
+    width: 1em;
+    height: 1em;
   }
   ::-webkit-scrollbar-track {
     background-color: var(--backgroundColor);
-    margin: 0.2rem;
+    margin: 0.2em;
   }
   ::-webkit-scrollbar-corner {
     background-color: var(--backgroundColor)
   }
   ::-webkit-scrollbar-thumb {
     background-color: var(--textColor);
-    border: 0.25rem solid var(--backgroundColor);
-    border-radius: 3rem;
+    border: 0.25em solid var(--backgroundColor);
+    border-radius: 3em;
   }
   ::-webkit-scrollbar-thumb:hover {
     background-color: var(--textSubColor);
