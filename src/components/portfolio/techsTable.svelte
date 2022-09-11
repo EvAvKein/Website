@@ -29,6 +29,7 @@
         <li>JavaScript</li>
         <li>TypeScript</li>
         <li>Vue</li>
+        <li>Svelte</li>
       </ul>
     </td>
   </tr>
@@ -48,7 +49,6 @@
     <td>
       <ul>
         <li>SvelteKit</li>
-        <li>Svelte</li>
         <li>MongoDB</li>
         <li>Express.js</li>
       </ul>
