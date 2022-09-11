@@ -54,7 +54,7 @@
   }
   section + section {margin-top: 1em}
 
-  #techs {overflow-x: auto}
+  /* #techs {overflow-x: auto} */ /* need a better way to support tiny (320px) screens, because this way breaks any tooltips inside (or ideally make the tooltips work not break upon any horizontal overflow, still trying to solve that) */
 
   #dispositions h2, #resume h2 {
     font-size: 2.75em;

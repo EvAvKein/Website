@@ -73,6 +73,7 @@
     color: var(--textColor);
     font-weight: initial;
     text-decoration: initial;
+    white-space: normal;
     background-color: var(--backgroundSubColor);
     padding: 0.5em;
     border-radius: 0.5em;
