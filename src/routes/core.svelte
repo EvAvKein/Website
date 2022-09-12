@@ -38,8 +38,8 @@
     --filterToTextSubColor: brightness(0) saturate(100%) invert(85%) sepia(6%) saturate(0%) hue-rotate(252deg) brightness(89%) contrast(92%); 
     --backgroundColor: #050e18;
     --filterToBackgroundColor: brightness(0) saturate(100%) invert(5%) sepia(12%) saturate(2899%) hue-rotate(171deg) brightness(92%) contrast(100%);
-    --backgroundSubColor: #042b43;
-    --filterToBackgroundSubColor: brightness(0) saturate(100%) invert(11%) sepia(28%) saturate(3585%) hue-rotate(178deg) brightness(102%) contrast(97%);
+    --backgroundSubColor: #0F3460;
+    --filterToBackgroundSubColor: brightness(0) saturate(100%) invert(14%) sepia(50%) saturate(2250%) hue-rotate(194deg) brightness(92%) contrast(94%);
     --highlightColor: #f5cb32;
     --filterToHighlightColor: brightness(0) saturate(100%) invert(91%) sepia(83%) saturate(7499%) hue-rotate(325deg) brightness(101%) contrast(98%);
     --highlightSubColor: #d8b434;
