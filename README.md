@@ -2,7 +2,6 @@
 This is the repo for my (Eve Aviv Keinan's) website, hosted at https://evavkein.com
 
 ## Contributions
-I welcome contributions (preferably brought up through GitHub issues first), such as:  
-- Bug fixes
-- Vulnerability fixes
-- Formatting changes to comply with best practices (but I reserve the right to dismiss those on a subjective basis, as this project is meant to represent me with subjectivity included)
+Feel free to open an issue/discussion regarding anything about the project!
+
+Obligatory disclaimer though: This (codebase & site alike) is my own corner on the internet, I'm not obligated to forfeit unconventional/particularly-subjective decisions like in a shared project
