@@ -4,17 +4,17 @@
   on:focus={() => focused = true}
   on:blur={() => focused = false}
   tabindex="0"
+  bind:this={subject}
 >
   <slot name="subject"></slot>
+
   {#if activated}
-    <div class="tooltipWrapper"
-      bind:this={tooltip}
+    <div class="tooltipContent"
       in:fade={{duration: 200}}
       out:fade={{duration: 150}}
+      bind:this={tooltip}
     >
-      <span class="tooltipContent">
-        <slot name="content"></slot>
-      </span>
+      <slot name="content"></slot>
     </div>
   {/if}
 </div>
@@ -22,61 +22,61 @@
 <script lang="ts">
   import {fade} from "svelte/transition";
 
+  let subject:HTMLElement;
   let tooltip:HTMLElement;
   let hovered = false;
   let focused = false;
   $: activated = hovered || focused;
 
   $: if (activated && tooltip) {
-    const mainState = document.querySelector("main")!; // not querying body because the function "clientWidth" property to do corrections for its exclusion of an element's scrollbar, and (in the main layout) the scrollbar comes from main rather than body
+    const mainElem = document.querySelector("main")!; // not querying the body because (at least in the "main" layout) it doesn't accurately reflect the scrollHeight; the <main> is streched to all corners of the body (except the top, where the header is) and handles all overflow inside itself
     const tooltipState = tooltip.getBoundingClientRect();
 
-    // i'd declare a variable here for (tooltipState.x + tooltipState.width), to be used in the following line and the xOverflowing condition block... but i failed to come up with a variable name more readable than the code itself
-    const xOverflowing = (tooltipState.x + tooltipState.width) > mainState.clientWidth;
+    tooltip.style.top = `${tooltipState.top - mainElem.scrollTop}px`;
 
-    if (tooltipState.width > mainState.clientWidth) {
-      tooltip.style.maxWidth = (mainState.clientWidth + "px");
-      tooltipState.width = mainState.clientWidth;
+    if (tooltipState.width > mainElem.clientWidth) {
+      tooltip.style.maxWidth = (mainElem.clientWidth + "px");
+      tooltipState.width = mainElem.clientWidth;
     };
 
+    const xOverflowing = (tooltipState.x + tooltipState.width) > mainElem.clientWidth;
     if (xOverflowing) {
-      const xOverflow = (tooltipState.x + tooltipState.width) - mainState.clientWidth;
+      const xOverflow = (tooltipState.x + tooltipState.width) - mainElem.clientWidth;
       tooltip.style.transform = `translateX(-${xOverflow}px)`;
+    };
+
+    const yOverflowing = (tooltipState.y + tooltipState.height) > mainElem.scrollHeight;
+    if (yOverflowing) {
+      const subjectState = subject.getBoundingClientRect();
+      tooltip.style.top = `${subjectState.top - tooltipState.height}px`;
     };
   };
 </script>
 
 <style global> /* global for the ".tooltipSubject.activated img" selector to work */
   .tooltipSubject {
-    display: inline-block; /* inline-blocking a div instead of using a span because the latter creates an extra space in some cases */
+    display: inline-block; /* declaring inline-block on a <div> instead of using a <span> because the latter creates an extra space in some cases */
     cursor: help;
     outline: none;
-    position: relative;
     border-bottom: 0.15em dashed var(--highlightSubColor);
   }
 
-  .tooltipSubject.activated {color: var(--highlightColor)}
-  .tooltipSubject.activated img {filter: var(--filterToHighlightColor)}
-
-  .tooltipWrapper { /* wrapping to allow the tooltip to have a (functional) margin */
-    cursor: default;
-    position: absolute;
-    width: max-content;
-    left: 0;
-    top: 100%;
-  }
+  .tooltipSubject.activated {color: var(--highlightSubColor)}
+  .tooltipSubject.activated img {filter: var(--filterToHighlightSubColor)}
 
   .tooltipContent {
+    position: fixed;
+    height: max-content;
+    width: max-content;
     font-size: 0.8em;
-    display: block;
-    margin: 0.1em;
     color: var(--textColor);
+    background-color: var(--backgroundSubColor);
+    padding: 0.55em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5em 0.25em black;
+    
     font-weight: initial;
     text-decoration: initial;
     white-space: normal;
-    background-color: var(--backgroundSubColor);
-    padding: 0.5em;
-    border-radius: 0.5em;
-    box-shadow: 0 0 0.2em 0.1em black;
   } 
 </style>
