@@ -117,17 +117,13 @@
   }
 
   .core_contentButton {
-    --time: 1000ms;
-    --filterSelectors: filter var(--time);
     color: inherit;
     background-color: transparent;
     padding: 0;
-    transition: var(--filterSelectors);
   }
   .core_contentButton img, .core_contentButton svg {
     height: inherit;
     filter: var(--filterToTextColor);
-    transition: var(--filterSelectors);
   }
   .core_contentButton:focus, .core_contentButton:hover {
     color: var(--highlightSubColor);
