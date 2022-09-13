@@ -32,10 +32,10 @@
 
 <style global>
   :root { /* filters created via https://codepen.io/sosuke/pen/Pjoqqp */
-    --textColor: #e9e9e9;
-    --filterToTextColor: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(244%) hue-rotate(180deg) brightness(115%) contrast(83%);
+    --textColor: #ececec;
+    --filterToTextColor: brightness(92.5%);
     --textSubColor: #bebebe;
-    --filterToTextSubColor: brightness(0) saturate(100%) invert(85%) sepia(6%) saturate(0%) hue-rotate(252deg) brightness(89%) contrast(92%); 
+    --filterToTextSubColor: brightness(75%); 
     --backgroundColor: #050e18;
     --filterToBackgroundColor: brightness(0) saturate(100%) invert(5%) sepia(12%) saturate(2899%) hue-rotate(171deg) brightness(92%) contrast(100%);
     --backgroundSubColor: #0F3460;
@@ -117,13 +117,17 @@
   }
 
   .core_contentButton {
+    --time: 1000ms;
+    --filterSelectors: filter var(--time);
     color: inherit;
     background-color: transparent;
     padding: 0;
+    transition: var(--filterSelectors);
   }
   .core_contentButton img, .core_contentButton svg {
     height: inherit;
     filter: var(--filterToTextColor);
+    transition: var(--filterSelectors);
   }
   .core_contentButton:focus, .core_contentButton:hover {
     color: var(--highlightSubColor);
