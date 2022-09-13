@@ -67,14 +67,11 @@
     const result = solver.solve();
     
     let lossMsg;
-    if (result.loss < 1) { // i'm not a fan of these chained else-ifs
-      lossMsg = 'A perfect result!';
-    } else if (result.loss < 5) {
-      lossMsg = '...Close enough?';
-    } else if (result.loss < 15) {
-      lossMsg = 'Somewhat off, retry?';
-    } else {
-      lossMsg = 'Extremely off, retry!';
+    switch (true) {
+      case (result.loss < 1): lossMsg = "A perfect result!"; break;
+      case (result.loss < 5): lossMsg = "...Close enough?"; break;
+      case (result.loss < 15): lossMsg = "Somewhat off, retry?"; break;
+      default: lossMsg = "Extremely off, retry!"; break;
     };
 
     hexTargetAsRgb = color.toString();
