@@ -58,6 +58,8 @@
     font-size: clamp(0.9em, 2.5vw, 1.1em);
   }
 
+  :focus {outline: none}
+
   img {
     pointer-events: none;
     user-select: none;
@@ -65,16 +67,14 @@
 
   h1, h2, h3, h4, h5, h6, p {margin: 0}
 
-  a {
-    color: var(--textColor);
-    text-decoration: none;
-  }
+  a {color: var(--highlightSubColor)}
+  a:focus, a:hover {color: var(--highlightColor)}
 
-  button {font-size: inherit}
-  button, a, summary {
-    cursor: pointer;
+  button, a, summary {cursor: pointer}
+  button, a, summary, input, textarea {
+    font-size: inherit;
+    font-family: inherit;
     border: none;
-    outline: none;
   }
 
   ::-webkit-scrollbar {
@@ -102,6 +102,7 @@
   \~~~~~~~~~~~~~~~~~~~~~*/
   .core_backgroundButton {
     color: var(--backgroundColor);
+    text-decoration: none;
     background-color: var(--textColor);
     border-radius: 0.2em;
     text-decoration: none;
@@ -118,6 +119,7 @@
 
   .core_contentButton {
     color: inherit;
+    text-decoration: none;
     background-color: transparent;
     padding: 0;
   }

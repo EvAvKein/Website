@@ -45,13 +45,10 @@
   }
 
   input, textarea {
-    font-size: inherit;
-    font-family: inherit;
     color: var(--textColor);
     background-color: var(--backgroundColor);
     width: 100%;
     box-sizing: border-box;
-    border: none;
     border-left: 0.225em solid var(--textSubColor);
     margin-top: 1.3em;
     padding-left: 0.2em;
