@@ -67,9 +67,6 @@
 
   h1, h2, h3, h4, h5, h6, p {margin: 0}
 
-  a {color: var(--highlightSubColor)}
-  a:focus, a:hover {color: var(--highlightColor)}
-
   button, a, summary {cursor: pointer}
   button, a, summary, input, textarea {
     font-size: inherit;
