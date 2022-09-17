@@ -35,7 +35,7 @@
   <p id="initialColorDisclaimer"><strong>The generated filter assumes a black subject. If the subject isn't pure black, prepend <code>brightness(0) saturate(100%)</code> to the filter (which will firstly make it so)</strong></p>
   <hr>
   <p id="filterCodeCredit">
-    Without <a href="https://codepen.io/sosuke/pen/Pjoqqp" target="_blank" class="core_contentButton">this CodePen post by Barrett Sonntag</a> and <a href="https://stackoverflow.com/a/43960991/604861" target="_blank" class="core_contentButton">this StackOverflow post by MultiplyByZer0</a> (which Sonntag cites), this wouldn't be here.<br>
+    Without <a href="https://codepen.io/sosuke/pen/Pjoqqp" class="core_contentButton">this CodePen post by Barrett Sonntag</a> and <a href="https://stackoverflow.com/a/43960991/604861" class="core_contentButton">this StackOverflow post by MultiplyByZer0</a> (which Sonntag cites), this wouldn't be here.<br>
     All I've done is adapt Sonntag's code for Svelte & Typescript, and style & refactor a bit per my own preferences
   </p>
 </section>
