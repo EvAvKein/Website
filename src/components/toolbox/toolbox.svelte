@@ -13,6 +13,11 @@
         id="cssHexToFilter"
         bind:current={current}
       />
+      <NavButton 
+        text="Percent-RGB-Hex Converter"
+        id="percentRgbHexConverter"
+        bind:current={current}
+      />
     </nav>
     <section id="currentTool">
       {#if current === "debugSnippets"}
@@ -22,6 +27,10 @@
       {:else if current === "cssHexToFilter"}
         <TransWrapper>
           <FilterGenerator/>
+        </TransWrapper>
+      {:else if current === "percentRgbHexConverter"}
+        <TransWrapper>
+          <PercentRgbHexConverter/>
         </TransWrapper>
       {:else}
         <TransWrapper>
@@ -41,8 +50,9 @@
   import TransWrapper from "./transitionsWrapper.svelte";
   import DebugSnippets from "./tools/debugSnippets.svelte";
   import FilterGenerator from "./tools/cssHexToFilter/cssHexToFilter.svelte";
+  import PercentRgbHexConverter from "./tools/percentRgbHexConverter.svelte";
 
-  type toolID = ""|"debugSnippets"|"cssHexToFilter";
+  type toolID = ""|"debugSnippets"|"cssHexToFilter"|"percentRgbHexConverter";
   let current = "" as toolID;
 </script>
 
