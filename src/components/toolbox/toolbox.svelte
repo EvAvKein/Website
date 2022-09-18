@@ -123,6 +123,7 @@
     nav {
       flex-direction: column;
       justify-content: flex-start;
+      max-width: 33%;
       gap: 0.75em;
       border-radius: var(--borderWidth) 0 0 var(--borderWidth);
     }

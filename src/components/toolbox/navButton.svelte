@@ -13,7 +13,6 @@
   button {
     font-size: inherit;
     height: min-content;
-    white-space: nowrap;
   }
 
   button[inert] {
