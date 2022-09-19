@@ -47,7 +47,7 @@
 
   a.nameVisible img, a.current img,
   a:hover img, a:focus img, a:active img {
-    height: 70%;
+    height: 60%;
     transition: height 250ms;
   }
 
