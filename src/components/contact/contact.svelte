@@ -89,6 +89,9 @@
 
 <style>
   #contact {
+    display: block;
+    margin: auto;
+    max-width: 60em;
     text-align: center;
     padding: 0 0.5em 0.5em;
   }
