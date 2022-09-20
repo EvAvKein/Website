@@ -121,14 +121,15 @@
     }
 
     nav {
+      flex-basis: 25%;
       flex-direction: column;
       justify-content: flex-start;
-      max-width: 33%;
       gap: 0.75em;
       border-radius: var(--borderWidth) 0 0 var(--borderWidth);
     }
 
     #currentTool {
+      flex-basis: 75%;
       border-left: none;
       border-top: var(--border);
       border-radius: 0 var(--borderWidth) var(--borderWidth) 0;
