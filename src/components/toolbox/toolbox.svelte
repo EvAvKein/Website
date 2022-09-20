@@ -114,7 +114,7 @@
     height: 1.25em;
   }
 
-  @media (min-width: 50em) {
+  @media (min-width: 70em) {
     #tools {
       flex-direction: row;
       flex-grow: 1;
