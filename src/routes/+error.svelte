@@ -4,40 +4,24 @@
 >
   <main>
     <h1>404: Page not found!</h1>
-    <p>Were you trying to visit one of these pages?</p>
-    <Nav type={"main"} namesAlwaysVisible={true}/>
-    <hr>
-    <p>...Or maybe even one of these?</p>
-    <Nav type={"misc"} namesAlwaysVisible={true}/>
+    <hr/>
+    <p>Maybe you'll find your destination in the navigation menu? ¯\_(ツ)_/¯</p>
   </main>
 </Core>
 
 <script lang="ts">
   import Core from "./core.svelte";
-  import Nav from "../components/nav/nav.svelte";
 </script>
 
 
 <style>
   main {
-    height: calc(100vh - 2em);
-    width: calc(100vw - 2em);
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-top: 0.5em;
     text-align: center;
   }
 
-  h1 {
-    text-decoration: underline;
-    margin-bottom: 0.75em;
-  }
-  p {margin-bottom: 0.5em}
-
   hr {
-    width: 100%;
-    margin: 0.5em;
+    border-color: var(--textSubColor);
+    margin: 0.5em 0.5em 1.25em;
   }
 </style>
