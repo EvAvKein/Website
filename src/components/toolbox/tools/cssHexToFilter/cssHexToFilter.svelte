@@ -133,7 +133,10 @@
     border-radius: 0.5em;
   }
 
-  code{color: var(--textSubColor)}
+  code{
+    color: var(--textSubColor);
+    user-select: all;
+  }
 
   #initialColorDisclaimer {
     font-size: 1.1em;
