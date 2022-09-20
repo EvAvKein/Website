@@ -25,8 +25,8 @@
 </main>
 
 <script lang="ts">
-  import NavSvg from "../components/nav/navSvg.svelte"
-  import Nav from "../components/nav/nav.svelte";
+  import NavSvg from "./_layout/navSvg.svelte"
+  import Nav from "./_layout/nav.svelte";
 
   let windowWidth:number;
   let windowHeight:number;

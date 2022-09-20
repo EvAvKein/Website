@@ -2,10 +2,61 @@
   headTitle="EvAvKein"
   headDescription="The home page of Eve Aviv Keinan's personal and portfolio website"
 >
-  <About/>
+  <section id="about">
+    <h2>
+      <div id="greeting">Hello, I'm Eve Aviv Keinan ^^</div>
+      <div id="greetingParentheses">(Refer as Eve/Aviv, up to you!)</div>
+    </h2>
+    <section id="bio">
+      <div id="who"><Who/></div>
+      <div id="what"><What/></div>
+      <div id="how"><How/></div>
+      <div id="where"><Where/></div>
+    </section>
+  </section>
 </Core>
 
 <script lang="ts">
   import Core from "./core.svelte";
-  import About from "../components/about/about.svelte";
+  import Who from "./_QnAs/who.svelte";
+  import What from "./_QnAs/what.svelte";
+  import How from "./_QnAs/how.svelte";
+  import Where from "./_QnAs/where.svelte";
 </script>
+
+<style>
+  #about {
+    max-width: 70em;
+    padding: 0 0.5em 0.5em;
+    margin: 0 auto;
+  }
+
+  h2 {text-align: center}
+  #greeting {font-size: 2.5em}
+  #greetingParentheses {
+    font-size: 1.5em;
+    color: var(--textSubColor);
+  }
+
+  #bio {
+    margin-top: 2em;
+    font-size: 1.25em;
+  }
+
+  @media (min-width: 50em) {
+    #bio {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-template-areas:
+        "who how"
+        "what where"
+      ;
+      gap: 1em;
+    }
+
+    #who {grid-area: who}
+    #what {grid-area: what}
+    #how {grid-area: how}
+    #where {grid-area: where}
+  }
+</style>

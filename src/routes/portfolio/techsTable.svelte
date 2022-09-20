@@ -57,7 +57,7 @@
 </table>
 
 <script lang="ts">
-  import Tooltip from "../tooltip.svelte";
+  import Tooltip from "../../lib/tooltip.svelte";
 </script>
 
 <style>

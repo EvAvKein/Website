@@ -11,5 +11,5 @@
 
 <script lang="ts">
   import "./_QnABoxMixin.css";
-  import Tooltip from "../../tooltip.svelte";
+  import Tooltip from "../../lib/tooltip.svelte";
 </script>

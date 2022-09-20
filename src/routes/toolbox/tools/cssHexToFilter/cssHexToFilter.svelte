@@ -43,8 +43,8 @@
 <script lang="ts">
   import {Color, Solver, hexToRgb} from "./cssHexToFilter_formulas";
   import {slide} from "svelte/transition";
-  import LabelledInput from "../../../labelledInput.svelte";
-  import Notification from "../../../notification.svelte";
+  import LabelledInput from "../../../../lib/labelledInput.svelte";
+  import Notification from "../../../../lib/notification.svelte";
 
   let inputText = "#888888";
   let errorText = "";
