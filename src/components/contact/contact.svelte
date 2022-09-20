@@ -65,23 +65,25 @@
   let body = "";
   let email = "";
 
-  let notifText = "" as ""|typeof pendingNotif|typeof successNotif|typeof failureNotif;
-  const pendingNotif = "Processing...";
-  const successNotif = "Message sent! I usually reply within a day";
-  const failureNotif = "Message submission failed, you'll have to email me instead";
+  let notifText = "" as ""|typeof notifTexts[keyof typeof notifTexts];
+  const notifTexts = {
+    pending: "Processing...",
+    success: "Message sent! I usually reply within a day",
+    failure: "Message submission failed, you'll have to email me instead",
+  } as const;
   let notifDesirability = undefined as boolean|undefined;
 
   function submitForm() {
-    notifText = pendingNotif;
+    notifText = notifTexts.pending;
     notifDesirability = undefined;
 
     apiFetch("POST", "/submitContactForm", {title: title, body: body, email: email})
       .then((response:{outcome:boolean}) => {
-        notifText = response.outcome ? successNotif : failureNotif;
+        notifText = response.outcome ? notifTexts.success : notifTexts.failure;
         notifDesirability = response.outcome;
       })
       .catch(() => {
-        notifText = failureNotif;
+        notifText = notifTexts.failure;
         notifDesirability = false;
       });
   };
