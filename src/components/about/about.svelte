@@ -21,7 +21,7 @@
 <style>
   #about {
     max-width: 70em;
-    padding: 0 1em 0.5em;
+    padding: 0 0.5em 0.5em;
     margin: 0 auto;
   }
 

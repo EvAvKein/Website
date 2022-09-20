@@ -25,7 +25,6 @@
     height: inherit;
     width: inherit;
     overflow: visible;
-    padding-inline: 0.3em;
   }
   #top, #bottom {transition: transform 250ms}
   #middle {transition: opacity 200ms}

@@ -89,17 +89,14 @@
 
 <style>
   #contact {
-    padding: 0 1em 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding: 0 0.5em 0.5em;
   }
 
+  #contact > * {margin-inline: auto}
+
   h2 {font-size: 4em}
-  form {
-    width: clamp(10em, 95vw, 40em);
-    font-size: 1.5em;
-  }
+  form {font-size: 1.5em}
   hr {
     margin: 0.2em;
     border-color: transparent;

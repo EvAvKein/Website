@@ -44,7 +44,7 @@
 <style>
   #portfolio {
     max-width: 70em;
-    padding: 0 1em 0.5em;
+    padding: 0 0.5em 0.5em;
     margin: 0 auto;
   }
 
@@ -53,8 +53,6 @@
     margin-bottom: 0.1em;
   }
   section + section {margin-top: 1em}
-
-  #techs {overflow-x: auto}
 
   #dispositions h2, #resume h2 {
     font-size: 2.75em;
