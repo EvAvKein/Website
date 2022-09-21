@@ -99,7 +99,6 @@
   \~~~~~~~~~~~~~~~~~~~~~*/
   .core_backgroundButton {
     color: var(--backgroundColor);
-    text-decoration: none;
     text-align: center;
     background-color: var(--textColor);
     border-radius: 0.2em;
