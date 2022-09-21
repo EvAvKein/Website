@@ -48,7 +48,10 @@
     </td>
     <td>
       <ul>
-        <li>SvelteKit</li>
+        <li><Tooltip>
+          <span slot="subject">SvelteKit</span>
+          <span slot="content">Eager to make this a primary proficiency, but waiting until its 1.0 release</span>
+        </Tooltip></li>
         <li>MongoDB</li>
         <li>Express.js</li>
       </ul>
