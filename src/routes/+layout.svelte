@@ -87,6 +87,7 @@
       flex-direction: column;
       flex-wrap: nowrap;
       min-width: 4em;
+      max-width: 7em; /* when images requests fail (like they just did due to a sveltekit bug, but are liable to happen upon connection issues) the header takes up an obscene amount of space */
       padding: 1em 0.5em 1em;
       box-shadow: 0 0 0.5em 0.1em var(--backgroundColor);
       overflow-x: hidden;
