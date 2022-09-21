@@ -1,5 +1,5 @@
 <Project
-  logoSrc={"distillogue.svg"}
+  logoSrc={"/distillogue.svg"}
   logoAlt={"Icon of chemistry flask, with bubbling liquids, hung on a stand"}
   name={"Distillogue"}
   technologies={"Vue.js, TypeScript, Express.js, MongoDB, Cypress, Docker"}

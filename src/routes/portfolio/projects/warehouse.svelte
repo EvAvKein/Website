@@ -1,5 +1,5 @@
 <Project
-  logoSrc={"warehouse.svg"}
+  logoSrc={"/warehouse.svg"}
   logoAlt={"Crate icon"}
   name={"Warehouse"}
   technologies={"HTML, CSS, JS"}

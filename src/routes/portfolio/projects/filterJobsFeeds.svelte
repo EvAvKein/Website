@@ -1,5 +1,5 @@
 <Project
-  logoSrc={"filterJobsFeeds.svg"}
+  logoSrc={"/filterJobsFeeds.svg"}
   logoAlt={"Icon of papers titled 'Job' dropped inside a filter"}
   name={"Filter Jobs Feeds"}
   technologies={"HTML, CSS, JS"}

@@ -1,9 +1,9 @@
 <table>
   <tr>
     <th>
-      Category <img src="./arrow.svg" alt="Rightward arrow">
+      Category <img src="/arrow.svg" alt="Rightward arrow">
       <hr>
-      <img src="./arrow.svg" alt="Downward arrow"> 
+      <img src="/arrow.svg" alt="Downward arrow"> 
       <Tooltip>
         <span slot="subject">Proficiency</span>
         <span slot="content">Proficiency categories kept vague because it's extremely subjective</span>

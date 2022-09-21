@@ -42,17 +42,17 @@
         <a slot="subject"
           href="https://mstdn.social/@EvAvKein" class="core_contentButton"
         >
-          <img src="./mastodon.svg" alt="Mastodon icon">
+          <img src="/mastodon.svg" alt="Mastodon icon">
           <div>mstdn.social/@EvAvKein</div>
         </a>
         <span slot="content">I'm completely inactive on Mastodon and will delete that profile once I've set up blogging here</span>
       </Tooltip>
       <a href="https://github.com/EvAvKein" class="core_contentButton">
-        <img src="./github.svg" alt="GitHub icon">
+        <img src="/github.svg" alt="GitHub icon">
         <div>/EvAvKein</div>
       </a>
       <a href="mailto:contact@evavkein.com" class="core_contentButton">
-        <img src="./email.svg" alt="Email icon">
+        <img src="/email.svg" alt="Email icon">
         <div>contact@evavkein.com</div>
       </a>
     </address>

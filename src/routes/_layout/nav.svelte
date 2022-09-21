@@ -1,7 +1,7 @@
 <nav>
   <NavItem
     href={"/"}
-    imgSrc={"./about.svg"}
+    imgSrc={"/about.svg"}
     imgAlt={"Nondescript person icon"}
     pageName={"Home"}
     {currentPagePath}
@@ -9,7 +9,7 @@
   />
   <NavItem
     href={"/portfolio"}
-    imgSrc={"./code.svg"}
+    imgSrc={"/code.svg"}
     imgAlt={"Computer code icon"}
     pageName={"Portfolio"}
     {currentPagePath}
@@ -17,7 +17,7 @@
   />
   <NavItem
     href={"/contact"}
-    imgSrc={"./contact.svg"}
+    imgSrc={"/contact.svg"}
     imgAlt={"Envelope icon"}
     pageName={"Contact"}
     {currentPagePath}
@@ -26,7 +26,7 @@
   <hr/>
   <NavItem
     href={"/toolbox"}
-    imgSrc={"./toolbox.svg"}
+    imgSrc={"/toolbox.svg"}
     imgAlt={"Toolbox icon"}
     pageName={"Toolbox"}
     {currentPagePath}

@@ -1,5 +1,5 @@
 <Project
-  logoSrc={"eak.svg"}
+  logoSrc={"/eak.svg"}
   logoAlt={"The initials E.A.K, with E & K aligned and rotated to neatly overlap with the A inbetween"}
   name={"This Website"}
   technologies={"SvelteKit, TypeScript, Vercel"}
