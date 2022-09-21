@@ -1,40 +1,44 @@
-<section>
-  <label>
-    <input bind:value={percent}
-      type="number"
-      placeholder="0"
-      on:input={convertPercent} 
-    >
-    PERCENT <span>(0-100)</span>
-  </label>
-  <label>
-    <input bind:value={rgb}
-      type="number"
-      placeholder="0"
-      on:input={convertRgb}
-    >
-    RGB <span>(0-255)</span>
-  </label>
-  <label>
-    <input bind:value={hex}
-      type="text"
-      placeholder="0"
-      maxlength="2"
-      pattern={"[0-9a-fA-F]{0,2}"}
-      on:input={convertHex}
-    >
-    HEX <span>(0-FF)<span>
-  </label>
-</section>
+<TransitionWrapper>
+  <section>
+    <label>
+      <input bind:value={percent}
+        type="number"
+        placeholder="0"
+        on:input={convertPercent} 
+      >
+      PERCENT <span>(0-100)</span>
+    </label>
+    <label>
+      <input bind:value={rgb}
+        type="number"
+        placeholder="0"
+        on:input={convertRgb}
+      >
+      RGB <span>(0-255)</span>
+    </label>
+    <label>
+      <input bind:value={hex}
+        type="text"
+        placeholder="0"
+        maxlength="2"
+        pattern={"[0-9a-fA-F]{0,2}"}
+        on:input={convertHex}
+      >
+      HEX <span>(0-FF)<span>
+    </label>
+  </section>
 
-<hr/>
+  <hr/>
 
-<p> 
-  Without <a href="https://www.joshuamiron.com/percent-to-hex-converter" class="core_contentButton">the original converter by Joshua Miron</a> (and his permission), this wouldn't be here.<br>
-  All I've done is adapt Joshua's code for Svelte & Typescript, and style & refactor a bit per my own preferences.
-</p>
+  <p> 
+    Without <a href="https://www.joshuamiron.com/percent-to-hex-converter" class="core_contentButton">the original converter by Joshua Miron</a> (and his permission), this wouldn't be here.<br>
+    All I've done is adapt Joshua's code for Svelte & Typescript, and style & refactor a bit per my own preferences.
+  </p>
+</TransitionWrapper>
 
 <script lang="ts">
+  import TransitionWrapper from "../transitionWrapper.svelte";
+
   let percent:string;
   let rgb:string;
   let hex:string;

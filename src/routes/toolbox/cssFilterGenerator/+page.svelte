@@ -1,50 +1,53 @@
-<section id="tool">
-  <section id="inputSection">
-    <div id="inputWrapper">
-      <LabelledInput label="Hex Value"
-        id="hexInput"
-        bind:value={inputText}
-      />
-    </div>
-    <button class="core_backgroundButton" on:click={execute}>Generate Filter</button>
-  </section>
-  {#if errorText}
-    <div id="notifWrapper">
-      <Notification bind:text={errorText} desirablityStyle={false}/>
-    </div>
-  {/if}
-  
-  <div id="sampleWrapper">
-    <div>
-      <h4>Target Color</h4>
-      <div class="sample" style={"background-color: " + hexTargetAsRgb}></div>
-    </div>
-    <div>
-      <h4>Generated Filter</h4>
-      <div class="sample" style={"filter: " + filterAttempt}></div>
-    </div>
-  </div>
-
-    
-    {#if filterAttempt}
-      <div in:slide={{duration: 500}}>
-        <code id="filter">{filterAttempt}</code>
-        <p id="lossInfo">Loss {lossScore}: {lossDescription}</p>
+<TransitionWrapper>
+  <section id="tool">
+    <section id="inputSection">
+      <div id="inputWrapper">
+        <LabelledInput label="Hex Value"
+          id="hexInput"
+          bind:value={inputText}
+        />
+      </div>
+      <button class="core_backgroundButton" on:click={execute}>Generate Filter</button>
+    </section>
+    {#if errorText}
+      <div id="notifWrapper">
+        <Notification bind:text={errorText} desirablityStyle={false}/>
       </div>
     {/if}
-  <p id="initialColorDisclaimer"><strong>The generated filter assumes a black subject. If the subject isn't pure black, prepend <code>brightness(0) saturate(100%)</code> to the filter (which will firstly make it so)</strong></p>
-  <hr>
-  <p id="filterCodeCredit">
-    Without <a href="https://codepen.io/sosuke/pen/Pjoqqp" class="core_contentButton">this CodePen post by Barrett Sonntag</a> and <a href="https://stackoverflow.com/a/43960991/604861" class="core_contentButton">this StackOverflow post by MultiplyByZer0</a> (which Sonntag cites), this wouldn't be here.<br>
-    All I've done is adapt Sonntag's code for Svelte & Typescript, and style & refactor a bit per my own preferences
-  </p>
-</section>
+    
+    <div id="sampleWrapper">
+      <div>
+        <h4>Target Color</h4>
+        <div class="sample" style={"background-color: " + hexTargetAsRgb}></div>
+      </div>
+      <div>
+        <h4>Generated Filter</h4>
+        <div class="sample" style={"filter: " + filterAttempt}></div>
+      </div>
+    </div>
+
+
+      {#if filterAttempt}
+        <div in:slide={{duration: 500}}>
+          <code id="filter">{filterAttempt}</code>
+          <p id="lossInfo">Loss {lossScore}: {lossDescription}</p>
+        </div>
+      {/if}
+    <p id="initialColorDisclaimer"><strong>The generated filter assumes a black subject. If the subject isn't pure black, prepend <code>brightness(0) saturate(100%)</code> to the filter (which will firstly make it so)</strong></p>
+    <hr>
+    <p id="filterCodeCredit">
+      Without <a href="https://codepen.io/sosuke/pen/Pjoqqp" class="core_contentButton">this CodePen post by Barrett Sonntag</a> and <a href="https://stackoverflow.com/a/43960991/604861" class="core_contentButton">this StackOverflow post by MultiplyByZer0</a> (which Sonntag cites), this wouldn't be here.<br>
+      All I've done is adapt Sonntag's code for Svelte & Typescript, and style & refactor a bit per my own preferences
+    </p>
+  </section>
+</TransitionWrapper>
 
 <script lang="ts">
-  import {Color, Solver, hexToRgb} from "./cssHexToFilter_formulas";
+  import TransitionWrapper from "../transitionWrapper.svelte";
   import {slide} from "svelte/transition";
-  import LabelledInput from "../../../../lib/labelledInput.svelte";
-  import Notification from "../../../../lib/notification.svelte";
+  import {Color, Solver, hexToRgb} from "./cssFilterGenerator_formulas";
+  import LabelledInput from "../../../lib/labelledInput.svelte";
+  import Notification from "../../../lib/notification.svelte";
 
   let inputText = "#888888";
   let errorText = "";
