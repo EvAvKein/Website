@@ -36,36 +36,20 @@
       {/if}
     </form>
 
-    <h3>...or find me at:</h3>
-    <address>
-      <Tooltip>
-        <a slot="subject"
-          href="https://mstdn.social/@EvAvKein" class="core_contentButton"
-        >
-          <img src="/mastodon.svg" alt="Mastodon icon">
-          <div>mstdn.social/@EvAvKein</div>
-        </a>
-        <span slot="content">I'm completely inactive on Mastodon and will delete that profile once I've set up blogging here</span>
-      </Tooltip>
-      <a href="https://github.com/EvAvKein" class="core_contentButton">
-        <img src="/github.svg" alt="GitHub icon">
-        <div>/EvAvKein</div>
-      </a>
-      <a href="mailto:contact@evavkein.com" class="core_contentButton">
-        <img src="/email.svg" alt="Email icon">
-        <div>contact@evavkein.com</div>
-      </a>
-    </address>
+    <span>...or email me at </span> <address>{myEmailAddress}</address>
   </section>
 </Core>
 
 <script lang="ts">
   import Core from "../core.svelte";
+  import {onMount} from "svelte";
   import {slide} from "svelte/transition";
   import {apiFetch} from "../../helpers/apiFetch";
   import LabelledInput from "../../lib/labelledInput.svelte";
   import Notification from "../../lib/notification.svelte";
-  import Tooltip from "../../lib/tooltip.svelte";
+
+  let myEmailAddress = "";
+  onMount(() => myEmailAddress = "evavkein@gmail.com"); // adding via JS to mitigate scraping
 
   let title = "";
   let body = "";
@@ -117,24 +101,17 @@
     margin: 0.5em auto 1em;
   }
 
-  h3 {font-size: 1.75em}
+  span, address {
+    display: inline-block;
+    margin-top: 1em;
+    font-size: 1.25em;
+  }
   address {
-    margin-top: 1.5em;
-    font-style: normal;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: clamp(1.5em, 3vw, 3em);
-  }
-  address a {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    font-size: 1.5em;
-  }
-  address img {
-    height: 1.5em;
-    width: auto;
+    font-weight: 500;
+    font-style: unset;
+    text-underline-offset: 0.2em;
+    text-decoration: underline dotted var(--textSubColor);
+    cursor: copy;
+    user-select: all;
   }
 </style>
