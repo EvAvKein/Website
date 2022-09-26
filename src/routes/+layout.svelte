@@ -74,6 +74,7 @@
   #sidebar.sidebarToggled {transform: translateX(0)}
 
   main {
+    flex-grow: 1;
     overflow: auto;
     scrollbar-gutter: stable both-edges;
   }
@@ -106,7 +107,6 @@
     }
 
     main {
-      flex-grow: 1;
       padding-top: 2.5em; /* not a long-term solution due to potential conflicts with full-page elements, but aligning main contents via flexbox breaks on transitions (and also just doesn't position it to my taste) and i'm not eager to add an intermediate element just to transform-translateY it ... so i'll cross the full-page element bridge if/when i get there */
     }
   }
