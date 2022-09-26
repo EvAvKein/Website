@@ -2,7 +2,7 @@
   class={
     "core_contentButton" + 
     (nameAlwaysVisible ? " nameVisible" : "") + 
-    (href === currentPagePath ? " current" : "")
+    (ofCurrentPage ? " current" : "")
   }
   tabindex={currentPagePath === href ? -1 : 0}
   >
@@ -17,6 +17,8 @@
   export let pageName:string;
   export let currentPagePath:string;
   export let nameAlwaysVisible = false;
+
+  $: ofCurrentPage = href === "/" ? currentPagePath === "/" : currentPagePath.includes(href);
 </script>
 
 <style>
