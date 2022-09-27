@@ -3,7 +3,7 @@
   <title>{headTitle}</title>
   <meta name="description" content={headDescription}>
 </svelte:head>
-<div
+<div id="pageTransitionWrapper"
   in:fade={{delay: 500, duration: 500}}
   out:fade={{duration: 500}}
   on:introstart={noScrollWhilePageTransitions}
@@ -31,6 +31,14 @@
 </script>
 
 <style global>
+  #pageTransitionWrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  /*~~~~~~~~~~~~\
+    CORE STYLES
+  \~~~~~~~~~~~~*/
   :root { /* filters created via https://codepen.io/sosuke/pen/Pjoqqp */
     --textColor: #ececec;
     --filterToTextColor: brightness(92.5%);
