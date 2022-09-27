@@ -29,7 +29,7 @@
   $: activated = hovered || focused;
 
   $: if (activated && tooltip) {
-    const mainElem = document.querySelector("main")!; // not querying the body because (at least in the "main" layout) it doesn't accurately reflect the scrollHeight; the <main> is streched to all corners of the body (except the top, where the header is) and handles all overflow inside itself
+    const mainElem = document.querySelector("main")!; // not querying the body because (in the default layout) it doesn't accurately reflect the page's scrollHeight; the <main> takes the remainder height & width the header doesn't occupy, and it handles all (page-content) overflow within itself
     const tooltipState = tooltip.getBoundingClientRect();
 
     tooltip.style.top = `${tooltipState.top - mainElem.scrollTop}px`;
