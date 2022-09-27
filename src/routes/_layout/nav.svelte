@@ -1,9 +1,9 @@
 <nav>
   <NavItem
-    href={"/"}
+    href={"/about"}
     imgSrc={"/about.svg"}
-    imgAlt={"Nondescript person icon"}
-    pageName={"Home"}
+    imgAlt={"Non-descript person icon"}
+    pageName={"About"}
     {currentPagePath}
     nameAlwaysVisible={namesAlwaysVisible}
   />

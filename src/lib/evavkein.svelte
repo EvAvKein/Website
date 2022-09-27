@@ -1,8 +1,8 @@
-<h1 class={(expandable ? "expandable" : "undefined") + " " + (expanded ? "expanded": "")}>
+<span id="wrapper" class={(expandable ? "expandable" : "undefined") + " " + (expanded ? "expanded": "")}>
   <span>Ev<span class="extra">e</span></span>
   <span>Av<span class="extra">iv</span></span>
   <span>Kein<span class="extra">an</span></span>
-</h1>
+</span>
 
 <script lang="ts">
   export let expandable:boolean;
@@ -10,17 +10,17 @@
 </script>
 
 <style>
-  h1 {
-    color: inherit;
-    font-size: inherit;
+  #wrapper {
+    color: var(--highlightColor);
+    font-weight: bold;
     cursor: default;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: fit-content;
     margin: 0;
     gap: 0;
-    transition: gap 1000ms;
+    transition: gap 750ms ease-in-out;
   }
   .extra {
     display: inline-block;
@@ -33,15 +33,14 @@
                 visibility 0ms 500ms;
   }
 
-  h1.expandable:hover, h1.expandable.expanded {
+  #wrapper.expandable:hover, #wrapper.expandable.expanded {
     gap: 0 0.3em;
-    transition: gap 750ms ease-in-out;
   }
-  h1.expandable:hover .extra, h1.expandable.expanded .extra {
+  #wrapper.expandable:hover .extra, #wrapper.expandable.expanded .extra {
     visibility: visible;
     max-width: 2.5em;
     opacity: 1;
-    transition: max-width 1250ms ease-in-out,
-                opacity 500ms ease-out 250ms;
+    transition: max-width 750ms ease-in-out,
+                opacity 500ms ease-in-out 250ms;
   }
 </style>

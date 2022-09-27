@@ -1,62 +1,72 @@
 <Core
   headTitle="EvAvKein"
-  headDescription="The home page of Eve Aviv Keinan's personal and portfolio website"
+  headDescription="The home page for Eve Aviv Keinan's website"
 >
-  <section id="about">
-    <h2>
-      <div id="greeting">Hello, I'm Eve Aviv Keinan ^^</div>
-      <div id="greetingParentheses">(Refer as Eve/Aviv, up to you!)</div>
-    </h2>
-    <section id="bio">
-      <div id="who"><Who/></div>
-      <div id="what"><What/></div>
-      <div id="how"><How/></div>
-      <div id="where"><Where/></div>
-    </section>
+  <section>
+    <h1><EvAvKein expanded={evavkeinExpanded} expandable={true}/></h1>
+
+    <p id="greeting">Hello! ^^</p>
+    <div>
+      <p>
+        I'm Eve, a <a href="/portfolio">web programmer</a> and 
+          <Tooltip>
+            <a slot="subject" href="/about">a kinda neat person</a>
+            <span slot="content">
+              ...as brash as it is to say about oneself.<br>
+              Independent assessments are encouraged.
+            </span>
+          </Tooltip>.
+      </p>
+      <p>
+        This website is under active renovation, so I hope you're able and willing to reserve judgement on my design capabilities until this disclaimer is gone
+      </p>
+    </div>
+    <p>- Eve</p>
   </section>
 </Core>
 
 <script lang="ts">
   import Core from "./core.svelte";
-  import Who from "./_QnAs/who.svelte";
-  import What from "./_QnAs/what.svelte";
-  import How from "./_QnAs/how.svelte";
-  import Where from "./_QnAs/where.svelte";
+  import {onMount} from "svelte";
+  import EvAvKein from "../lib/evavkein.svelte";
+  import Tooltip from "../lib/tooltip.svelte";
+  
+  let evavkeinExpanded = true;
+
+  onMount(() => {
+    setTimeout(() => evavkeinExpanded = false, 3000)
+  });
 </script>
 
 <style>
-  #about {
-    max-width: 70em;
-    padding: 0 0.5em 0.5em;
-    margin: 0 auto;
+  section {
+    padding-top: 1em;
+    font-size: clamp(1em, 3vw, 1.5em);
   }
 
-  h2 {text-align: center}
-  #greeting {font-size: 2.5em}
-  #greetingParentheses {
-    font-size: 1.5em;
-    color: var(--textSubColor);
+  h1 {
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
   }
 
-  #bio {
-    margin-top: 2em;
-    font-size: 1.25em;
+  p {
+    font-size: 1.15em;
+    max-width: clamp(25em, 90%, 35em);
+    margin: auto;
+  }
+  
+  div {margin-top: 1em}
+  div > p {margin-top: 0.5em}
+  div + p {
+    margin-top: 0.75em;
+    text-align: end;
   }
 
-  @media (min-width: 50em) {
-    #bio {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      grid-template-areas:
-        "who how"
-        "what where"
-      ;
-      gap: 1em;
-    }
-
-    #who {grid-area: who}
-    #what {grid-area: what}
-    #how {grid-area: how}
-    #where {grid-area: where}
+  a {
+    color: inherit;
+    transition: color 200ms ease-in-out;
   }
+  a:hover, a:focus {color: var(--highlightSubColor)}
+  a:active {color: var(--highlightColor)}
 </style>
