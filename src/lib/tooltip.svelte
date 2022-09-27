@@ -1,4 +1,4 @@
-<div class="tooltipSubject" class:activated
+<span class="tooltipSubject" class:activated
   on:mouseenter={() => hovered = true}
   on:mouseleave={() => hovered = false}
   on:focus={() => focused = true}
@@ -17,7 +17,7 @@
       <slot name="content"></slot>
     </div>
   {/if}
-</div>
+</span>
 
 <script lang="ts">
   import {fade} from "svelte/transition";
@@ -55,7 +55,7 @@
 
 <style global> /* global for the ".tooltipSubject.activated img" selector to work */
   .tooltipSubject {
-    display: inline-block; /* declaring inline-block on a <div> instead of using a <span> because the latter creates an extra space in some cases */
+    display: inline-block;
     cursor: help;
     outline: none;
     border-bottom: 0.15em dashed var(--highlightSubColor);
