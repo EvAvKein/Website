@@ -1,6 +1,6 @@
 <Core
   headTitle="EvAvKein: Contact"
-  headDescription="Eve Aviv Keinan's contact page; including a contact form and a list of other contact methods"
+  headDescription="Eve Aviv Keinan's contact page; including a contact form and his email address"
 >
   <section id="contact">
     <h2>Contact</h2>
