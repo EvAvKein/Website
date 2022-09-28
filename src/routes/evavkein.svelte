@@ -38,6 +38,7 @@
   h1 {
     font-size: 3.5em;
     color: var(--highlightColor);
+    text-align: center;
     cursor: default;
     user-select: none;
     gap: 0;
