@@ -3,9 +3,10 @@
   headDescription="The home page for Eve Aviv Keinan's website"
 >
   <section>
-    <h1><EvAvKein expanded={evavkeinExpanded} expandable={true}/></h1>
+    <EvAvKein expanded={evavkeinExpanded}/>
 
-    <p id="greeting">Hello! ^^</p>
+    <p>Hello! ^^</p>
+
     <div>
       <p>
         I'm Eve, a <a href="/portfolio">web programmer</a> and 
@@ -21,14 +22,13 @@
         This website is under active renovation, so I hope you're able and willing to reserve judgement on my design capabilities until this disclaimer is gone
       </p>
     </div>
-    <p>- Eve</p>
   </section>
 </Core>
 
 <script lang="ts">
   import Core from "./core.svelte";
   import {onMount} from "svelte";
-  import EvAvKein from "../lib/evavkein.svelte";
+  import EvAvKein from "./evavkein.svelte";
   import Tooltip from "../lib/tooltip.svelte";
   
   let evavkeinExpanded = true;
@@ -40,28 +40,18 @@
 
 <style>
   section {
-    padding-top: 1em;
+    padding-top: 2em;
     font-size: clamp(1em, 3vw, 1.5em);
-  }
-
-  h1 {
-    font-size: 3.5em;
-    text-align: center;
-    margin-bottom: 0.5em;
   }
 
   p {
     font-size: 1.15em;
     max-width: clamp(25em, 90%, 35em);
-    margin: auto;
+    margin: 1.5em auto 0;
   }
   
   div {margin-top: 1em}
   div > p {margin-top: 0.5em}
-  div + p {
-    margin-top: 0.75em;
-    text-align: end;
-  }
 
   a {
     color: inherit;
