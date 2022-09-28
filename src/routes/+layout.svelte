@@ -79,7 +79,7 @@
     scrollbar-gutter: stable both-edges;
   }
 
-  @media (orientation: landscape) {
+  @media (orientation: landscape) and (min-height: 40em) {
     :global(body) {
       flex-direction: row;
     }
