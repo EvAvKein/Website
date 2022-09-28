@@ -7,9 +7,9 @@
       <h2>Who?</h2>
       <h3>(Demographics)</h3>
       <ul>
-        <li>Progressive leftie (deriving from Utilitarianism)</li>
-        <li>Neuroatypical (HFASD & GAD & ADD)</li>
-        <li>Cis/agender guy (he/they)</li>
+        <li>Progressive leftie <span>(deriving from Utilitarianism)</span></li>
+        <li>Neuroatypical <span>(HFASD & GAD & ADD)</span></li>
+        <li>Cis/agender guy <span>(he/they)</span></li>
         <li>Senior Gen-Z</li>
       </ul>
     </section>
@@ -18,9 +18,9 @@
       <h2>What?</h2>
       <h3>(Activities)</h3>
       <ul>
-        <li>Web programming (fullstack, but primarily frontend)</li>
-        <li>Video-games (e.g RPGs, team-based/co-op shooters, platformers, narrative-centric, MMOs (very rarely), misc indie)</li>
-        <li>Online media (e.g news, explainers, fandoms)</li>
+        <li>Web programming <span>(fullstack, but primarily frontend)</span></li>
+        <li>Video-games <span>(e.g RPGs, team-based/co-op shooters, platformers, narrative-centric, MMOs (very rarely), misc indie)</span></li>
+        <li>Online media <span>(e.g news, explainers, fandoms)</span></li>
       </ul>
     </section>
 
@@ -70,6 +70,8 @@
     font-size: 1em;
     color: var(--textSubColor);
   }
+
+  li span {color: var(--textSubColor)}
 
   li + li {margin-top: 0.25em}
 
