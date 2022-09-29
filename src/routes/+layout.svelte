@@ -76,6 +76,7 @@
   main {
     flex-grow: 1;
     overflow: auto;
+    scroll-behavior: smooth;
     scrollbar-gutter: stable both-edges;
   }
 
