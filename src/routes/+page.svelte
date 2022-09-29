@@ -26,7 +26,7 @@
 </Core>
 
 <script lang="ts">
-  import Core from "./core.svelte";
+  import Core from "./_core.svelte";
   import {onMount} from "svelte";
   import EvAvKein from "./evavkein.svelte";
   import Tooltip from "../lib/tooltip.svelte";

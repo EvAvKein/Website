@@ -10,7 +10,7 @@
 </Core>
 
 <script lang="ts">
-  import Core from "./core.svelte";
+  import Core from "./_core.svelte";
 </script>
 
 

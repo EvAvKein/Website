@@ -51,7 +51,7 @@
 </Core>
 
 <script lang="ts">
-  import Core from "../core.svelte";
+  import Core from "../_core.svelte";
   import Tooltip from "../../lib/tooltip.svelte";
 </script>
 

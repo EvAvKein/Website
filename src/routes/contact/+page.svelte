@@ -41,7 +41,7 @@
 </Core>
 
 <script lang="ts">
-  import Core from "../core.svelte";
+  import Core from "../_core.svelte";
   import {onMount} from "svelte";
   import {slide} from "svelte/transition";
   import {apiFetch} from "../../helpers/apiFetch";

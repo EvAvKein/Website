@@ -22,7 +22,7 @@
 </Core>
 
 <script lang="ts">
-  import Core from "../core.svelte";
+  import Core from "../_core.svelte";
   import {page} from "$app/stores";
   import {Tool} from "./toolClass";
 

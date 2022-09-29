@@ -38,7 +38,7 @@
 </Core>
 
 <script lang="ts">
-  import Core from "../core.svelte";
+  import Core from "../_core.svelte";
   import Distillogue from "./projects/distillogue.svelte";
   import Website from "./projects/website.svelte";
   import FilterJobsFeeds from "./projects/filterJobsFeeds.svelte";
