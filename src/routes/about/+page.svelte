@@ -57,8 +57,8 @@
 
 <style>
   #about {
-    font-size: 1.25em;
-    max-width: 65em;
+    font-size: clamp(1.25em, 3vw, 1.5em);
+    max-width: 30em;
     padding: 1em 0.5em 0.5em;
     margin: 0 auto;
   }
@@ -71,7 +71,10 @@
     color: var(--textSubColor);
   }
 
-  li span {color: var(--textSubColor)}
+  li span {
+    color: var(--textSubColor);
+    font-size: 65%;
+  }
 
   li + li {margin-top: 0.25em}
 
