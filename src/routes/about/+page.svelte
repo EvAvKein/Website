@@ -19,7 +19,7 @@
       <h3>(Activities)</h3>
       <ul>
         <li>Web programming <span>(fullstack, but primarily frontend)</span></li>
-        <li>Video-games <span>(e.g RPGs, team-based/co-op shooters, platformers, narrative-centric, MMOs (very rarely), misc indie)</span></li>
+        <li>Video-games <span>(e.g RPGs, adventure, shooters, misc indie)</span></li>
         <li>Online media <span>(e.g news, explainers, fandoms)</span></li>
       </ul>
     </section>
