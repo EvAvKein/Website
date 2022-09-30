@@ -18,9 +18,11 @@
             </span>
           </Tooltip>.
       </p>
-      <p>
-        This website is under active renovation, so I hope you're able and willing to reserve judgement on my design capabilities until this disclaimer is gone
-      </p>
+      <Notification
+        text={"This website is under active renovation, so I hope you're able and willing to reserve judgement on my design capabilities until this disclaimer is gone"}
+        desirablityStyle={false}
+        baseDuration={null}
+      />
     </div>
   </section>
 </Core>
@@ -30,6 +32,7 @@
   import {onMount} from "svelte";
   import EvAvKein from "./evavkein.svelte";
   import Tooltip from "../lib/tooltip.svelte";
+  import Notification from "../lib/notification.svelte";
   
   let evavkeinExpanded = true;
 
