@@ -77,7 +77,8 @@
     flex-grow: 1;
     overflow: auto;
     scroll-behavior: smooth;
-    scrollbar-gutter: stable both-edges;
+    scrollbar-gutter: stable;
+    padding-left: 1em; /* mirrors for the scrollbar width (in _core.svelte). not using "scrollbar-gutter: both edges" because it caused some problems with taking up more space than it should and clipping/covering text there */
   }
 
   @media (orientation: landscape) and (min-height: 40em) {
