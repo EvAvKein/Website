@@ -26,12 +26,48 @@
     <section id="dispositions">
       <h2>Dispositions</h2>
         <p>
-          The following are (some) reasons why I believe I'm dispositionally fit for software engineering:
+          Considering my lack of professional experience in the field, here are (some) reasons why I'm dispositionally fit for software engineering:
         </p>
         <ul>
-          <li>I'm diligent (and communicative when appropriate) regarding the what/why/how of my conduct and its likely short-term & long-term consequences</li>
-          <li>I'm mindful of how I communicate and interpret; Accounting for distinctions, implications, uncertainty, dynamics with the recipient(s) and their priorities, etc</li>
-          <li>I strongly value the long-term well-being of myself and those I affect. In the context of programming, this guides my output (e.g readability, reusability) and motivates me to refine my approach to software engineering (e.g priorities, mindset)</li>
+          <li>
+            Thanks to my neuroatypicality, ongoing introspection, and ethics, I'm particularly analytically-inclined: I have a keen eye for edge-cases and incongruities, and 
+            <Tooltip>
+              <span slot="subject">prefer long-term/systemic solutions</span>
+              <span slot="content">(or, when there's insufficient context, at least the likeliest educated guess)</span>
+            </Tooltip>
+            over instantly-gratifying haphazard ones
+          </li>
+          <li>
+            I'm mindful of the well-being of myself and 
+            <Tooltip>
+              <span slot="subject">those I affect</span>
+              <span slot="content">(individuals and systems alike)</span>
+            </Tooltip>:
+            Heeding Utilitarian calculus in all domains,
+            <Tooltip>
+              <span slot="subject">without disregarding</span>
+              <span slot="content">(but outright exonerating as few as viable)</span>
+            </Tooltip>
+            human imperfections/conditions
+          </li>
+          <li>
+            I aim to be 
+            <Tooltip>
+              <span slot="subject">as courteous as possible</span>
+              <span slot="content">(while it is conducive for Utility (as in Utilitarianism))</span>
+            </Tooltip>, 
+            to
+            <Tooltip>
+              <span slot="subject">'meet people where they're at'</span>
+              <span slot="content">(...despite citing Utilitarian and using 'big words' in this pitch. The former was too necessary to convey my perspective, and the latter is due to the assumption that conveying the same/sufficient meaning/nuance in simpler words would be too verbose for a recruiter to indulge)</span>
+            </Tooltip>,
+            and (at a minimum) be a 
+            <Tooltip>
+              <span slot="subject">worthwhile participant</span>
+              <span slot="content">(compared to the time/attention/resources my presence/conduct necessitate)</span>
+            </Tooltip>
+            in the communities/systems I engage with
+          </li>
         </ul>
     </section>
   </section>
@@ -44,6 +80,8 @@
   import FilterJobsFeeds from "./projects/filterJobsFeeds.svelte";
   import Warehouse from "./projects/warehouse.svelte";
   import TechsTable from "./techsTable.svelte";
+
+  import Tooltip from "../../lib/tooltip.svelte";
 </script>
 
 <style>
