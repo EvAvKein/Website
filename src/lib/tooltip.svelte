@@ -71,6 +71,7 @@
     font-size: 0.8em;
     color: var(--textColor);
     background-color: var(--backgroundSubColor);
+    z-index: 999999999;
     padding: 0.55em;
     border-radius: 0.5em;
     box-shadow: 0 0 0.5em 0.25em black;
