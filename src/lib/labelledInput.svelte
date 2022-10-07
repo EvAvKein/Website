@@ -52,6 +52,7 @@
     border-left: 0.225em solid var(--textSubColor);
     margin-top: 1.3em;
     padding-left: 0.2em;
+    box-shadow: 0 0 0.25em 0.1em black;
   }
   textarea {resize: vertical}
 

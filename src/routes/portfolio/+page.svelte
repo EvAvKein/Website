@@ -3,9 +3,9 @@
   headDescription="Eve Aviv Keinan's programming portfolio page; including summaries with links to his projects, lists of the techs he has experience with, dispositions relevant to his professional conduct, and information regarding his resumé"
 >
   <section id="portfolio">
-    <section id="projects">
+    <section id="projects" class="core_blueprint">
       <h2>Projects</h2>
-      <section id="projects">
+      <section id="projectsList">
         <Distillogue/>
         <Website/>
         <FilterJobsFeeds/>
@@ -13,17 +13,17 @@
       </section>
     </section>
 
-    <section id="techs">
+    <section id="techs" class="core_blueprint">
       <h2>Technologies</h2>
       <TechsTable/>
     </section>
 
-    <section id="resume">
+    <section id="resume" class="core_blueprint">
       <h2>Resumé</h2>
       <p>The summary is that I've done civil service and community management, you're welcome to contact me for the resumé file with all its usual details</p>
     </section>
 
-    <section id="dispositions">
+    <section id="dispositions" class="core_blueprint">
       <h2>Dispositions</h2>
         <p>
           Considering my lack of professional experience in the field, here are (some) reasons why I'm dispositionally fit for software engineering:
@@ -86,27 +86,43 @@
 
 <style>
   #portfolio {
-    max-width: 70em;
-    padding: 0 0.5em 0.5em;
+    max-width: 75em;
     margin: 0 auto;
   }
+  #portfolio > section {
+    background-color: var(--backgroundSubColor);
+    padding: 1em;
+    box-shadow: inset 0 0 0.5em 0.1em black;
+  }
+  #portfolio > section + section {margin-top: 1em}
 
   h2 {
     font-size: 3.25em;
     margin-bottom: 0.1em;
   }
-  section + section {margin-top: 1em}
+
+  #projects {
+    display: flex;
+    flex-direction: column;
+  }
+  #projectsList {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1.5em;
+  }
 
   #dispositions h2, #resume h2 {
     font-size: 2.75em;
   }
   li + li {margin-top: 0.4em}
   
-  @media (min-width: 55em) {
-    section + section {margin-top: 0}
+  @media (min-width: 80em) {
     #portfolio {
       display: grid;
-      justify-items: center;
+      justify-items: stretch;
+      align-items: stretch;
       grid-template-columns: 1.25fr 1fr;
       grid-template-areas:
         "projects techs"
@@ -115,7 +131,8 @@
       ;
       gap: 1em;
     }
-
+    
+    #portfolio > section + section {margin-top: 0}
     #projects {grid-area: projects}
     #techs {grid-area: techs}
     #resume {grid-area: resume}

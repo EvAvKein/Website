@@ -97,6 +97,7 @@
   }
 
   section {
+    margin-top: 0.4em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -106,6 +107,7 @@
   input {
     color: var(--textColor);
     background-color: var(--backgroundSubColor);
+    box-shadow: 0 0 0.5em 0em black;
     width: 3em;
     padding: 0.25em;
     border-radius: 0.5em;
@@ -121,7 +123,8 @@
   }
 
   hr {
-    border-color: var(--textSubColor)
+    border-color: var(--textSubColor);
+    margin-block: 1em;
   }
 
   p {line-height: 1.3em}

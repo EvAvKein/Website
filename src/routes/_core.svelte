@@ -44,9 +44,11 @@
     --filterToTextColor: brightness(92.5%);
     --textSubColor: #bebebe;
     --filterToTextSubColor: brightness(75%); 
-    --backgroundColor: #050e18;
+    --backgroundColor: #033070;
     --filterToBackgroundColor: brightness(0) saturate(100%) invert(5%) sepia(12%) saturate(2899%) hue-rotate(171deg) brightness(92%) contrast(100%);
-    --backgroundSubColor: #0F3460;
+    --backgroundMidColor: #053A85;
+    --filterToBackgroundMidColor: brightness(0) saturate(100%) invert(5%) sepia(12%) saturate(2899%) hue-rotate(171deg) brightness(92%) contrast(100%);
+    --backgroundSubColor: #0A4B8F;
     --filterToBackgroundSubColor: brightness(0) saturate(100%) invert(14%) sepia(50%) saturate(2250%) hue-rotate(194deg) brightness(92%) contrast(94%);
     --highlightColor: #f5cb32;
     --filterToHighlightColor: brightness(0) saturate(100%) invert(91%) sepia(83%) saturate(7499%) hue-rotate(325deg) brightness(101%) contrast(98%);
@@ -54,14 +56,14 @@
     --filterToHighlightSubColor: brightness(0) saturate(100%) invert(62%) sepia(76%) saturate(412%) hue-rotate(9deg) brightness(102%) contrast(84%);
   }
 
+  * {box-sizing: border-box}
+
   body {
     margin: 0;
     min-height: 100%;
-    box-sizing: border-box;
     color: var(--textColor);
     font-family: sans-serif;
     letter-spacing: 0.03em;
-    background-color: var(--backgroundColor);
     text-underline-offset: 0.1em;
     font-size: clamp(0.9em, 2.5vw, 1.1em);
   }
@@ -87,15 +89,16 @@
     height: 1em;
   }
   ::-webkit-scrollbar-track {
-    background-color: var(--backgroundColor);
+    background-color: inherit;
     margin: 0.2em;
   }
   ::-webkit-scrollbar-corner {
-    background-color: var(--backgroundColor)
+    background-color: inherit
   }
   ::-webkit-scrollbar-thumb {
     background-color: var(--textColor);
-    border: 0.25em solid var(--backgroundColor);
+    border: 0.25em solid transparent;
+    background-clip: content-box;
     border-radius: 3em;
   }
   ::-webkit-scrollbar-thumb:hover {
@@ -105,6 +108,14 @@
   /*~~~~~~~~~~~~~~~~~~~~~\
     CORE STYLING CLASSES
   \~~~~~~~~~~~~~~~~~~~~~*/
+  .core_blueprint {
+    background-size: 1.5rem 1.5rem;
+    background-position: center;
+    background-image:
+      linear-gradient(to right, #FFFFFF06 0.15rem, transparent 0),
+      linear-gradient(to bottom, #FFFFFF06 0.15rem, transparent 0);
+  }
+
   .core_backgroundButton {
     color: var(--backgroundColor);
     text-align: center;

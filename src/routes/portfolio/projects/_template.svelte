@@ -31,16 +31,17 @@
 
 <style>
   article {
+    box-shadow: 0 0 0.25em 0.1em black;
     padding: 0.5em;
     display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: min-content min-content 1fr;
     grid-template-areas: 
-      "logo name"
-      "logo techs"
-      "description description"
-      "links links"
+      "logo name links"
+      "logo techs links"
+      "description description links"
     ;
+    column-gap: 0 5em;
   }
 
   .logoImg {
@@ -70,12 +71,13 @@
   
   .projectLinks {
     grid-area: links;
-    margin-top: 0.25em;
-    border-top: 0.2em solid var(--textSubColor);
-    padding-top: 0.25em;
+    border-left: 0.2em solid var(--textSubColor);
+    padding-left: 0.4em;
+    margin-left: 1em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 1em;
+    gap: 0.75em;
   }
   .projectLinks a {width: min-content}
   .projectLinks img {

@@ -5,7 +5,7 @@
   <section id="toolbox">
     <h2>Toolbox</h2>
     <h3>Utilities I found useful</h3>
-    <section id="tools">
+    <section id="tools" class="core_blueprint">
       <nav>
         {#each tools as tool}
           <a href={"/toolbox/" + tool.id}
@@ -14,7 +14,7 @@
           >{tool.name}</a>
         {/each}
       </nav>
-      <section id="currentTool">
+      <section id="currentTool" class="core_blueprint">
         <slot/>
       </section>
     </section>
@@ -50,35 +50,34 @@
   h2, h3 {text-align: center}
 
   #tools {
-    --borderWidth: 0.75em;
-    min-height: 20em;
     margin-top: 1em;
+    --wrapperPadding: 1em;
+    padding: var(--wrapperPadding);
+    background-color: var(--backgroundColor);
+    box-shadow: 0 0 1em 0 black;
+    padding-bottom: 1em;
     display: flex;
     flex-direction: column;
   }
 
   nav {
-    font-size: 1.35em;
-    padding: var(--borderWidth);
+    padding-bottom: var(--wrapperPadding);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 0.5em;
-    border-radius: var(--borderWidth) var(--borderWidth) 0 0;
-    background-color: var(--backgroundSubColor);
+    gap: 0.75em;
   }
 
+  a {font-size: 1.3em}
   a[inert] {background-color: var(--textSubColor)}
 
   #currentTool {
-    --border: var(--borderWidth) solid var(--backgroundSubColor);
+    background-color: var(--backgroundMidColor);
+    min-height: 20em;
     flex-grow: 1;
-    padding: 0.5em;
-    border-left: var(--border);
-    border-right: var(--border);
-    border-bottom: var(--border);
-    border-radius: 0 0 var(--borderWidth) var(--borderWidth);
+    padding: 0.75em;
     overflow: auto;
+    box-shadow: inset 0 0 0.5em 0 black;
   }
 
   @media (min-width: 70em) {
@@ -92,14 +91,12 @@
       flex-direction: column;
       justify-content: flex-start;
       gap: 0.75em;
-      border-radius: var(--borderWidth) 0 0 var(--borderWidth);
+      padding-bottom: unset;
+      padding-right: var(--wrapperPadding);
     }
 
     #currentTool {
       flex-basis: 75%;
-      border-left: none;
-      border-top: var(--border);
-      border-radius: 0 var(--borderWidth) var(--borderWidth) 0;
     }
   }
 </style>

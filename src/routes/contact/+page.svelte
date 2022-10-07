@@ -85,7 +85,6 @@
     margin: auto;
     max-width: 60em;
     text-align: center;
-    padding: 0 0.5em 0.5em;
   }
 
   #contact > * {margin-inline: auto}
@@ -98,7 +97,7 @@
   }
   button {
     display: block;
-    margin: 0.5em auto 1em;
+    margin: 1.25em auto 0.25em;
   }
 
   span, address {

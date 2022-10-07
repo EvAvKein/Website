@@ -1,6 +1,6 @@
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight}/>
 
-<header>
+<header class="core_blueprint">
   <a href="/" class="core_contentButton">
     <img src="/eak.svg" alt="The initials E.A.K, with E & K aligned and rotated to neatly overlap with the A inbetween">
   </a>
@@ -13,6 +13,7 @@
     </button>
 
   <section id="sidebar"
+    class="core_blueprint"
     class:sidebarToggled
     inert={!sidebarInteractable || null}
   >
@@ -20,7 +21,7 @@
   </section>
 </header>
 
-<main>
+<main class="core_blueprint">
   <slot/>
 </main>
 
@@ -52,7 +53,7 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 0.5em 0.5em var(--backgroundColor);
+    box-shadow: 0 0 0.5em 0.1em black;
   }
 
   a img, #navButton {height: 2.5em}
@@ -60,24 +61,25 @@
 
   #sidebar {
     direction: rtl; /* for the scrollbar */
-    background-color: var(--backgroundColor);
+    background-color: inherit;
     position: fixed;
     top: 0;
     right: 0;
-    padding: 1em 0.25em;
-    margin-top: 4em;
+    margin-top: 3.9em;
     max-height: calc(100% - 6em);
     transform: translateX(125%);
     transition: transform 250ms;
-    box-shadow: -0.25em 0 0.5em 0.5em var(--backgroundColor);
+    box-shadow: 0 0 0.5em 0.1em black;
   }
   #sidebar.sidebarToggled {transform: translateX(0)}
 
   main {
+    background-color: var(--backgroundMidColor);
     flex-grow: 1;
     overflow: auto;
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
+    padding-top: 1em; /* not a long-term solution due to potential conflicts with full-page elements, but aligning main contents via flexbox breaks on transitions (and also just doesn't position it to my taste) and i'm not eager to add an intermediate element just to transform-translateY it... so i'll cross the full-page element bridge if/when i get there */
     padding-left: 1em; /* mirrors for the scrollbar width (in _core.svelte). not using "scrollbar-gutter: both edges" because it caused some problems with taking up more space than it should and clipping/covering text there */
   }
 
@@ -89,10 +91,10 @@
     header {
       flex-direction: column;
       flex-wrap: nowrap;
-      min-width: 4.5em; /* there used to small page-dependent changes that caused this element to change width a bit, and i failed to figure out what was actually causing the problem or to come up with a better page-independent solution, so here these two delcarations are (because setting a static width value didn't work, for whatever wacky reason) */
-      max-width: 4.5em; /* when images requests fail (e.g connection issues), without this declaration the alt text causes the (now-vertical) header to take up an obscene amount of space */
-      padding: 1em 0.5em 1em;
-      box-shadow: 0 0 0.5em 0.1em var(--backgroundColor);
+      min-width: 5em; /* there used to small page-dependent changes that caused this element to change width a bit, and i failed to figure out what was actually causing the problem or to come up with a better page-independent solution, so here these two delcarations are (because setting a static width value didn't work, for whatever wacky reason) */
+      max-width: 5em; /* when images requests fail (e.g connection issues), without this declaration the alt text causes the (now-vertical) header to take up an obscene amount of space */
+      padding: 1em 0.5em 0;
+      box-shadow: 0 0 0.5em 0.1em black;
       overflow-x: hidden;
     }
 
@@ -105,11 +107,9 @@
       direction: ltr;
       left: 0;
       right: none;
-      padding: 0;
+      background: unset;
     }
 
-    main {
-      padding-top: 2.5em; /* not a long-term solution due to potential conflicts with full-page elements, but aligning main contents via flexbox breaks on transitions (and also just doesn't position it to my taste) and i'm not eager to add an intermediate element just to transform-translateY it ... so i'll cross the full-page element bridge if/when i get there */
-    }
+    main {padding-top: 2.5em}
   }
 </style>

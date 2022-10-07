@@ -1,5 +1,5 @@
 <section id="QnA">
-  <section id="who">
+  <section id="who" class="core_blueprint">
     <h2>Who?</h2>
     <h3>(Demographics)</h3>
     <ul>
@@ -10,7 +10,7 @@
     </ul>
   </section>
 
-  <section id="how">
+  <section id="how" class="core_blueprint">
     <h2>How?</h2>
     <h3>(Values)</h3>
     <ul>
@@ -22,7 +22,7 @@
     </ul>
   </section>
 
-  <section id="what">
+  <section id="what" class="core_blueprint">
     <h2>What?</h2>
     <h3>(Activities)</h3>
     <ul>
@@ -32,7 +32,7 @@
     </ul>
   </section>
 
-  <section id="where">
+  <section id="where" class="core_blueprint">
     <h2>Where?</h2>
     <h3>(Residence)</h3>
     <p>Currently in Israel. Thanks to my French citizenship, I'll immigrate to the EU 
@@ -52,7 +52,14 @@
   #QnA {
     max-width: 80em;
     margin: 0 auto;
-    padding-bottom: 1.5em;
+    padding: 1em;
+  }
+
+  #QnA > section {
+    background-color: var(--backgroundSubColor);
+    height: min-content;
+    padding: 1em;
+    box-shadow: 0 0 1em 0.15em black;
   }
 
   #QnA section + section {margin-top: 2em}
@@ -83,7 +90,7 @@
     #QnA {
       display: flex;
       flex-wrap: wrap;
-      gap: 1em 2em;
+      gap: 2em;
       justify-content: space-around;
     }
 

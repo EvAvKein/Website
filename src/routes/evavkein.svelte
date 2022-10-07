@@ -36,7 +36,7 @@
 
 <style>
   h1 {
-    font-size: 3.5em;
+    font-size: 5em;
     color: var(--highlightColor);
     text-align: center;
     cursor: default;

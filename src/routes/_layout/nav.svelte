@@ -49,6 +49,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 1.25em;
+    padding: 1em 0.5em 1em;
   }
 
   hr {

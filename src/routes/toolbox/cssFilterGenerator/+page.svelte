@@ -97,6 +97,7 @@
     font-size: 1.5em;
     align-items: flex-end;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1em;
   }
 
@@ -122,10 +123,10 @@
     display: flex;
     width: fit-content;
     background-color: white;
-    padding: 0.5em 1em 1em;
+    padding: 0.5em clamp(0.5em, 2.5vw, 1em) 1em;
     margin-block: 1em 0.25em;
     border-radius: 0.5em;
-    gap: clamp(0.75em, 2vw, 1.5em);;
+    gap: clamp(0.75em, 2vw, 1.5em);
   }
         
   .sample {

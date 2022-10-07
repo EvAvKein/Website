@@ -1,18 +1,18 @@
 <Core
   headTitle="EvAvKein"
   headDescription="The home page for Eve Aviv Keinan's website"
->
-  <section>
-    <EvAvKein expanded={evavkeinExpanded}/>
+> 
+  <EvAvKein expanded={evavkeinExpanded}/>
 
+  <section class="core_blueprint">
     <p>Hello ^^</p>
 
     <p>
       I'm Eve, a <a href="/portfolio">fullstack web programmer</a>, currently jobseeking for my first position in the field!
     </p>
-  </section>
 
-  <hr/>
+    <p id="disclaimer">I've only just had my eureka moment for my site's design (on October 7th), so I ask that you don't judge its completeness/coherence just yet. I have many changes and design ideas I've yet to implement, and I'm also working on my "Distillogue" project</p>
+  </section>
 
   <QnA/>
 </Core>
@@ -32,17 +32,26 @@
 
 <style>
   section {
-    padding-top: 2em;
-    font-size: clamp(1em, 3vw, 1.5em);
+    background-color: var(--backgroundSubColor);
+    width: fit-content;
+    margin: auto;
+    font-size: clamp(1.5em, 3vw, 1.5em);
+    margin-bottom: 1em;
+    padding: 0.75em;
+    box-shadow: inset 0 0 0.5em 0.1em black;
   }
 
   p {
-    font-size: 1.15em;
-    max-width: clamp(25em, 90%, 35em);
-    margin: 1em auto 0;
+    max-width: 70em;
+    margin-top: 0;
   }
   
   p + p {margin-top: 0.75em}
+
+  #disclaimer {
+    font-size: 0.7em;
+    color: var(--textSubColor);
+  }
 
   a {
     color: inherit;
@@ -50,12 +59,4 @@
   }
   a:hover, a:focus {color: var(--highlightSubColor)}
   a:active {color: var(--highlightColor)}
-
-  hr {
-    border: none;
-    background-color: var(--textSubColor);
-    height: 0.25em;
-    margin-block: 2.5em;
-    border-radius: 1em;
-  }
 </style>
