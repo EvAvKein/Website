@@ -2,7 +2,13 @@
 
 <header class="core_blueprint">
   <a href="/" class="core_contentButton">
-    <img src="/eak.svg" alt="The initials E.A.K, with E & K aligned and rotated to neatly overlap with the A inbetween">
+    <svg width="138.41" height="84" viewBox="0 0 138.41 84" xmlns="http://www.w3.org/2000/svg"> <!-- inlining to enable color transitions, since img imports can only be colored with filters and color-transitioning those (at least the auto-generated ones e.g https://evavkein.com/toolbox/cssFilterGenerator) without unwanted intermediate colors is prohibitively complex -->
+      <g>
+      <path d="M67.4284 15.7297L45.3337 83.7302L-1.18376e-06 69.0004L3.98932 56.7225L36.1007 67.1561L41.3175 51.1004L10.1506 40.9737L13.833 29.6403L45 39.767L50.307 23.4336L18.1956 12.9999L22.0947 0.999846L67.4284 15.7297Z"/>
+      <path d="M46.5 83.9998H30L55 10.9998H75L100 83.9998H84L66 27.9998H64L46.5 83.9998ZM46.5 55.1405H84V66.9998H46.5V55.1405Z"/>
+      <path d="M84.0495 83.9004L63.0001 17.1402L75.3984 13.2311L84.7203 42.7963L85.674 42.4956L101.149 5.112L117.362 9.23297e-07L101.887 37.3836L138.411 66.7602L123.152 71.5715L95.3571 49.9278L90.4337 60.9169L96.4478 79.9913L84.0495 83.9004Z"/>
+      </g>
+    </svg>
   </a>
 
   <button id="navButton" aria-label="Open (extra) navigation"
@@ -56,8 +62,10 @@
     box-shadow: 0 0 0.5em 0.1em black;
   }
 
-  a img, #navButton {height: 2.5em}
+  a svg, #navButton {height: 2.5em}
   #navButton {margin-right: 0.5em}
+
+  a svg {vertical-align: bottom} /* removes unduely-added space (see https://stackoverflow.com/a/27999850) */
 
   #sidebar {
     direction: rtl; /* for the scrollbar */
