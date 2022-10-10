@@ -1,4 +1,5 @@
 <svg class:activated viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <title>A sidebar icon</title>
   <g id="top">
     <circle cx="5" cy="10" r="5" fill="white"/>
     <rect x="5" y="5" width="50" height="10" fill="white"/>

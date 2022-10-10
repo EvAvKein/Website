@@ -3,6 +3,7 @@
 <header class="core_blueprint">
   <a href="/" class="core_contentButton">
     <svg width="138.41" height="84" viewBox="0 0 138.41 84" xmlns="http://www.w3.org/2000/svg"> <!-- inlining to enable color transitions, since img imports can only be colored with filters and color-transitioning those (at least the auto-generated ones e.g https://evavkein.com/toolbox/cssFilterGenerator) without unwanted intermediate colors is prohibitively complex -->
+      <title>The initials E.A.K, with E and K rotated and aligned to neatly overlap with the A inbetween</title>
       <g>
       <path d="M67.4284 15.7297L45.3337 83.7302L-1.18376e-06 69.0004L3.98932 56.7225L36.1007 67.1561L41.3175 51.1004L10.1506 40.9737L13.833 29.6403L45 39.767L50.307 23.4336L18.1956 12.9999L22.0947 0.999846L67.4284 15.7297Z"/>
       <path d="M46.5 83.9998H30L55 10.9998H75L100 83.9998H84L66 27.9998H64L46.5 83.9998ZM46.5 55.1405H84V66.9998H46.5V55.1405Z"/>
