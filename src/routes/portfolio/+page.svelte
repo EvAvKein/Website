@@ -59,7 +59,7 @@
             to
             <Tooltip>
               <span slot="subject">'meet people where they're at'</span>
-              <span slot="content">(...despite citing Utilitarian and using 'big words' in this pitch. The former was too necessary to convey my perspective, and the latter is due to the assumption that conveying the same/sufficient meaning/nuance in simpler words would be too verbose for a recruiter to indulge)</span>
+              <span slot="content">(...despite me citing Utilitarian. It seemed too necessary to sufficiently convey my perspective)</span>
             </Tooltip>,
             and (at a minimum) be a 
             <Tooltip>
