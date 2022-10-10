@@ -89,11 +89,11 @@
     height: 1em;
   }
   ::-webkit-scrollbar-track {
-    background-color: inherit;
+    background: transparent;
     margin: 0.2em;
   }
   ::-webkit-scrollbar-corner {
-    background-color: inherit
+    background: transparent;
   }
   ::-webkit-scrollbar-thumb {
     background-color: var(--textColor);
