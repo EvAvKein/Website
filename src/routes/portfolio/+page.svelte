@@ -101,6 +101,8 @@
     margin-bottom: 0.1em;
   }
 
+  #techs {overflow-x: auto}
+
   #projects {
     display: flex;
     flex-direction: column;
