@@ -139,7 +139,7 @@
     background-color: transparent;
     padding: 0;
   }
-  .core_contentButton img, .core_contentButton svg {
+  .core_contentButton img {
     height: inherit;
     filter: var(--filterToTextColor);
   }
@@ -149,11 +149,31 @@
   .core_contentButton:active {
     color: var(--highlightColor);
   }
-  .core_contentButton:focus img, .core_contentButton:focus svg,
-  .core_contentButton:hover img, .core_contentButton:hover svg {
+  .core_contentButton:focus img, .core_contentButton:hover img {
     filter: var(--filterToHighlightSubColor);
   }
-  .core_contentButton:active img, .core_contentButton:active svg {
+  .core_contentButton:active img {
     filter: var(--filterToHighlightColor);
+  }
+
+  .core_contentButton svg {
+    height: inherit;
+    width: min-content;
+  }
+  .core_contentButton svg path,
+  .core_contentButton svg rect,
+  .core_contentButton svg circle {
+    transition: fill 350ms;
+    fill: var(--textColor);
+  }
+  .core_contentButton:focus svg path, .core_contentButton:hover svg path,
+  .core_contentButton:focus svg rect, .core_contentButton:hover svg rect,
+  .core_contentButton:focus svg circle, .core_contentButton:hover svg circle {
+    fill: var(--highlightSubColor);
+  }
+  .core_contentButton:active svg path,
+  .core_contentButton:active svg rect,
+  .core_contentButton:active svg circle {
+    fill: var(--highlightColor);
   }
 </style>
