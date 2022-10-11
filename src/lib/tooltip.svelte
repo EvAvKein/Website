@@ -59,6 +59,7 @@
     cursor: help;
     outline: none;
     border-bottom: 0.15em dashed var(--highlightSubColor);
+    transition: color 350ms, filter 350ms;
   }
 
   .tooltipSubject.activated {color: var(--highlightSubColor)}
