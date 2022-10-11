@@ -6,8 +6,7 @@
   description={"A tool for conducting dialogue in the distilled format of your choice; currently in very early development"}
   links={[
     {
-      src: "github.svg",
-      alt: "Github icon",
+      type: "github",
       url: "https://github.com/EvAvKein/distillogue"
     }
   ]}

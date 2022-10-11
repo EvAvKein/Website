@@ -6,13 +6,11 @@
   description={"A (minimal) Chrome extension for filtering jobs feeds by blacklisting text"}
   links={[
     {
-      src: "github.svg",
-      alt: "Github icon",
+      type: "github",
       url: "https://github.com/EvAvKein/FilterJobsFeeds"
     },
     {
-      src: "chrome.svg",
-      alt: "Google Chrome icon",
+      type: "chrome",
       url: "https://chrome.google.com/webstore/detail/filter-jobs-feeds/edebgnaafidhaiepkjknfmdonoagkjhe"
     }
   ]}

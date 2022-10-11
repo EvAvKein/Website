@@ -6,8 +6,7 @@
   description={"My personal & portfolio website\n(I'm planning on adding more stuff here eventually, e.g a blog)"}
   links={[
     {
-      src: "github.svg",
-      alt: "Github icon",
+      type: "github",
       url: "https://github.com/EvAvKein/website"
     }
   ]}

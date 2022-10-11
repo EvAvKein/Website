@@ -6,13 +6,11 @@
   description={"A slot-based inventory management interface, inspired by those of various \"sandbox\" video-games"}
   links={[
     {
-      src: "github.svg",
-      alt: "Github icon",
+      type: "github",
       url: "https://github.com/EvAvKein/Warehouse"
     },
     {
-      src: "website.svg",
-      alt: "Browser icon",
+      type: "browser",
       url: "https://warehouse.evavkein.com"
     }
   ]}
