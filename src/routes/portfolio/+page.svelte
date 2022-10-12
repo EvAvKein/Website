@@ -88,6 +88,7 @@
   #portfolio {
     max-width: 75em;
     margin: 0 auto;
+    padding-bottom: 0.5em;
   }
   #portfolio > section {
     background-color: var(--backgroundSubColor);
