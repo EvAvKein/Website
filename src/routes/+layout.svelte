@@ -74,8 +74,10 @@
     position: fixed;
     top: 0;
     right: 0;
+    overflow-y: auto;
     margin-top: 3.9em;
-    max-height: calc(100% - 6em);
+    border-radius: 0.25em 0 0 0.25em;
+    max-height: calc(100% - 5em);
     transform: translateX(125%);
     transition: transform 250ms;
     box-shadow: 0 0 0.5em 0.1em black;
@@ -83,13 +85,11 @@
   #sidebar.sidebarToggled {transform: translateX(0)}
 
   main {
-    background-color: var(--backgroundMidColor);
+    background-color: var(--backgroundColor);
     flex-grow: 1;
     overflow: auto;
     scroll-behavior: smooth;
-    scrollbar-gutter: stable;
-    padding-top: 1em; /* not a long-term solution due to potential conflicts with full-page elements, but aligning main contents via flexbox breaks on transitions (and also just doesn't position it to my taste) and i'm not eager to add an intermediate element just to transform-translateY it... so i'll cross the full-page element bridge if/when i get there */
-    padding-left: 1em; /* mirrors for the scrollbar width (in _core.svelte). not using "scrollbar-gutter: both edges" because it caused some problems with taking up more space than it should and clipping/covering text there */
+    padding: 0.75em; /* not a long-term solution due to potential conflicts with full-page elements */
   }
 
   @media (orientation: landscape) and (min-height: 40em) {
@@ -118,7 +118,5 @@
       right: none;
       background: unset;
     }
-
-    main {padding-top: 2.5em}
   }
 </style>

@@ -38,7 +38,6 @@
 <style>
   #toolbox {
     max-width: 70em;
-    padding: 0 1em 0.5em;
     margin: 0 auto;
   }
 

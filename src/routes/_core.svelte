@@ -3,9 +3,9 @@
   <title>{headTitle}</title>
   <meta name="description" content={headDescription}>
 </svelte:head>
-<div id="pageTransitionWrapper"
-  in:fade={{delay: 500, duration: 500}}
-  out:fade={{duration: 500}}
+<div id="pageWrapper" class="core_blueprint"
+  in:fly={{x: 0 - window.innerWidth, duration: transitionDuration, delay: transitionDuration}}
+  out:fly={{ x: window.innerWidth, duration: transitionDuration}}
   on:introstart={noScrollWhilePageTransitions}
 >
   <slot/>
@@ -13,11 +13,13 @@
 
 <script lang="ts">
   import {onMount} from "svelte";
-  import {fade} from "svelte/transition";
+  import {fly} from "svelte/transition";
 
   export let headFavicon = "./eak.svg";
   export let headTitle:string;
   export let headDescription:string;
+
+  const transitionDuration = 500;
 
   let main:HTMLElement;
   onMount(() => main = document.querySelector("main")!);
@@ -26,14 +28,17 @@
     main.style.overflow = "hidden";
     setTimeout(() => {
       main.style.overflow = "";
-    }, 500);
+    }, transitionDuration);
   };
 </script>
 
 <style global>
-  #pageTransitionWrapper {
-    height: 100%;
-    width: 100%;
+  #pageWrapper {
+    background-color: var(--backgroundMidColor);
+    padding: clamp(0.75em, 1vw, 1.5em);
+    border-radius: 0.25em;
+    min-height: 100%;
+    box-shadow: 0 0 0.5em 0.1em black;
   }
 
   /*~~~~~~~~~~~~\
