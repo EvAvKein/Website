@@ -15,7 +15,7 @@
   import {onMount} from "svelte";
   import {fly} from "svelte/transition";
 
-  export let headFavicon = "./eak.svg";
+  export let headFavicon = "/eak.svg";
   export let headTitle:string;
   export let headDescription:string;
 
