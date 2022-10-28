@@ -1,4 +1,4 @@
-<TransitionWrapper>
+<ToolWrapper>
   <section id="tool">
     <section id="inputSection">
       <div id="inputWrapper">
@@ -40,10 +40,10 @@
       All I've done is adapt Sonntag's code for Svelte & Typescript, and style & refactor a bit per my own preferences
     </p>
   </section>
-</TransitionWrapper>
+</ToolWrapper>
 
 <script lang="ts">
-  import TransitionWrapper from "../transitionWrapper.svelte";
+  import ToolWrapper from "../toolWrapper.svelte";
   import {slide} from "svelte/transition";
   import {Color, Solver, hexToRgb} from "./cssFilterGenerator_formulas";
   import LabelledInput from "../../../lib/labelledInput.svelte";

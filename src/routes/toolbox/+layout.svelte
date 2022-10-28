@@ -72,9 +72,7 @@
 
   #currentTool {
     background-color: var(--backgroundMidColor);
-    min-height: 20em;
     flex-grow: 1;
-    padding: 0.75em;
     overflow: auto;
     box-shadow: inset 0 0 0.5em 0 black;
   }

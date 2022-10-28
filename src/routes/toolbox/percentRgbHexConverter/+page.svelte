@@ -1,4 +1,4 @@
-<TransitionWrapper>
+<ToolWrapper>
   <section>
     <label>
       <input bind:value={percent}
@@ -34,10 +34,10 @@
     Without <a href="https://www.joshuamiron.com/percent-to-hex-converter" class="core_contentButton">the original converter by Joshua Miron</a> (and his permission), this wouldn't be here.<br>
     All I've done is adapt Joshua's code for Svelte & Typescript, and style & refactor a bit per my own preferences.
   </p>
-</TransitionWrapper>
+</ToolWrapper>
 
 <script lang="ts">
-  import TransitionWrapper from "../transitionWrapper.svelte";
+  import ToolWrapper from "../toolWrapper.svelte";
 
   let percent:string;
   let rgb:string;

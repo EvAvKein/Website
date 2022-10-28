@@ -1,4 +1,4 @@
-<TransitionWrapper>
+<ToolWrapper>
   <h4>Log Every Focus</h4>
   <code>{
   `document.querySelector("body")
@@ -9,10 +9,10 @@
   <hr>
   <h4>Highlight Element Boxes</h4>
   <code>{"* {box-shadow: 0 0 0 0.1em rgb(255 0 0 / 40%) !important}"}</code>
-</TransitionWrapper>
+</ToolWrapper>
 
 <script lang="ts">
-  import TransitionWrapper from "../transitionWrapper.svelte";
+  import ToolWrapper from "../toolWrapper.svelte";
 </script>
 
 <style>
