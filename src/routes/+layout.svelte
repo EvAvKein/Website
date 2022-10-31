@@ -60,7 +60,7 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 0.5em 0.1em black;
+    box-shadow: 0 0 0.25em 0.1em black;
   }
 
   a svg, #navButton {height: 2.5em}
@@ -89,7 +89,7 @@
     flex-grow: 1;
     overflow: auto;
     scroll-behavior: smooth;
-    padding: 0.75em; /* not a long-term solution due to potential conflicts with full-page elements */
+    padding: 0.75em 0.5em 0.5em;
   }
 
   @media (orientation: landscape) and (min-height: 40em) {
@@ -103,7 +103,6 @@
       min-width: 5em; /* there used to small page-dependent changes that caused this element to change width a bit, and i failed to figure out what was actually causing the problem or to come up with a better page-independent solution, so here these two delcarations are (because setting a static width value didn't work, for whatever wacky reason) */
       max-width: 5em; /* when images requests fail (e.g connection issues), without this declaration the alt text causes the (now-vertical) header to take up an obscene amount of space */
       padding: 1em 0.5em 0;
-      box-shadow: 0 0 0.5em 0.1em black;
       overflow-x: hidden;
     }
 
@@ -117,6 +116,11 @@
       left: 0;
       right: none;
       background: unset;
+    }
+
+    main {
+      padding: 0.5em;
+      padding-left: 0.75em;
     }
   }
 </style>
