@@ -85,7 +85,8 @@
   #sidebar.sidebarToggled {transform: translateX(0)}
 
   main {
-    background-color: var(--backgroundColor);
+    background-image: url("/wooden.svg");
+    background-size: 50vh;
     flex-grow: 1;
     overflow: auto;
     scroll-behavior: smooth;
