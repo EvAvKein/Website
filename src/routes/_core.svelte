@@ -109,6 +109,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background-color: var(--textSubColor);
   }
+  ::-webkit-scrollbar-thumb:active {border-width: 0.2em}
 
   /*~~~~~~~~~~~~~~~~~~~~~\
     CORE STYLING CLASSES
