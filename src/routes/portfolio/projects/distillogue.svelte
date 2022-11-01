@@ -2,7 +2,7 @@
   logoSrc={"/distillogue.svg"}
   logoAlt={"Icon of chemistry flask, with bubbling liquids, hung on a stand"}
   name={"Distillogue"}
-  technologies={"Vue.js, TypeScript, Express.js, MongoDB, Cypress, Docker"}
+  technologies={"Vue, TypeScript, Express, MongoDB, Cypress, Docker"}
   description={"A tool for conducting dialogue in the distilled format of your choice; currently in very early development"}
   links={[
     {

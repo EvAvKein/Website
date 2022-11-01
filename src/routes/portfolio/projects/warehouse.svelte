@@ -2,7 +2,7 @@
   logoSrc={"/warehouse.svg"}
   logoAlt={"Crate icon"}
   name={"Warehouse"}
-  technologies={"HTML, CSS, JS"}
+  technologies={"HTML, CSS, JavaScript"}
   description={"A slot-based inventory management interface, inspired by those of various \"sandbox\" video-games"}
   links={[
     {

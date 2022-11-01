@@ -53,7 +53,7 @@
           <span slot="content">Eager to make this a primary proficiency, but waiting until its 1.0 release</span>
         </Tooltip></li>
         <li>MongoDB</li>
-        <li>Express.js</li>
+        <li>Express</li>
       </ul>
     </td>
   </tr>

@@ -2,7 +2,7 @@
   logoSrc={"/filterJobsFeeds.svg"}
   logoAlt={"Icon of papers titled 'Job' dropped inside a filter"}
   name={"Filter Jobs Feeds"}
-  technologies={"HTML, CSS, JS"}
+  technologies={"HTML, CSS, JavaScript"}
   description={"A (minimal) Chrome extension for filtering jobs feeds by blacklisting text"}
   links={[
     {
