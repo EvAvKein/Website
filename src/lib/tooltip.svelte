@@ -1,71 +1,75 @@
-<span class="tooltipSubject" class:activated
+<div class="tooltipSubject" class:activated
   on:mouseenter={() => hovered = true}
   on:mouseleave={() => hovered = false}
   on:focus={() => focused = true}
   on:blur={() => focused = false}
   tabindex="0"
-  bind:this={subject}
->
-  <slot name="subject"></slot>
-
-  {#if activated}
-    <div class="tooltipContent"
-      in:fade={{duration: 200}}
-      out:fade={{duration: 150}}
-      bind:this={tooltip}
-    >
-      <slot name="content"></slot>
-    </div>
-  {/if}
-</span>
+  bind:this={wrapperElem}
+>{text}</div><!--
+  comment prevents extra space character
+-->{#if activated}
+  <div class="tooltip"
+    in:fade={{duration: 200}}
+    out:fade={{duration: 150}}
+    bind:this={tooltipElem}
+  >{tooltip}</div>
+{/if}
 
 <script lang="ts">
   import {fade} from "svelte/transition";
+  
+  export let text:string;
+  export let tooltip:string;
 
-  let subject:HTMLElement;
-  let tooltip:HTMLElement;
+  let wrapperElem:HTMLElement;
+  let tooltipElem:HTMLElement;
   let hovered = false;
   let focused = false;
   $: activated = hovered || focused;
 
-  $: if (activated && tooltip) {
+  $: if (activated && tooltipElem) {
     const mainElem = document.querySelector("main")!; // not querying the body because (in the default layout) it doesn't accurately reflect the page's scrollHeight; the <main> takes the remainder height & width the header doesn't occupy, and it handles all (page-content) overflow within itself
-    const tooltipState = tooltip.getBoundingClientRect();
 
-    tooltip.style.top = `${tooltipState.top - mainElem.scrollTop}px`;
+    tooltipElem.style.top = `${tooltipElem.offsetTop - mainElem.scrollTop}px`;
 
-    if (tooltipState.width > mainElem.clientWidth) {
-      tooltip.style.maxWidth = (mainElem.clientWidth + "px");
-      tooltipState.width = mainElem.clientWidth;
+    if (tooltipElem.offsetWidth > mainElem.clientWidth) {
+      tooltipElem.style.maxWidth = (mainElem.clientWidth + "px");
     };
 
-    const xOverflowing = (tooltipState.x + tooltipState.width) > mainElem.clientWidth;
+    const wrapperX = wrapperElem.getBoundingClientRect().left; // because offsetLeft can get weird (for a lack of a proper understanding) in some cases (found in portfolio's techs section)
+    const xForCenteringAboveText = (wrapperX + (wrapperElem.offsetWidth / 2)) - (tooltipElem.offsetWidth / 2);
+    tooltipElem.style.left = `${xForCenteringAboveText}px`;
+
+    const xOverflowing = (tooltipElem.offsetLeft + tooltipElem.offsetWidth) > mainElem.clientWidth;
     if (xOverflowing) {
-      const xOverflow = (tooltipState.x + tooltipState.width) - mainElem.clientWidth;
-      tooltip.style.transform = `translateX(-${xOverflow}px)`;
+      const xOverflow = (tooltipElem.offsetLeft + tooltipElem.offsetWidth) - mainElem.clientWidth;
+      tooltipElem.style.transform = `translateX(-${xOverflow}px)`;
     };
 
-    const yOverflowing = (tooltipState.y + tooltipState.height) > mainElem.scrollHeight;
+    const xUnderflowing = tooltipElem.offsetLeft < 0;
+    if (xUnderflowing) {
+      tooltipElem.style.left = "0";
+    };
+
+    const yOverflowing = (tooltipElem.offsetTop + tooltipElem.offsetHeight) > mainElem.scrollHeight;
     if (yOverflowing) {
-      const subjectState = subject.getBoundingClientRect();
-      tooltip.style.top = `${subjectState.top - tooltipState.height}px`;
+      tooltipElem.style.top = `${wrapperElem.offsetTop - tooltipElem.offsetTop}px`;
     };
   };
 </script>
 
-<style global> /* global for the ".tooltipSubject.activated img" selector to work */
+<style>
   .tooltipSubject {
-    display: inline-block;
+    display: inline;
     cursor: help;
     outline: none;
-    border-bottom: 0.15em dashed var(--highlightSubColor);
-    transition: color 350ms, filter 350ms;
+    text-underline-offset: 0.2em;
+    text-decoration: underline 0.15em dashed var(--highlightSubColor);
+    transition: color 350ms;
   }
-
   .tooltipSubject.activated {color: var(--highlightSubColor)}
-  .tooltipSubject.activated img {filter: var(--filterToHighlightSubColor)}
 
-  .tooltipContent {
+  .tooltip {
     position: fixed;
     height: max-content;
     width: max-content;

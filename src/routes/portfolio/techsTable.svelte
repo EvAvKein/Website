@@ -4,10 +4,10 @@
       Category <img src="/arrow.svg" alt="Rightward arrow">
       <hr>
       <img src="/arrow.svg" alt="Downward arrow"> 
-      <Tooltip>
-        <span slot="subject">Proficiency</span>
-        <span slot="content">Proficiency categories kept vague because it's extremely subjective</span>
-      </Tooltip> 
+      <Tooltip
+        text={"Proficiency"}
+        tooltip={"Proficiency categories kept vague because it's extremely subjective"}
+      /> 
     </th>
     <th>Tools</th>
     <th>Languages</th>
@@ -48,10 +48,10 @@
     </td>
     <td>
       <ul>
-        <li><Tooltip>
-          <span slot="subject">SvelteKit</span>
-          <span slot="content">Eager to make this a primary proficiency, but waiting until its 1.0 release</span>
-        </Tooltip></li>
+        <li><Tooltip
+          text={"SvelteKit"}
+          tooltip={"Eager to make this a primary proficiency, but waiting until its 1.0 release"}
+        /></li>
         <li>MongoDB</li>
         <li>Express</li>
       </ul>

@@ -31,41 +31,41 @@
         <ul>
           <li>
             Thanks to my neuroatypicality, ongoing introspection, and ethics, I'm particularly analytically-inclined: I have a keen eye for edge-cases and incongruities, and 
-            <Tooltip>
-              <span slot="subject">prefer long-term/systemic solutions</span>
-              <span slot="content">(or, when there's insufficient context, at least the likeliest educated guess)</span>
-            </Tooltip>
+            <Tooltip
+              text={"prefer long-term/systemic solutions"}
+              tooltip={"(or, when there's insufficient context, at least the likeliest educated guess)"}
+            />
             over instantly-gratifying haphazard ones
           </li>
           <li>
             I'm mindful of the well-being of myself and 
-            <Tooltip>
-              <span slot="subject">those I affect</span>
-              <span slot="content">(individuals and systems alike)</span>
-            </Tooltip>:
+            <Tooltip
+              text={"those I affect"}
+              tooltip={"(individuals and systems alike)"}
+            />:
             Heeding Utilitarian calculus in all domains,
-            <Tooltip>
-              <span slot="subject">without disregarding</span>
-              <span slot="content">(but outright exonerating as few as viable)</span>
-            </Tooltip>
+            <Tooltip
+              text={"without disregarding"}
+              tooltip={"(but outright exonerating as few as viable)"}
+            />
             human imperfections/conditions
           </li>
           <li>
             I aim to be 
-            <Tooltip>
-              <span slot="subject">as courteous as possible</span>
-              <span slot="content">(while it is conducive for Utility (as in Utilitarianism))</span>
-            </Tooltip>, 
+            <Tooltip
+              text={"as courteous as possible"}
+              tooltip={"(while it is conducive for Utility (as in Utilitarianism))"}
+            />, 
             to
-            <Tooltip>
-              <span slot="subject">'meet people where they're at'</span>
-              <span slot="content">(...despite me citing Utilitarian. It seemed too necessary to sufficiently convey my perspective)</span>
-            </Tooltip>,
+            <Tooltip
+              text={"'meet people where they're at'"}
+              tooltip={"(...despite me citing Utilitarian. It seemed too necessary to sufficiently convey my perspective)"}
+            />,
             and (at a minimum) be a 
-            <Tooltip>
-              <span slot="subject">worthwhile participant</span>
-              <span slot="content">(compared to the time/attention/resources my presence/conduct necessitate)</span>
-            </Tooltip>
+            <Tooltip
+              text={"worthwhile participant"}
+              tooltip={"(compared to the time/attention/resources my presence/conduct necessitate)"}
+            />
             in the communities/systems I engage with
           </li>
         </ul>
