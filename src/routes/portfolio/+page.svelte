@@ -38,12 +38,7 @@
             over instantly-gratifying haphazard ones
           </li>
           <li>
-            I'm mindful of the well-being of myself and 
-            <Tooltip
-              text={"those I affect"}
-              tooltip={"(individuals and systems alike)"}
-            />:
-            Heeding Utilitarian calculus in all domains,
+            I'm mindful of the well-being of those I affect: Heeding Utilitarian calculus in all domains,
             <Tooltip
               text={"without disregarding"}
               tooltip={"(but outright exonerating as few as viable)"}
@@ -56,10 +51,9 @@
               text={"as courteous as possible"}
               tooltip={"(while it is conducive for Utility (as in Utilitarianism))"}
             />, 
-            to
             <Tooltip
               text={"'meet people where they're at'"}
-              tooltip={"(...despite me citing Utilitarian. It seemed too necessary to sufficiently convey my perspective)"}
+              tooltip={"(...despite me citing Utilitarian. It seemed too necessary here to sufficiently convey my perspective)"}
             />,
             and (at a minimum) be a 
             <Tooltip
