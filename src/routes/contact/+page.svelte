@@ -26,7 +26,7 @@
           bind:value={email}
         />
       {/if}
-      <Notification text={notifText} desirablityStyle={notifDesirability} baseDuration={null}/>
+      <Notification bind:text={notifText} desirablityStyle={notifDesirability} baseDuration={null}/>
       {#if body && email && typeof notifDesirability !== "boolean"}
         <button transition:slide
           class="core_backgroundButton"
