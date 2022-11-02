@@ -62,7 +62,6 @@
       "logo techs links"
       "description description links"
     ;
-    column-gap: 0 5em;
   }
 
   .logoImg {
