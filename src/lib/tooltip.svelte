@@ -64,7 +64,7 @@
     display: inline;
     cursor: help;
     outline: none;
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.22em; /* minimum needed for letters with descenders to not override the underline */
     text-decoration: underline 0.15em dashed var(--highlightSubColor);
     transition: color 350ms;
   }
@@ -74,16 +74,17 @@
     position: fixed;
     height: max-content;
     width: max-content;
-    font-size: 0.8em;
+    font-size: 0.9rem;
     color: var(--textColor);
     background-color: var(--backgroundSubColor);
     z-index: 999999999;
-    padding: 0.55em;
-    border-radius: 0.5em;
-    box-shadow: 0 0 0.5em 0.25em black;
+    padding: 0.55rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem 0.25rem black;
     
     font-weight: initial;
     text-decoration: initial;
     white-space: normal;
+    line-height: initial;
   } 
 </style>
