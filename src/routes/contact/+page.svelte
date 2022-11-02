@@ -36,7 +36,8 @@
       {/if}
     </form>
 
-    <span>...or email me at </span> <address>{myEmailAddress}</address>
+    <span>...or email me at <address on:click={copyEmail}>{myEmailAddress}</address> </span> 
+    <Notification bind:text={emailCopyNotice} desirablityStyle={true}/>
   </section>
 </Core>
 
@@ -50,6 +51,11 @@
 
   let myEmailAddress = "";
   onMount(() => myEmailAddress = "evavkein@gmail.com"); // adding via JS to mitigate scraping
+  let emailCopyNotice = "";
+  function copyEmail() {
+    navigator.clipboard.writeText(myEmailAddress)
+      .then(() => {emailCopyNotice = "Address copied to clipboard!"});
+  };
 
   let title = "";
   let body = "";
@@ -100,12 +106,13 @@
     margin: 1.25em auto 0.25em;
   }
 
-  span, address {
+  span {
     display: inline-block;
     margin-top: 1em;
     font-size: 1.25em;
   }
   address {
+    display: inline;
     font-weight: 500;
     font-style: unset;
     text-underline-offset: 0.2em;
