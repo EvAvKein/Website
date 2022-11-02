@@ -5,15 +5,16 @@
   on:blur={() => focused = false}
   tabindex="0"
   bind:this={wrapperElem}
->{text}</div><!--
+>{text}<!--
   comment prevents extra space character
 -->{#if activated}
-  <div class="tooltip"
-    in:fade={{duration: 200}}
-    out:fade={{duration: 150}}
-    bind:this={tooltipElem}
-  >{tooltip}</div>
-{/if}
+    <div class="tooltip"
+      in:fade={{duration: 200}}
+      out:fade={{duration: 150}}
+      bind:this={tooltipElem}
+    >{tooltip}</div>
+  {/if}
+</div>
 
 <script lang="ts">
   import {fade} from "svelte/transition";
