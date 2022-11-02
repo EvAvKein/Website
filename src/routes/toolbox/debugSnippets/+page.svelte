@@ -2,9 +2,9 @@
   <h4>Log Every Focus</h4>
   <code>{
   `document.querySelector("body")
-    .addEventListener("focusin", (event) =>
-      {console.log(event.target)}
-    );`
+    .addEventListener("focusin", (event) => {
+      console.log(event.target)
+    });`
   }</code>
   <hr>
   <h4>Highlight Element Boxes</h4>
