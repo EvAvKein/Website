@@ -64,11 +64,10 @@
     display: inline;
     cursor: help;
     outline: none;
-    text-underline-offset: 0.22em; /* minimum needed for letters with descenders to not override the underline */
-    text-decoration: underline 0.15em dashed var(--highlightSubColor);
+    text-decoration: underline 0.1em dashed var(--highlightSubColor);
     transition: color 350ms;
   }
-  .tooltipSubject.activated {color: var(--highlightSubColor)}
+  .tooltipSubject.activated {color: var(--highlightColor)}
 
   .tooltip {
     position: fixed;
