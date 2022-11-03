@@ -31,7 +31,7 @@
   $: if (activated && tooltipElem) {
     const mainElem = document.querySelector("main")!; // not querying the body because (in the default layout) it doesn't accurately reflect the page's scrollHeight; the <main> takes the remainder height & width the header doesn't occupy, and it handles all (page-content) overflow within itself
 
-    tooltipElem.style.top = `${tooltipElem.offsetTop - mainElem.scrollTop}px`;
+    tooltipElem.style.top = `${wrapperElem.offsetTop + wrapperElem.offsetHeight - mainElem.scrollTop}px`;
 
     if (tooltipElem.offsetWidth > mainElem.clientWidth) {
       tooltipElem.style.maxWidth = (mainElem.clientWidth + "px");
