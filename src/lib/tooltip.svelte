@@ -8,16 +8,16 @@
 >{text}<!--
   comment prevents extra space character
 -->{#if activated}
-    <div class="tooltip"
-      in:fade={{duration: 200}}
-      out:fade={{duration: 150}}
+    <div class="tooltip core_blueprint"
+      in:slide={{duration: 300}}
+      out:slide={{duration: 250}}
       bind:this={tooltipElem}
     >{tooltip}</div>
   {/if}
 </div>
 
 <script lang="ts">
-  import {fade} from "svelte/transition";
+  import {slide} from "svelte/transition";
   
   export let text:string;
   export let tooltip:string;
@@ -73,13 +73,14 @@
     position: fixed;
     height: max-content;
     width: max-content;
+    cursor: text;
     font-size: 0.9rem;
     color: var(--textColor);
     background-color: var(--backgroundSubColor);
     z-index: 999999999;
-    padding: 0.55rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem 0.25rem black;
+    padding: 0.4rem;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 0.25rem 0.1rem black;
     
     font-weight: initial;
     text-decoration: initial;
