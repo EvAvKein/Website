@@ -101,6 +101,7 @@
   #contact {
     width: clamp(20em, 85vw, 50em);
     text-align: center;
+    padding: 0 0.75em 0.25em;
   }
 
   #contact > * {margin-inline: auto}
