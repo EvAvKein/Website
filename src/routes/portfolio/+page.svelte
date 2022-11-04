@@ -13,7 +13,7 @@
       </section>
     </section>
 
-    <section id="techs" class="core_blueprint">
+    <section id="technologies" class="core_blueprint">
       <h2>Technologies</h2>
       <Techs/>
     </section>
@@ -79,24 +79,26 @@
 </script>
 
 <style>
-  #portfolio {
-    max-width: 75em;
-    margin: 0 auto;
-    padding-bottom: 0.5em;
-  }
+  #portfolio {max-width: 70em}
+
   #portfolio > section {
-    background-color: var(--backgroundSubColor);
-    padding: 1em;
-    box-shadow: inset 0 0 0.5em 0.1em black;
+    background-color: var(--backgroundMidColor);
+    border-radius: 0.25em;
+    padding: 0.75em;
+    box-shadow: 0 0 0.5em 0.1em black;
   }
-  #portfolio > section + section {margin-top: 1em}
+  #portfolio > section + section {margin-top: 1.5em}
 
   h2 {
     font-size: 3.25em;
     margin-bottom: 0.1em;
   }
 
-  #techs {overflow-x: auto}
+  #technologies {
+    margin: auto;
+    max-width: 45em;
+  }
+  #technologies h2 {text-align: center}
 
   #projects {
     display: flex;
@@ -114,25 +116,4 @@
     font-size: 2.75em;
   }
   li + li {margin-top: 0.4em}
-  
-  @media (min-width: 80em) {
-    #portfolio {
-      display: grid;
-      justify-items: stretch;
-      align-items: start;
-      grid-template-columns: 1.25fr 1fr;
-      grid-template-areas:
-        "projects techs"
-        "projects resume"
-        "dispositions dispositions"
-      ;
-      gap: 1em;
-    }
-    
-    #portfolio > section + section {margin-top: 0}
-    #projects {grid-area: projects}
-    #techs {grid-area: techs}
-    #resume {grid-area: resume}
-    #dispositions {grid-area: dispositions}
-  }
 </style>

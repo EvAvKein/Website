@@ -56,7 +56,7 @@
   }
 
   #QnA > section {
-    background-color: var(--backgroundSubColor);
+    background-color: var(--backgroundMidColor);
     height: min-content;
     padding: 1em;
     box-shadow: 0 0 1em 0.15em black;

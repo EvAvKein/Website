@@ -8,7 +8,7 @@
     <p>Hello ^^</p>
 
     <p>
-      I'm Eve, a <a href="/portfolio">fullstack web programmer</a>, currently jobseeking for my first position in the field!
+      I'm Eve, a <a href="/portfolio" class="core_contentButton">fullstack web programmer</a>, currently jobseeking for my first position in the field!
     </p>
 
     <p id="disclaimer">I've only just had my eureka moment for the site's design. I have many changes and design ideas I've yet to implement, and I'm also working on my "Distillogue" project, so I ask that you don't judge its completeness/coherence just yet</p>
@@ -19,20 +19,15 @@
 
 <script lang="ts">
   import Core from "./_core.svelte";
-  import {onMount} from "svelte";
   import EvAvKein from "./evavkein.svelte";
   import QnA from "./QnA.svelte";
   
   let evavkeinExpanded = true;
-
-  onMount(() => {
-    setTimeout(() => {evavkeinExpanded = false}, 3000)
-  });
 </script>
 
 <style>
   section {
-    background-color: var(--backgroundSubColor);
+    background-color: var(--backgroundMidColor);
     width: fit-content;
     margin: auto;
     font-size: clamp(1.5em, 3vw, 1.5em);
@@ -53,10 +48,5 @@
     color: var(--textSubColor);
   }
 
-  a {
-    color: inherit;
-    transition: color 200ms ease-in-out;
-  }
-  a:hover, a:focus {color: var(--highlightSubColor)}
-  a:active {color: var(--highlightColor)}
+  a {text-decoration: underline}
 </style>

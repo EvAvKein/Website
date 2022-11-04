@@ -3,12 +3,15 @@
   <title>{headTitle}</title>
   <meta name="description" content={headDescription}>
 </svelte:head>
-<div id="pageWrapper" class="core_blueprint"
-  in:fly={{x: 0 - window.innerWidth, duration: transitionDuration, delay: transitionDuration}}
-  out:fly={{ x: window.innerWidth, duration: transitionDuration}}
-  on:introstart={noScrollWhilePageTransitions}
->
-  <slot/>
+
+<div id="pageWrapper">
+  <div id="page" class="core_blueprint"
+    in:fly={{x: 0 - window.innerWidth, duration: transitionDuration, delay: transitionDuration}}
+    out:fly={{ x: window.innerWidth, duration: transitionDuration}}
+    on:introstart={noScrollWhilePageTransitions}
+  >
+    <slot/>
+  </div>
 </div>
 
 <script lang="ts">
@@ -34,10 +37,16 @@
 
 <style global>
   #pageWrapper {
-    background-color: var(--backgroundMidColor);
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #page {
+    background-color: var(--backgroundColor);
     padding: clamp(0.75em, 1vw, 1.5em);
     border-radius: 0.25em;
-    min-height: 100%;
     box-shadow: 0 0 0.5em 0.1em black;
   }
 

@@ -1,4 +1,4 @@
-<article>
+<article class="core_blueprint">
   <img class="logoImg"
     src={logoSrc}
     alt={logoAlt}
@@ -52,8 +52,9 @@
 
 <style>
   article {
-    box-shadow: 0 0 0.25em 0.1em black;
+    background-color: var(--backgroundSubColor);
     padding: 0.5em;
+    border-radius: 0.25em;
     display: grid;
     grid-template-columns: min-content 1fr min-content;
     grid-template-rows: min-content min-content 1fr;
@@ -62,6 +63,7 @@
       "logo techs links"
       "description description links"
     ;
+    box-shadow: 0 0 0.25em 0.1em black;
   }
 
   .logoImg {

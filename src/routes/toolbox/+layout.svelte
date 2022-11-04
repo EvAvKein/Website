@@ -36,11 +36,6 @@
 </script>
 
 <style>
-  #toolbox {
-    max-width: 70em;
-    margin: 0 auto;
-  }
-
   h2 {font-size: 3.5em}
   h3 {
     font-size: 2em;
@@ -75,12 +70,14 @@
     flex-grow: 1;
     overflow: auto;
     box-shadow: inset 0 0 0.5em 0 black;
+    transition: all 350ms;
   }
 
   @media (min-width: 70em) {
     #tools {
       flex-direction: row;
       flex-grow: 1;
+      width: clamp(55em, 85vw, 70em)
     }
 
     nav {

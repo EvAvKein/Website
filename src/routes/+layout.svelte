@@ -119,10 +119,5 @@
       right: none;
       background: unset;
     }
-
-    main {
-      padding: 0.5em;
-      padding-left: 0.75em;
-    }
   }
 </style>

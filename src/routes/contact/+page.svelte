@@ -28,15 +28,27 @@
       {/if}
       <Notification bind:text={notifText} desirablityStyle={notifDesirability} baseDuration={null}/>
       {#if body && email && typeof notifDesirability !== "boolean"}
-        <button transition:slide
+      <div id="submitWrapper"
+        transition:slide
+      >
+        <button
+          transition:fly={{y: -100}}
           class="core_backgroundButton"
           type="button"
           on:click={submitForm}
         >Submit</button>
+      </div>
       {/if}
     </form>
 
-    <span>...or email me at <address on:click={copyEmail}>{myEmailAddress}</address> </span> 
+    <span>...or email me at
+      <button
+        class="core_contentButton"
+        on:click={copyEmail}
+      >
+        <address>{myEmailAddress}</address>
+      </button>
+    </span> 
     <Notification bind:text={emailCopyNotice} desirablityStyle={true}/>
   </section>
 </Core>
@@ -44,7 +56,7 @@
 <script lang="ts">
   import Core from "../_core.svelte";
   import {onMount} from "svelte";
-  import {slide} from "svelte/transition";
+  import {slide, fly} from "svelte/transition";
   import {apiFetch} from "../../helpers/apiFetch";
   import LabelledInput from "../../lib/labelledInput.svelte";
   import Notification from "../../lib/notification.svelte";
@@ -87,9 +99,7 @@
 
 <style>
   #contact {
-    display: block;
-    margin: auto;
-    max-width: 60em;
+    width: clamp(20em, 85vw, 50em);
     text-align: center;
   }
 
@@ -101,10 +111,8 @@
     margin: 0.2em;
     border-color: transparent;
   }
-  button {
-    display: block;
-    margin: 1.25em auto 0.25em;
-  }
+
+  form #submitWrapper {padding-top: 1em}
 
   span {
     display: inline-block;
