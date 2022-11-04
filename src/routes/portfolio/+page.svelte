@@ -3,6 +3,11 @@
   headDescription="Eve Aviv Keinan's programming portfolio page; including summaries with links to his projects, lists of the techs he has experience with, dispositions relevant to his professional conduct, and information regarding his resumé"
 >
   <section id="portfolio">
+    <section id="technologies" class="core_blueprint">
+      <h2>Technologies</h2>
+      <Techs/>
+    </section>
+
     <section id="projects" class="core_blueprint">
       <h2>Projects</h2>
       <section id="projectsList">
@@ -11,11 +16,6 @@
         <FilterJobsFeeds/>
         <Warehouse/>
       </section>
-    </section>
-
-    <section id="technologies" class="core_blueprint">
-      <h2>Technologies</h2>
-      <Techs/>
     </section>
 
     <section id="resume" class="core_blueprint">
@@ -79,26 +79,26 @@
 </script>
 
 <style>
-  #portfolio {max-width: 60em}
+  #portfolio {max-width: 55em}
 
   #portfolio > section {
     background-color: var(--backgroundMidColor);
     border-radius: 0.25em;
-    padding: 0.75em;
+    padding: 0.5em 1em 0.5em;
     box-shadow: 0 0 0.5em 0.1em black;
   }
   #portfolio > section + section {margin-top: 1.5em}
 
   h2 {
-    font-size: 3.25em;
-    margin-bottom: 0.1em;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 0.25em;
   }
 
   #technologies {
     margin: auto;
     max-width: 45em;
   }
-  #technologies h2 {text-align: center}
 
   #projects {
     display: flex;
@@ -112,8 +112,5 @@
     gap: 1.5em;
   }
 
-  #dispositions h2, #resume h2 {
-    font-size: 2.75em;
-  }
   li + li {margin-top: 0.4em}
 </style>
