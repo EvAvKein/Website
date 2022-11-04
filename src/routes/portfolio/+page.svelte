@@ -79,7 +79,7 @@
 </script>
 
 <style>
-  #portfolio {max-width: 70em}
+  #portfolio {max-width: 60em}
 
   #portfolio > section {
     background-color: var(--backgroundMidColor);
