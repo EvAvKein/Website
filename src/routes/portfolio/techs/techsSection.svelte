@@ -1,12 +1,12 @@
 <section>
   <section id="techs">
     <section>
-      <h3>
+      <h4>
         <Tooltip
           text={"Languages"}
           tooltip={"...and frameworks, libraries, etc"}
         />
-      </h3>
+      </h4>
       <TechsBox bind:selectedTech
         techsByNameAndSrc={[
           ["HTML", "/techs/html.svg"],
@@ -23,7 +23,7 @@
     </section>
     <hr>
     <section>
-      <h3>Tools</h3>
+      <h4>Tools</h4>
       <TechsBox bind:selectedTech
         techsByNameAndSrc={[
           ["Visual Studio Code", "/techs/vsCode.svg"],
@@ -63,7 +63,7 @@
   #techs {display: flex}
   #techs > section {flex-basis: 1}
 
-  h3 {
+  h4 {
     font-size: 2em;
     width: fit-content;
     margin: auto;
