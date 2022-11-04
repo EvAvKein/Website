@@ -15,7 +15,7 @@
 
     <section id="techs" class="core_blueprint">
       <h2>Technologies</h2>
-      <TechsTable/>
+      <Techs/>
     </section>
 
     <section id="resume" class="core_blueprint">
@@ -73,7 +73,7 @@
   import Website from "./projects/website.svelte";
   import FilterJobsFeeds from "./projects/filterJobsFeeds.svelte";
   import Warehouse from "./projects/warehouse.svelte";
-  import TechsTable from "./techsTable.svelte";
+  import Techs from "./techs/techsSection.svelte";
 
   import Tooltip from "../../lib/tooltip.svelte";
 </script>
@@ -119,7 +119,7 @@
     #portfolio {
       display: grid;
       justify-items: stretch;
-      align-items: stretch;
+      align-items: start;
       grid-template-columns: 1.25fr 1fr;
       grid-template-areas:
         "projects techs"
