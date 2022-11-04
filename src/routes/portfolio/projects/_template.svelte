@@ -96,12 +96,15 @@
     margin-left: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 0.75em;
   }
-  .projectLinks a {width: min-content}
-  .projectLinks svg {
+  .projectLinks a {
     height: 1.75em;
-    width: auto;
+    width: 1.75em;
+  }
+  .projectLinks a svg {
+    height: inherit;
+    width: inherit;
   }
 </style>
