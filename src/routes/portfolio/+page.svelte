@@ -27,14 +27,14 @@
     <section id="dispositions" class="core_blueprint">
       <h3>Dispositions</h3>
         <p>
-          Considering my lack of professional experience in the field, here are (some) reasons why I'm dispositionally fit for software engineering:
+          Due to my lack of professional experience in the field, here are (some) reasons why I'm dispositionally fit for software engineering:
         </p>
         <ul>
           <li>
             Thanks to my neuroatypicality, ongoing introspection, and ethics, I'm particularly analytically-inclined: I have a keen eye for edge-cases and incongruities, and 
             <Tooltip
               text={"prefer long-term/systemic solutions"}
-              tooltip={"(or, when there's insufficient context, at least the likeliest educated guess)"}
+              tooltip={"(or, when there's insufficient time/context, at least the likeliest educated guess)"}
             />
             over instantly-gratifying haphazard ones
           </li>
@@ -50,13 +50,13 @@
             I aim to be 
             <Tooltip
               text={"as courteous as possible"}
-              tooltip={"(while it is conducive for Utility (as in Utilitarianism))"}
+              tooltip={"(as long as doing so doesn't conflict with Utilitarianism)"}
             />, 
             <Tooltip
               text={"'meet people where they're at'"}
-              tooltip={"(...despite me citing Utilitarian. It seemed too necessary here to sufficiently convey my perspective)"}
+              tooltip={"(as much as viable, e.g citing Utilitarianism seemed too necessary to sufficiently convey my perspective)"}
             />,
-            and (at a minimum) be a 
+            and (at the very least) be a 
             <Tooltip
               text={"worthwhile participant"}
               tooltip={"(compared to the time/attention/resources my presence/conduct necessitate)"}
