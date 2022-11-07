@@ -17,20 +17,28 @@
 </div>
 
 <script lang="ts">
+  import {onMount} from "svelte";
   import {slide} from "svelte/transition";
   
   export let text:string;
   export let tooltip:string;
 
+  let mainElem:HTMLElement; // not querying the body because (in the default layout) it doesn't accurately reflect the page's scrollHeight; the <main> takes the remainder height & width the header doesn't occupy, and it handles all (page-content) overflow within itself
   let wrapperElem:HTMLElement;
   let tooltipElem:HTMLElement;
   let hovered = false;
   let focused = false;
   $: activated = hovered || focused;
+    
+  function disable() {activated = false};
+  onMount(() => {
+    mainElem = document.querySelector("main")!; // declared on mount because it otherwise executes when the document is undefined
+    mainElem.addEventListener("scroll", disable); // an imperfect solution long-term because tooltips are liable to be added inside other overflowing elements. writing a script to find the nearest overflowing parent is trivial, but it'd currently be of no use and an unnecessary performance cost
+
+    return () => {mainElem.removeEventListener("scroll", disable)};
+  });
 
   $: if (activated && tooltipElem) {
-    const mainElem = document.querySelector("main")!; // not querying the body because (in the default layout) it doesn't accurately reflect the page's scrollHeight; the <main> takes the remainder height & width the header doesn't occupy, and it handles all (page-content) overflow within itself
-
     tooltipElem.style.top = `${wrapperElem.offsetTop + wrapperElem.offsetHeight - mainElem.scrollTop}px`;
 
     if (tooltipElem.offsetWidth > mainElem.clientWidth) {
