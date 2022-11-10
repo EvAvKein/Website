@@ -43,7 +43,7 @@
 </ToolWrapper>
 
 <script lang="ts">
-  import ToolWrapper from "../toolWrapper.svelte";
+  import ToolWrapper from "../../../lib/swappableContentWrapper.svelte";
   import {slide} from "svelte/transition";
   import {Color, Solver, hexToRgb} from "./cssFilterGenerator_formulas";
   import LabelledInput from "../../../lib/labelledInput.svelte";

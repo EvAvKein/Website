@@ -37,7 +37,7 @@
 </ToolWrapper>
 
 <script lang="ts">
-  import ToolWrapper from "../toolWrapper.svelte";
+  import ToolWrapper from "../../../lib/swappableContentWrapper.svelte";
 
   let percent:string;
   let rgb:string;

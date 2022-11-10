@@ -3,7 +3,7 @@
 </ToolWrapper>
 
 <script lang="ts">
-  import ToolWrapper from "./toolWrapper.svelte";
+  import ToolWrapper from "../../lib/swappableContentWrapper.svelte";
 </script>
 
 <style>
