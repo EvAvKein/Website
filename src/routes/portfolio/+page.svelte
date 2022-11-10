@@ -11,12 +11,7 @@
 
     <section id="projects" class="core_blueprint">
       <h3>Projects</h3>
-      <section id="projectsList">
-        <Distillogue/>
-        <Website/>
-        <FilterJobsFeeds/>
-        <Warehouse/>
-      </section>
+      <Projects/>
     </section>
 
     <section id="resume" class="core_blueprint">
@@ -70,11 +65,8 @@
 
 <script lang="ts">
   import Core from "../_core.svelte";
-  import Distillogue from "./projects/distillogue.svelte";
-  import Website from "./projects/website.svelte";
-  import FilterJobsFeeds from "./projects/filterJobsFeeds.svelte";
-  import Warehouse from "./projects/warehouse.svelte";
   import Techs from "./techs/techsSection.svelte";
+  import Projects from "./projects/projectsSection.svelte";
 
   import Tooltip from "../../lib/tooltip.svelte";
 </script>
@@ -100,18 +92,6 @@
   #technologies {
     margin: auto;
     max-width: 45em;
-  }
-
-  #projects {
-    display: flex;
-    flex-direction: column;
-  }
-  #projectsList {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 1.5em;
   }
 
   li + li {margin-top: 0.4em}
