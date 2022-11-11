@@ -11,7 +11,7 @@
       I'm Eve, a <a href="/portfolio" class="core_contentButton">fullstack web programmer</a>, currently jobseeking for my first position in the field!
     </p>
 
-    <p id="disclaimer">I've only just had my eureka moment for the site's design. I have many changes and design ideas I've yet to implement, and I'm also working on my "Distillogue" project, so I ask that you don't judge its completeness/coherence just yet</p>
+    <p id="disclaimer">I've only recently had my eureka moment for the site's design. I have many changes and design ideas I've yet to implement, and I'm also working on my "Distillogue" project, so I ask that you don't judge this site's design completeness/coherence just yet</p>
   </section>
 
   <QnA/>
