@@ -35,7 +35,7 @@
   <section id="where" class="core_blueprint">
     <h2>Where?</h2>
     <h3>(Residence)</h3>
-    <p>Currently in Israel. Thanks to my French citizenship, I'll immigrate to the EU 
+    <p>Currently in Israel. Thanks to my French citizenship, I'll relocate to the EU 
       <Tooltip
         text={"(likely Finland/Sweden)"}
         tooltip={"(for interpersonal & politics reasons)"}
