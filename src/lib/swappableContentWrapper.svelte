@@ -1,4 +1,4 @@
-<div id="toolWrapper"
+<div class:maintainParentHeight
   in:slide={{
     duration: resizeDuration,
     delay: swipeDuration
@@ -8,7 +8,7 @@
     delay: swipeDuration
   }}
 >
-  <div class="core_blueprint"
+  <div class="innerWrapper core_blueprint"
     in:fly={{
       duration: swipeDuration,
       x: 0 - swipeDistance,
@@ -18,13 +18,13 @@
       duration: swipeDuration,
       x: swipeDistance
     }}
-  >
-    <slot/>
-  </div>
+  ><slot/></div>
 </div>
 
 <script lang="ts">
   import {slide, fly} from "svelte/transition";
+
+  export let maintainParentHeight = false;
 
   const swipeDuration = 250;
   const swipeDistance = 750;
@@ -32,7 +32,10 @@
 </script>
 
 <style>
-  .core_blueprint {
+  .maintainParentHeight {height: 100%}
+  .maintainParentHeight > .innerWrapper {height: 100%}
+  
+  .innerWrapper {
     padding: 1em;
     box-shadow: 0 0 0.25em 0.1em black;
     overflow: auto;
