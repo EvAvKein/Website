@@ -11,7 +11,21 @@
       I'm Eve, a <a href="/portfolio" class="core_contentButton">fullstack web programmer</a>, currently jobseeking for my first position in the field!
     </p>
 
-    <p id="disclaimer">I've only recently had my eureka moment for the site's design. I have many changes and design ideas I've yet to implement, and I'm also working on my "Distillogue" project, so I ask that you don't judge this site's design completeness/coherence just yet</p>
+    <p id="disclaimer">I only recently settled on my site's theme and am currently working on some related features and design improvements, so I ask that you don't judge this site's design completeness/coherence just yet</p>
+    
+    <p id="disclaimer">
+      Following 6.5 months of uninterrupted full-time
+      <Tooltip
+        text="project work"
+        tooltip="(programming, design, self-marketing, the latter two unfortunately taking a disproportionate amount of time compared to their commit output)"
+      />
+      with
+      <Tooltip
+        text="daily commits"
+        tooltip="(some admittedly being a (few) minor fix/adjustment(s) during an entire day, but it's always because I'm working on some big/complex commit which is taking more than a day. I'm too motivated by integrity/decency to coast on performative work)"
+      />,
+      the majority of it including weekends, I'm taking a few weeks vacation from that routine (starting 18.11). Mind that I'll nevertheless spend a decent amount of that time working on some particular big/intricate commits, because they've been piling up and I seriously need to get them out of the way before returning to the daily commits schedule
+    </p>
   </section>
 
   <QnA/>
@@ -21,6 +35,7 @@
   import Core from "./_core.svelte";
   import EvAvKein from "./evavkein.svelte";
   import QnA from "./QnA.svelte";
+  import Tooltip from "../lib/tooltip.svelte";
   
   let evavkeinExpanded = true;
 </script>
