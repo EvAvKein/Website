@@ -72,10 +72,7 @@
 
   li + li {margin-top: 0.25em}
 
-  p {
-    margin: 1em 0 0 1em;
-    max-width: 50em;
-  }
+  p {margin: 1em 0 0 1em}
 
   @media (min-width: 40em) {
     #QnA {
