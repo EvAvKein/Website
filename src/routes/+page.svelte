@@ -25,7 +25,7 @@
         text="daily commits"
         tooltip="(some admittedly being a (few) minor fix/adjustment(s) during an entire day, but it's always because I'm working on some big/complex commit which is taking more than a day. I'm too motivated by integrity/decency to coast on performative work)"
       />,
-      the majority of it including weekends, I'm taking a few weeks vacation from that routine (starting 18.11). Mind that I'll nevertheless spend a decent amount of that time working on some particular big/intricate commits, because they've been piling up and I seriously need to get them out of the way before returning to the daily commits schedule
+      the majority of it including weekends, I'm taking a break from that routine starting 18.11 for the remainder of the year. Mind that I'll nevertheless spend a decent amount of that time working on some particular big/intricate commits, because they've been piling up and I seriously need to get them out of the way before returning to the daily commits schedule
     </p>
   </section>
 
