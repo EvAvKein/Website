@@ -2,14 +2,15 @@
   headTitle="EvAvKein"
   headDescription="The home page for Eve Aviv Keinan's website"
 > 
-  <EvAvKein expanded={evavkeinExpanded}/>
+  <section id="introduction">
+    <EvAvKein expanded={evavkeinExpanded}/>
 
-  <section class="core_blueprint">
-    <p>Hello ^^</p>
-
-    <p>
-      I'm Eve, a <a href="/portfolio" class="core_contentButton">fullstack web programmer</a>, currently jobseeking for my first position in the field!
-    </p>
+    <section class="core_blueprint">
+      <p>Hello ^^</p>
+  
+      <p>
+        I'm Eve, a <a href="/portfolio" class="core_contentButton">fullstack web programmer</a>, currently jobseeking for my first position in the field!
+      </p>
 
     <p id="disclaimer">I only recently settled on my site's theme and am currently working on some related features and design improvements, so I ask that you don't judge this site's design completeness/coherence just yet</p>
     
@@ -28,40 +29,127 @@
     </p>
   </section>
 
-  <QnA/>
+  <section id="contentGrid">
+    <section id="why" class="core_blueprint">
+      <h2>Why?</h2>
+      <h3>(Values)</h3>
+      <ValuesDiagram/>
+      <p>(Select any value or connection)</p>
+    </section>
+  
+    <section id="who" class="core_blueprint">
+      <h2>Who?</h2>
+      <h3>(Demographics)</h3>
+      <ul>
+        <li>Progressive leftie <span>(deriving from Utilitarianism)</span></li>
+        <li>Neuroatypical <span>(HFASD & GAD & ADD)</span></li>
+        <li>Cis/agender guy <span>(he/they)</span></li>
+        <li>Senior Gen-Z</li>
+      </ul>
+    </section>
+  
+    <section id="what" class="core_blueprint">
+      <h2>What?</h2>
+      <h3>(Activities)</h3>
+      <ul>
+        <li>Web programming <span>(fullstack, but primarily frontend)</span></li>
+        <li>Video-games <span>(e.g RPGs, adventure, shooters, misc indie)</span></li>
+        <li>Online media <span>(e.g news, explainers, fandoms)</span></li>
+      </ul>
+    </section>
+  
+    <section id="where" class="core_blueprint">
+      <h2>Where?</h2>
+      <h3>(Residence)</h3>
+      <p>Currently in Israel. Thanks to my French citizenship, I'll relocate to the EU once I'm employed remotely/there</p>
+    </section>
+  </section>
 </Core>
 
 <script lang="ts">
   import Core from "./_core.svelte";
   import EvAvKein from "./evavkein.svelte";
-  import QnA from "./QnA.svelte";
   import Tooltip from "../lib/tooltip.svelte";
+  import ValuesDiagram from "./valuesDiagram.svelte";
   
   let evavkeinExpanded = true;
 </script>
 
 <style>
-  section {
+  #introduction {
+    font-size: clamp(1.25em, 2vw, 1.4em);
+    max-width: 50em;
+  }
+
+  section.core_blueprint {
     background-color: var(--backgroundMidColor);
     width: fit-content;
     margin: auto;
-    font-size: clamp(1.5em, 3vw, 1.5em);
-    margin-bottom: 1em;
-    padding: 0.75em;
-    box-shadow: inset 0 0 0.5em 0.1em black;
+    padding: 0.75em 1em;
+    box-shadow: 0 0 0.5em 0.1em black;
   }
+  section.core_blueprint + section.core_blueprint {margin-top: 1em}
 
-  p {
-    max-width: 70em;
-    margin-top: 0;
-  }
-  
-  p + p {margin-top: 0.75em}
+  #introduction p + p {margin-top: 0.5em}
 
   #disclaimer {
-    font-size: 0.7em;
+    font-size: 0.8em;
     color: var(--textSubColor);
   }
 
   a {text-decoration: underline}
+
+  h2 {font-size: 2em}
+  h3 {
+    font-size: 1.25em;
+    color: var(--textSubColor);
+    margin-bottom: 0.5em;
+  }
+  
+  ul {margin: 0}
+
+  li + li {margin-top: 0.25em}
+
+  li span {
+    color: var(--textSubColor);
+    font-size: 65%;
+  }
+
+  #why {width: clamp(15em, 100%, 27.5em)}
+  #why p {
+    color: var(--textSubColor);
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  #why {grid-area: why}
+  #who {grid-area: who}
+  #what {grid-area: what}
+  #where {grid-area: where}
+  #contentGrid {margin-top: 1em}
+
+  @media (min-width: 40em) {
+    section.core_blueprint {margin: unset}
+
+    section.core_blueprint + section.core_blueprint {margin-top: 0}
+
+    #contentGrid {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      gap: 1em;
+      grid-template-areas: "why why"
+                           "who what"
+                           "where where";
+    }
+  }
+
+  @media (min-width: 67.5em) {
+    #contentGrid {
+      grid-template-areas: "why who"
+                           "why what"
+                           "where where";
+      grid-template-columns: 1.25fr 1fr;
+    }
+  }
 </style>
