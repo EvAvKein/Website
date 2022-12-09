@@ -3,7 +3,7 @@
   headDescription="The home page for Eve Aviv Keinan's website"
 > 
   <section id="introduction">
-    <EvAvKein expanded={evavkeinExpanded}/>
+    <EvAvKein/>
 
     <section class="core_blueprint">
       <p>Hello ^^</p>
@@ -71,8 +71,6 @@
   import EvAvKein from "./evavkein.svelte";
   import Tooltip from "../lib/tooltip.svelte";
   import ValuesDiagram from "./valuesDiagram.svelte";
-  
-  let evavkeinExpanded = true;
 </script>
 
 <style>
