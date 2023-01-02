@@ -11,22 +11,6 @@
       <p>
         I'm Eve, a <a href="/portfolio" class="core_contentButton">fullstack web programmer</a>, currently jobseeking for my first position in the field!
       </p>
-
-    <p id="disclaimer">I only recently settled on my site's theme and am currently working on some related features and design improvements, so I ask that you don't judge this site's design completeness/coherence just yet</p>
-    
-    <p id="disclaimer">
-      Following 6.5 months of uninterrupted full-time
-      <Tooltip
-        text="project work"
-        tooltip="(programming, design, self-marketing, the latter two unfortunately taking a disproportionate amount of time compared to their commit output)"
-      />
-      with
-      <Tooltip
-        text="daily commits"
-        tooltip="(some admittedly being a (few) minor fix/adjustment(s) during an entire day, but it's always because I'm working on some big/complex commit which is taking more than a day. I'm too motivated by integrity/decency to coast on performative work)"
-      />,
-      the majority of it including weekends, I'm taking a break from that routine starting 18.11 for the remainder of the year. Mind that I'll nevertheless spend a decent amount of that time working on some particular big/intricate commits, because they've been piling up and I seriously need to get them out of the way before returning to the daily commits schedule
-    </p>
   </section>
 
   <section id="contentGrid">
@@ -69,7 +53,6 @@
 <script lang="ts">
   import Core from "./_core.svelte";
   import EvAvKein from "./evavkein.svelte";
-  import Tooltip from "../lib/tooltip.svelte";
   import ValuesDiagram from "./valuesDiagram.svelte";
 </script>
 
@@ -89,11 +72,6 @@
   section.core_blueprint + section.core_blueprint {margin-top: 1em}
 
   #introduction p + p {margin-top: 0.5em}
-
-  #disclaimer {
-    font-size: 0.8em;
-    color: var(--textSubColor);
-  }
 
   a {text-decoration: underline}
 
