@@ -1,7 +1,10 @@
-<h1 class={layout} bind:this={wrapper}>
-  <span id="eve" >Ev<span class="extra">e</span></span>
-  <span id="aviv">Av<span class="extra">iv</span></span>
-  <span id="keinan">Kein<span class="extra">an</span></span>
+<h1 bind:this={wrapper}
+  class={layout}
+  aria-label="Eve Aviv Keinan"
+>
+  <span aria-hidden="true" id="eve" >Ev<span class="extra">e</span></span>
+  <span aria-hidden="true" id="aviv">Av<span class="extra">iv</span></span>
+  <span aria-hidden="true" id="keinan">Kein<span class="extra">an</span></span>
 </h1>
 
 <script lang="ts">
