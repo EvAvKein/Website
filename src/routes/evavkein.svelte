@@ -35,7 +35,7 @@
 
 <style>
   h1 {
-    font-size: 4.5em;
+    font-size: clamp(3.5em, 11vw, 5.5em);
     color: var(--highlightColor);
     user-select: none;
     gap: 0 0.3em;

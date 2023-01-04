@@ -1,53 +1,48 @@
 <Core
   headTitle="EvAvKein"
   headDescription="The home page for Eve Aviv Keinan's website"
-> 
-  <section id="introduction">
+>
+  <div id="rootPageWrapper">
+
     <EvAvKein/>
 
-    <section class="core_blueprint">
-      <p>Hello ^^</p>
-  
-      <p>
-        I'm Eve, a <a href="/portfolio" class="core_contentButton">fullstack web programmer</a>, currently jobseeking for my first position in the field!
-      </p>
-  </section>
+    <section id="contentGrid">
+      <section id="why" class="core_blueprint">
+        <h2>Why?</h2>
+        <h3>(Values)</h3>
+        <ValuesDiagram/>
+        <p>(Select any value or connection)</p>
+      </section>
+    
+      <section id="who" class="core_blueprint">
+        <h2>Who?</h2>
+        <h3>(Demographics)</h3>
+        <ul>
+          <li>Progressive leftie <span>(deriving from Utilitarianism)</span></li>
+          <li>Neuroatypical <span>(HFASD & GAD & ADD)</span></li>
+          <li>Cis/agender guy <span>(he/they)</span></li>
+          <li>Senior Gen-Z</li>
+        </ul>
+      </section>
+    
+      <section id="what" class="core_blueprint">
+        <h2>What?</h2>
+        <h3>(Activities)</h3>
+        <ul>
+          <li>Web programming <span>(fullstack, but primarily frontend)</span></li>
+          <li>Video-games <span>(e.g RPGs, adventure, shooters, misc indie)</span></li>
+          <li>Online media <span>(e.g news, explainers, fandoms)</span></li>
+        </ul>
+      </section>
+    
+      <section id="where" class="core_blueprint">
+        <h2>Where?</h2>
+        <h3>(Residence)</h3>
+        <p>Currently in Israel. Thanks to my French citizenship, I'll relocate to the EU once I'm employed remotely/there</p>
+      </section>
+    </section>
 
-  <section id="contentGrid">
-    <section id="why" class="core_blueprint">
-      <h2>Why?</h2>
-      <h3>(Values)</h3>
-      <ValuesDiagram/>
-      <p>(Select any value or connection)</p>
-    </section>
-  
-    <section id="who" class="core_blueprint">
-      <h2>Who?</h2>
-      <h3>(Demographics)</h3>
-      <ul>
-        <li>Progressive leftie <span>(deriving from Utilitarianism)</span></li>
-        <li>Neuroatypical <span>(HFASD & GAD & ADD)</span></li>
-        <li>Cis/agender guy <span>(he/they)</span></li>
-        <li>Senior Gen-Z</li>
-      </ul>
-    </section>
-  
-    <section id="what" class="core_blueprint">
-      <h2>What?</h2>
-      <h3>(Activities)</h3>
-      <ul>
-        <li>Web programming <span>(fullstack, but primarily frontend)</span></li>
-        <li>Video-games <span>(e.g RPGs, adventure, shooters, misc indie)</span></li>
-        <li>Online media <span>(e.g news, explainers, fandoms)</span></li>
-      </ul>
-    </section>
-  
-    <section id="where" class="core_blueprint">
-      <h2>Where?</h2>
-      <h3>(Residence)</h3>
-      <p>Currently in Israel. Thanks to my French citizenship, I'll relocate to the EU once I'm employed remotely/there</p>
-    </section>
-  </section>
+  </div>
 </Core>
 
 <script lang="ts">
@@ -57,7 +52,7 @@
 </script>
 
 <style>
-  #introduction {
+  #rootPageWrapper {
     font-size: clamp(1.25em, 2vw, 1.4em);
     max-width: 50em;
   }
@@ -70,10 +65,6 @@
     box-shadow: 0 0 0.5em 0.1em black;
   }
   section.core_blueprint + section.core_blueprint {margin-top: 1em}
-
-  #introduction p + p {margin-top: 0.5em}
-
-  a {text-decoration: underline}
 
   h2 {font-size: 2em}
   h3 {
