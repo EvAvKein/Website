@@ -7,13 +7,6 @@
     <EvAvKein/>
 
     <section id="contentGrid">
-      <section id="why" class="core_blueprint">
-        <h2>Why?</h2>
-        <h3>(Values)</h3>
-        <ValuesDiagram/>
-        <p>(Select any value or connection)</p>
-      </section>
-    
       <section id="who" class="core_blueprint">
         <h2>Who?</h2>
         <h3>(Demographics)</h3>
@@ -33,6 +26,13 @@
           <li>Video-games <span>(e.g RPGs, adventure, shooters, misc indie)</span></li>
           <li>Online media <span>(e.g news, explainers, fandoms)</span></li>
         </ul>
+      </section>
+
+      <section id="why" class="core_blueprint">
+        <h2>Why?</h2>
+        <h3>(Values)</h3>
+        <ValuesDiagram/>
+        <p>(Select any value or connection)</p>
       </section>
     
       <section id="where" class="core_blueprint">
@@ -54,7 +54,7 @@
 <style>
   #rootPageWrapper {
     font-size: clamp(1.25em, 2vw, 1.4em);
-    max-width: 50em;
+    max-width: 55em;
   }
 
   section.core_blueprint {
@@ -105,8 +105,8 @@
       align-items: center;
       justify-items: center;
       gap: 1em;
-      grid-template-areas: "why why"
-                           "who what"
+      grid-template-areas: "who what"
+                           "why why"
                            "where where";
     }
   }
