@@ -8,6 +8,10 @@
     {
       type: "github",
       url: "https://github.com/EvAvKein/distillogue"
+    },
+    {
+      type: "browser",
+      url: "http://distillogue.com"
     }
   ]}
 />
