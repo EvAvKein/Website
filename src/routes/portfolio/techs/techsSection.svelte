@@ -32,7 +32,8 @@
           ["Figma", "/techs/figma.svg"],
           ["Git", "/techs/git.svg"],
           ["Docker", "/techs/docker.svg"],
-          ["Node.js", "/techs/nodeJs.svg"],
+          ["Prettier", "/techs/prettier.svg"],
+          ["Node.js", "/techs/nodeJs.svg"]
         ]}
       />
     </section>
