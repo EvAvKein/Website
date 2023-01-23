@@ -11,7 +11,7 @@
     },
     {
       type: "browser",
-      url: "http://distillogue.com"
+      url: "https://distillogue.com"
     }
   ]}
 />
