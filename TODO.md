@@ -1,4 +1,5 @@
 (In no particular order)
 
 ### Tasks:
+* **Refine site theme**: I like the design concept of pseudo-physical blueprint papers, but the site's current theme is lurid. I need to find some way (perhaps with your help!) to make it less maximalist and intensely-colorful... without capitulating to the trending ultra-minimalist (I'll spare you the pejoratives) style I'm so tired of.
 * **Convert API to TypeScript**: Impossible due to a tsconfig issue with Vercel which I was unable to locate. This task is not urgent, and checking/debugging it locally with `vercel dev` isn't possible anymore since SvelteKit switched to Vite and the Vercel CLI still uses the old commands... so I'm waiting until Vercel gets updated, in which case I'll create a repro to either discover the tsconfig issue is fixed, retry debugging the issue myself, or submit a GitHub issue.
