@@ -71,8 +71,7 @@
 
   p {
     font-size: 1.1em;
-    width: fit-content;
-    margin: auto;
+    text-align: center;
     padding-top: 0.4em;
   }
 </style>
