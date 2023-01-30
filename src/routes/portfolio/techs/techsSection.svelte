@@ -16,7 +16,7 @@
         ["Svelte & SvelteKit", "/techs/svelte.svg"],
         ["MongoDB", "/techs/mongoDb.svg"],
         ["Express", "/techs/express.svg"],
-        ["Cypress", "/techs/cypress.svg"]
+        ["Cypress (until recently. Migrating to Playwright)", "/techs/cypress.svg"]
       ]}
     />
   </section>
