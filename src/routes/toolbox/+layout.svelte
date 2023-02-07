@@ -36,6 +36,10 @@
 </script>
 
 <style>
+  #toolbox {
+    max-width: 90vw;
+  }
+
   h2 {font-size: 3.5em}
   h3 {
     font-size: 2em;
