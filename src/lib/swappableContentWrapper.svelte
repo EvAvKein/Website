@@ -1,4 +1,5 @@
 <div class:maintainParentHeight
+  role="presentation"
   in:slide={{
     duration: resizeDuration,
     delay: swipeDuration
@@ -9,6 +10,7 @@
   }}
 >
   <div class="innerWrapper core_blueprint"
+    role="presentation"
     in:fly={{
       duration: swipeDuration,
       x: 0 - swipeDistance,
