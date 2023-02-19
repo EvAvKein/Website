@@ -5,10 +5,12 @@
   `}>
     {#each valueConnections as connection}
       <line
+        aria-label={`Synthesis of ${connection.values[0]} and ${connection.values[1]}`}
         x1={valuesMap[connection.values[0]].coords.x} y1={valuesMap[connection.values[0]].coords.y}
         x2={valuesMap[connection.values[1]].coords.x} y2={valuesMap[connection.values[1]].coords.y}
         stroke-width="15" stroke="black"
         on:click={() => selectValues([connection.values[0], connection.values[1]])}
+        on:keypress={() => selectValues([connection.values[0], connection.values[1]])}
         on:focusout={() => {
           setTimeout(() => {
             if (currentValues.length === 2 && currentValues[0] === connection.values[0] && currentValues[1] === connection.values[1]) {
@@ -47,6 +49,7 @@
       width={percent(boxWidth, 98)}
       y={percent(boxHeight, 44)}
       height={percent(boxHeight, 55)}
+      aria-live="polite"
     >
       {#if currentValuePairText}
         {#key currentValuePairText}
@@ -150,7 +153,13 @@
   g {scale: 1.1} /* a hack, admittedly. the amount of trial-and-error necessary to eliminate the need for this (especially with the coords, to keep the perfect pentagon shape) doesn't seem worth the effort */
   g, label {transition: all 350ms}
 
-  line {cursor: pointer}
+  line {
+    cursor: pointer;
+    transition: stroke 350ms;
+  }
+  line:focus {
+    stroke: #666;
+  }
 
   .valueWrapper {
     position: relative;
@@ -175,9 +184,13 @@
     margin: auto;
     height: inherit;
     width: inherit;
+    border-radius: 50%;
     background-color: var(--backgroundSubColor);
     box-shadow: 0 0 0.25em 0.1em black;
-    border-radius: 50%;
+    transition: box-shadow 350ms;
+  }
+  button:focus {
+    box-shadow: 0 0 0.5em 0.2em #888;
   }
 
   #valueDesc {
