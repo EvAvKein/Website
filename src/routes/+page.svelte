@@ -22,7 +22,7 @@
         <h2>What?</h2>
         <h3>(Activities)</h3>
         <ul>
-          <li>Web programming <span>(fullstack, but primarily frontend)</span></li>
+          <li>Programming <span>(fullstack web)</span></li>
           <li>Video-games <span>(e.g RPGs, adventure, shooters, misc indie)</span></li>
           <li>Online media <span>(e.g news, explainers, fandoms)</span></li>
         </ul>
