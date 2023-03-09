@@ -86,6 +86,8 @@
 </script>
 
 <style>
+  #tool {padding: 1em}
+
   #tool > * {
     font-size: 1.5em;
     text-align: center;

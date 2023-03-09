@@ -1,39 +1,41 @@
 <ToolWrapper>
-  <section>
-    <label>
-      <input bind:value={percent}
-        type="number"
-        placeholder="0"
-        on:input={convertPercent} 
-      >
-      PERCENT <span>(0-100)</span>
-    </label>
-    <label>
-      <input bind:value={rgb}
-        type="number"
-        placeholder="0"
-        on:input={convertRgb}
-      >
-      RGB <span>(0-255)</span>
-    </label>
-    <label>
-      <input bind:value={hex}
-        type="text"
-        placeholder="0"
-        maxlength="2"
-        pattern={"[0-9a-fA-F]{0,2}"}
-        on:input={convertHex}
-      >
-      HEX <span>(0-FF)<span>
-    </label>
+  <section id="converterWrapper">
+    <section id="conversionInputs">
+      <label>
+        <input bind:value={percent}
+          type="number"
+          placeholder="0"
+          on:input={convertPercent} 
+        >
+        PERCENT <span>(0-100)</span>
+      </label>
+      <label>
+        <input bind:value={rgb}
+          type="number"
+          placeholder="0"
+          on:input={convertRgb}
+        >
+        RGB <span>(0-255)</span>
+      </label>
+      <label>
+        <input bind:value={hex}
+          type="text"
+          placeholder="0"
+          maxlength="2"
+          pattern={"[0-9a-fA-F]{0,2}"}
+          on:input={convertHex}
+        >
+        HEX <span>(0-FF)<span>
+      </label>
+    </section>
+  
+    <hr/>
+  
+    <p> 
+      Without <a href="https://www.joshuamiron.com/percent-to-hex-converter" class="core_contentButton">the original converter by Joshua Miron</a> (and his permission), this wouldn't be here.<br>
+      All I've done is adapt Joshua's code for Svelte & Typescript, and style & refactor a bit per my own preferences.
+    </p>
   </section>
-
-  <hr/>
-
-  <p> 
-    Without <a href="https://www.joshuamiron.com/percent-to-hex-converter" class="core_contentButton">the original converter by Joshua Miron</a> (and his permission), this wouldn't be here.<br>
-    All I've done is adapt Joshua's code for Svelte & Typescript, and style & refactor a bit per my own preferences.
-  </p>
 </ToolWrapper>
 
 <script lang="ts">
@@ -91,12 +93,13 @@
 </script>
 
 <style>
-  section, hr, p {
+  #converterWrapper {
     font-size: 1.25em;
     text-align: center;
+    padding: 1em;
   }
 
-  section {
+  #conversionInputs {
     margin-top: 0.4em;
     display: flex;
     flex-wrap: wrap;

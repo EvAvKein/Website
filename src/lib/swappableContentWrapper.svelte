@@ -38,7 +38,6 @@
   .maintainParentHeight > .innerWrapper {height: 100%}
   
   .innerWrapper {
-    padding: 1em;
     box-shadow: 0 0 0.25em 0.1em black;
     overflow: auto;
   }

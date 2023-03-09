@@ -76,6 +76,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 1em;
     gap: 1.25em;
   }
 </style>

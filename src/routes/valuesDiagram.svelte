@@ -54,14 +54,18 @@
       {#if currentValuePairText}
         {#key currentValuePairText}
           <SwappableContentWrapper maintainParentHeight={true}>
-            <h4>{currentValuePairText.title}</h4>
-            <p>{currentValuePairText.description}</p>
+            <div>
+              <h4>{currentValuePairText.title}</h4>
+              <p>{currentValuePairText.description}</p>
+            </div>
           </SwappableContentWrapper>
         {/key}
       {:else if currentValues[0]}
         {#key currentValues[0]}
           <SwappableContentWrapper maintainParentHeight={true}>
-            <p>{valuesMap[currentValues[0]].text}</p>
+            <div>
+              <p>{valuesMap[currentValues[0]].text}</p>
+            </div>
           </SwappableContentWrapper>
         {/key}
       {/if}
@@ -200,8 +204,9 @@
     box-shadow: 0 0 0.5em 0.15em black;
     transition: height 350ms, y 350ms;
   }
-  #valueDesc > * {
+  div {
     display: block;
+    padding: 0.75em 1em 0.75em;
     height: 100%;
   }
 
