@@ -32,8 +32,11 @@
     display: block;
     color: var(--textSubColor);
     white-space: pre;
-    margin: 0.5em 0 1em;
+    margin-top: 0.5em;
   }
 
-  hr {border-color: var(--textSubColor)}
+  hr {
+    border-color: var(--textSubColor);
+    margin: 1em 0 0.5em;
+  }
 </style>
