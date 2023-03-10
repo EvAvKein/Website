@@ -10,6 +10,9 @@
     <hr>
     <h4>Highlight Element Boxes</h4>
     <code>{"* {box-shadow: 0 0 0 0.1em rgb(255 0 0 / 40%) !important}"}</code>
+    <hr>
+    <h4>Delayed debugger freeze (Chromium/Firefox)</h4>
+    <code>{"setTimeout(() => {debugger}, 5000)"}</code>
   </section>
 </ToolWrapper>
 
