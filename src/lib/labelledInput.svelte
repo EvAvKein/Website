@@ -46,7 +46,7 @@
 
   input, textarea {
     color: var(--textColor);
-    background-color: var(--backgroundMidColor);
+    background-color: var(--backgroundSubColor);
     width: 100%;
     box-sizing: border-box;
     border-left: 0.225em solid var(--textSubColor);

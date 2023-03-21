@@ -38,7 +38,7 @@
   }
 
   #portfolio > section {
-    background-color: var(--backgroundMidColor);
+    background-color: var(--backgroundSubColor);
     border-radius: 0.25em;
     padding: 0.5em 1em 0.5em;
     box-shadow: 0 0 0.5em 0.1em black;

@@ -199,7 +199,7 @@
 
   #valueDesc {
     font-size: 0.5cm; /* cm changes less drastically than the unset value when the svg resizes */
-    background-color: var(--backgroundMidColor);
+    background-color: var(--backgroundSubColor);
     border-radius: 0.25em;
     box-shadow: 0 0 0.5em 0.15em black;
     transition: height 350ms, y 350ms;

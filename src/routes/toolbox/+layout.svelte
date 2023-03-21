@@ -70,7 +70,7 @@
   a[inert] {background-color: var(--textSubColor)}
 
   #currentTool {
-    background-color: var(--backgroundMidColor);
+    background-color: var(--backgroundSubColor);
     flex-grow: 1;
     overflow: auto;
     box-shadow: inset 0 0 0.5em 0 black;

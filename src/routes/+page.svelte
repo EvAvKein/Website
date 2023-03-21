@@ -58,7 +58,7 @@
   }
 
   section.core_blueprint {
-    background-color: var(--backgroundMidColor);
+    background-color: var(--backgroundSubColor);
     width: fit-content;
     margin: auto;
     padding: 0.75em 1em;

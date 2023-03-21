@@ -47,7 +47,7 @@
     flex-grow: 0.1;
     align-self: flex-end;
     color: var(--textColor);
-    background-color: var(--backgroundMidColor);
+    background-color: var(--backgroundSubColor);
     padding: 0.5em;
     box-shadow: var(--shadow) black;
     scale: 0.925;
