@@ -14,10 +14,6 @@
     />
   {/if}
   <label for={id}>{label}</label>
-
-  {#if note}
-    <p>* {note}</p>
-  {/if}
 </div>
 
 <script lang="ts">
@@ -25,7 +21,6 @@
   export let label:string;
   export let value:string;
   export let type = "text" as "text"|"textarea"|undefined;
-  export let note = undefined as string|undefined;
 
   export let textareaMinLineHeight = undefined as number|undefined;
 </script>
