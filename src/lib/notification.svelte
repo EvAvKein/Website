@@ -1,5 +1,5 @@
 {#if text}
-  <p transition:slide class={'notification ' + styleClass}>
+  <p transition:slide class={'notification ' + styleClass} aria-live="polite">
     {text}
   </p>
 {/if}
