@@ -193,8 +193,10 @@
     box-shadow: 0 0 0.25em 0.1em black;
     transition: box-shadow 350ms;
   }
+
+  label:hover + button,
   button:focus {
-    box-shadow: 0 0 0.5em 0.2em #888;
+    box-shadow: 0 0 0.25em 0.1em #888;
   }
 
   #valueDesc {
