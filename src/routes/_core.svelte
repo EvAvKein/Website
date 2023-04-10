@@ -7,7 +7,7 @@
 <div id="pageWrapper">
   <div id="page" class="core_blueprint"
     in:fly={{x: 0 - window.innerWidth, duration: transitionDuration, delay: transitionDuration}}
-    out:fly={{ x: window.innerWidth, duration: transitionDuration}}
+    out:fly={{x: window.innerWidth, duration: transitionDuration}}
     on:introstart={noScrollWhilePageTransitions}
   >
     <slot/>
@@ -53,15 +53,15 @@
   /*~~~~~~~~~~~~\
     CORE STYLES
   \~~~~~~~~~~~~*/
-  :root { /* filters created via https://codepen.io/sosuke/pen/Pjoqqp */
+  :root { /* filters created via https://evavkein.com/toolbox/cssFilterGenerator */
     --textColor: #ececec;
     --filterToTextColor: brightness(92.5%);
     --textSubColor: #bebebe;
     --filterToTextSubColor: brightness(75%); 
-    --backgroundColor: #033070;
-    --filterToBackgroundColor: brightness(0) saturate(100%) invert(5%) sepia(12%) saturate(2899%) hue-rotate(171deg) brightness(92%) contrast(100%);
-    --backgroundSubColor: #053A85;
-    --filterTobackgroundSubColor: brightness(0) saturate(100%) invert(5%) sepia(12%) saturate(2899%) hue-rotate(171deg) brightness(92%) contrast(100%);
+    --backgroundColor: #042657;
+    --filterToBackgroundColor: invert(13%) sepia(46%) saturate(2420%) hue-rotate(198deg) brightness(92%) contrast(105%);
+    --backgroundSubColor: #042e68;
+    --filterTobackgroundSubColor: invert(14%) sepia(40%) saturate(3859%) hue-rotate(204deg) brightness(88%) contrast(101%);
     --highlightColor: #f5cb32;
     --filterToHighlightColor: brightness(0) saturate(100%) invert(91%) sepia(83%) saturate(7499%) hue-rotate(325deg) brightness(101%) contrast(98%);
     --highlightSubColor: #d8b434;
@@ -145,9 +145,12 @@
   .core_backgroundButton:active {
     background-color: var(--highlightColor);
   }
+  .core_backgroundButton[inert="true"] {
+    background-color: var(--textSubColor);
+  }
 
   .core_contentButton {
-    color: inherit;
+    color: var(--textColor);
     text-decoration: none;
     background-color: transparent;
     padding: 0;
@@ -167,6 +170,12 @@
   }
   .core_contentButton:active img {
     filter: var(--filterToHighlightColor);
+  }
+  .core_contentButton[inert="true"] {
+    color: var(--textSubColor);
+  }
+  .core_contentButton[inert="true"] img {
+    filter: var(--filterToTextSubColor);
   }
 
   .core_contentButton svg {
