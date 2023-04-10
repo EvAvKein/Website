@@ -1,24 +1,21 @@
-<div class="tooltipSubject" class:activated
-  role="presentation"
+<button class="tooltipSubject core_contentButton" class:activated
   on:mouseenter={() => hovered = true}
   on:mouseleave={() => hovered = false}
   on:focus={() => focused = true}
   on:blur={() => focused = false}
   tabindex="0"
+  aria-live="polite"
   bind:this={wrapperElem}
 >{text}<!--
   comment prevents extra space character
 -->{#if activated}
     <div class="tooltip core_blueprint"
-      aria-live="polite"
       in:slide={{duration: 300}}
       out:slide={{duration: 250}}
       bind:this={tooltipElem}
     >{tooltip}</div>
   {/if}
-</div>
-
-<!-- this template is (as of svelte ^3.55.0) A11y-warning that "noninteractive element cannot have positive tabIndex value" despite focus being an interaction in this case. see the following comment and any future discussion (after 18.2.23) https://github.com/sveltejs/svelte/issues/7953#issuecomment-1328164850 -->
+</button>
 
 <script lang="ts">
   import {onMount} from "svelte";
@@ -76,6 +73,8 @@
     display: inline;
     cursor: help;
     outline: none;
+    user-select: text;
+    font-weight: inherit;
     text-decoration: underline 0.1em dashed var(--highlightSubColor);
     transition: color 350ms;
   }
