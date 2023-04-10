@@ -4,8 +4,7 @@
     (nameAlwaysVisible ? " nameVisible" : "") + 
     (ofCurrentPage ? " current" : "")
   }
-  tabindex={currentPagePath === href ? -1 : 0}
-  >
+>
   <img src={imgSrc} alt={imgAlt}/>
   <span>{pageName}</span>
 </a>
@@ -41,10 +40,7 @@
     transition: opacity 250ms ease-out;
   }
 
-  a.current {
-    cursor: default;
-    color: var(--textSubColor);
-  }
+  a.current {color: var(--textSubColor)}
   a.current img {filter: var(--filterToTextSubColor)}
 
   a.nameVisible img, a.current img,
