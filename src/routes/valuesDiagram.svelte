@@ -1,77 +1,75 @@
-<svg viewBox={`0 0 ${boxWidth} ${boxHeight}`}>
-  <g style={`
-    transform-origin: center ${percent(boxHeight, 53.05)}px;
-    rotate: ${rotationDeg > 0 ? 0 - rotationDeg : Math.abs(rotationDeg)}deg;
-  `}>
-    {#each valueConnections as connection}
-      <line
-        aria-label={`Synthesis of ${connection.values[0]} and ${connection.values[1]}`}
-        x1={valuesMap[connection.values[0]].coords.x} y1={valuesMap[connection.values[0]].coords.y}
-        x2={valuesMap[connection.values[1]].coords.x} y2={valuesMap[connection.values[1]].coords.y}
-        stroke-width="15" stroke="black"
-        on:click={() => selectValues([connection.values[0], connection.values[1]])}
-        on:keypress={() => selectValues([connection.values[0], connection.values[1]])}
-        on:focusout={() => {
-          setTimeout(() => {
-            if (currentValues.length === 2 && currentValues[0] === connection.values[0] && currentValues[1] === connection.values[1]) {
-              selectValues([]);
-            };
-          }, 300)
-        }}
-      />
-    {/each}
-    {#each values as [name]}
-      <foreignObject class="valueWrapper"
-        x={valuesMap[name].coords.x - 17}
-        y={valuesMap[name].coords.y - 17}
-      >
-        <label for={name}
-          style={`rotate: ${rotationDeg}deg`}
-          class={currentValues.length === 0 || currentValues.includes(name) ? "active" : ""}
-        >{name}</label>
-        <button id={name}
-          on:click={() => selectValues([name])}
+<section>
+  <svg viewBox={`0 0 ${boxWidth} ${boxHeight}`}>
+    <g style={`
+      transform-origin: center ${percent(boxHeight, 53.05)}px;
+      rotate: ${rotationDeg > 0 ? 0 - rotationDeg : Math.abs(rotationDeg)}deg;
+    `}>
+      {#each valueConnections as connection}
+        <line
+          aria-label={`Synthesis of ${connection.values[0]} and ${connection.values[1]}`}
+          x1={valuesMap[connection.values[0]].coords.x} y1={valuesMap[connection.values[0]].coords.y}
+          x2={valuesMap[connection.values[1]].coords.x} y2={valuesMap[connection.values[1]].coords.y}
+          stroke-width="15" stroke="black"
+          on:click={() => selectValues([connection.values[0], connection.values[1]])}
+          on:keypress={() => selectValues([connection.values[0], connection.values[1]])}
           on:focusout={() => {
             setTimeout(() => {
-              if (currentValues.length === 1 && currentValues[0] === name) {
+              if (currentValues.length === 2 && currentValues[0] === connection.values[0] && currentValues[1] === connection.values[1]) {
                 selectValues([]);
               };
             }, 300)
           }}
         />
-      </foreignObject>
-    {/each}
-  </g>
+      {/each}
+      {#each values as [name]}
+        <foreignObject class="valueWrapper"
+          x={valuesMap[name].coords.x - 17}
+          y={valuesMap[name].coords.y - 17}
+        >
+          <label for={name}
+            style={`rotate: ${rotationDeg}deg`}
+            class={currentValues.length === 0 || currentValues.includes(name) ? "active" : ""}
+          >{name}</label>
+          <button id={name}
+            on:click={() => selectValues([name])}
+            on:focusout={() => {
+              setTimeout(() => {
+                if (currentValues.length === 1 && currentValues[0] === name) {
+                  selectValues([]);
+                };
+              }, 300)
+            }}
+          />
+        </foreignObject>
+      {/each}
+    </g>
+  </svg>
   {#if currentValues[0]}
-    <foreignObject id="valueDesc"
-      transition:fly={{y: 25, duration: 200}}
-      x={percent(boxWidth, 1)}
-      width={percent(boxWidth, 98)}
-      y={percent(boxHeight, 44)}
-      height={percent(boxHeight, 55)}
-      aria-live="polite"
-    >
-      {#if currentValuePairText}
-        {#key currentValuePairText}
-          <SwappableContentWrapper maintainParentHeight={true}>
-            <div>
-              <h4>{currentValuePairText.title}</h4>
-              <p>{currentValuePairText.description}</p>
-            </div>
-          </SwappableContentWrapper>
-        {/key}
-      {:else if currentValues[0]}
-        {#key currentValues[0]}
-          <SwappableContentWrapper maintainParentHeight={true}>
-            <div>
-              <p>{valuesMap[currentValues[0]].text}</p>
-            </div>
-          </SwappableContentWrapper>
-        {/key}
-      {/if}
-    </foreignObject>
+  <div id="valueDesc"
+    transition:fly={{y: 25, duration: 200}}
+    aria-live="polite"
+  >
+    {#if currentValuePairText}
+      {#key currentValuePairText}
+        <SwappableContentWrapper>
+          <div>
+            <h4>{currentValuePairText.title}</h4>
+            <p>{currentValuePairText.description}</p>
+          </div>
+        </SwappableContentWrapper>
+      {/key}
+    {:else if currentValues[0]}
+      {#key currentValues[0]}
+        <SwappableContentWrapper>
+          <div>
+            <p>{valuesMap[currentValues[0]].text}</p>
+          </div>
+        </SwappableContentWrapper>
+      {/key}
+    {/if}
+  </div>
   {/if}
-</svg>
+</section>
 
 <script lang="ts">
   import {fly} from "svelte/transition";
@@ -154,6 +152,8 @@
 </script>
 
 <style>
+  section {position: relative}
+
   g {scale: 1.1} /* a hack, admittedly. the amount of trial-and-error necessary to eliminate the need for this (especially with the coords, to keep the perfect pentagon shape) doesn't seem worth the effort */
   g, label {transition: all 350ms}
 
@@ -200,24 +200,26 @@
   }
 
   #valueDesc {
-    font-size: 0.5cm; /* cm changes less drastically than the unset value when the svg resizes */
+    position: absolute;
+    left: 0;
+    bottom: 2%;
+    max-height: 54%;
+    overflow-x: hidden;
     background-color: var(--backgroundSubColor);
     border-radius: 0.25em;
     box-shadow: 0 0 0.5em 0.15em black;
-    transition: height 350ms, y 350ms;
+    transition: all 7500ms;
   }
-  div {
+  #valueDesc div {
     display: block;
-    padding: 0.75em 1em 0.75em;
+    padding: 0.5em;
     height: 100%;
   }
 
   h4 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     text-align: center;
     margin-bottom: 0.25em;
   }
-  h4 + p {font-size: 1.5em}
-
-  p {font-size: 1.70em}
+  h4 + p {font-size: 0.9em}
 </style>
