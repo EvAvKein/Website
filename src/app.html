@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Eve Aviv Keinan" />
+		%sveltekit.head%
+	</head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="author" content="Eve Aviv Keinan">
-	%sveltekit.head%
-</head>
-
-<body>
-	<div style="display:contents">
-		%sveltekit.body%
-		<!-- extra wrapper and style is at the recommendation of sveltekit:
+	<body>
+		<div style="display: contents">
+			%sveltekit.body%
+			<!-- extra wrapper and style is at the recommendation of sveltekit:
 				"%sveltekit.body% directly inside <body> is not recommended, as your app may break for users who have certain browser extensions installed.
 
 					Consider wrapping it in an element:
@@ -20,7 +19,6 @@
 					  %sveltekit.body%
 					</div>
 			-->
-	</div>
-</body>
-
+		</div>
+	</body>
 </html>

@@ -2,13 +2,13 @@
 // see https://github.com/sveltejs/svelte/issues/6900 & https://github.com/sveltejs/svelte/issues/6592 (& more via "mentioned this issue" automated replies)
 
 class Tool {
-  name:string;
-  id:string;
+	name: string;
+	id: string;
 
-  constructor(name:Tool["name"], id:string) {
-    this.name = name;
-    this.id = id;
-  };
-};
+	constructor(name: Tool["name"], id: string) {
+		this.name = name;
+		this.id = id;
+	}
+}
 
-export {Tool}
+export {Tool};

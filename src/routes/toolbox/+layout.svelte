@@ -1,100 +1,108 @@
 <Core
-  headTitle="EvAvKein: Toolbox"
-  headDescription="Eve Aviv Keinan's toolbox page; including a variety of utilities he found useful"
+	headTitle="EvAvKein: Toolbox"
+	headDescription="Eve Aviv Keinan's toolbox page; including a variety of utilities he found useful"
 >
-  <section id="toolbox">
-    <h2>Toolbox</h2>
-    <h3>Utilities I found useful</h3>
-    <section id="tools" class="core_blueprint">
-      <nav>
-        {#each tools as tool}
-          <a href={"/toolbox/" + tool.id}
-            class="core_backgroundButton"
-            inert={tool.id === currentToolId || null}
-          >{tool.name}</a>
-        {/each}
-      </nav>
-      <section id="currentTool" class="core_blueprint">
-        <slot/>
-      </section>
-    </section>
-  </section>
+	<section id="toolbox">
+		<h2>Toolbox</h2>
+		<h3>Utilities I found useful</h3>
+		<section id="tools" class="core_blueprint">
+			<nav>
+				{#each tools as tool}
+					<a href={"/toolbox/" + tool.id} class="core_backgroundButton" inert={tool.id === currentToolId || null}
+						>{tool.name}</a
+					>
+				{/each}
+			</nav>
+			<section id="currentTool" class="core_blueprint">
+				<slot />
+			</section>
+		</section>
+	</section>
 </Core>
 
 <script lang="ts">
-  import Core from "../_core.svelte";
-  import {page} from "$app/stores";
-  import {Tool} from "./toolClass";
+	import Core from "../_core.svelte";
+	import {page} from "$app/stores";
+	import {Tool} from "./toolClass";
 
-  const tools = [
-    new Tool("Debug Snippets", "debugSnippets"),
-    new Tool("CSS Filter Generator", "cssFilterGenerator"),
-    new Tool("Percent-RGB-Hex Converter", "percentRgbHexConverter"),
-  ];
+	const tools = [
+		new Tool("Debug Snippets", "debugSnippets"),
+		new Tool("CSS Filter Generator", "cssFilterGenerator"),
+		new Tool("Percent-RGB-Hex Converter", "percentRgbHexConverter"),
+	];
 
-  $: currentToolId = $page.url.pathname.replace("/toolbox/", "");
+	$: currentToolId = $page.url.pathname.replace("/toolbox/", "");
 </script>
 
 <style>
-  #toolbox {
-    max-width: 90vw;
-  }
+	#toolbox {
+		max-width: 90vw;
+	}
 
-  h2 {font-size: 3.5em}
-  h3 {
-    font-size: 2em;
-    color: var(--textSubColor);
-  }
-  h2, h3 {text-align: center}
+	h2 {
+		font-size: 3.5em;
+	}
+	h3 {
+		font-size: 2em;
+		color: var(--textSubColor);
+	}
+	h2,
+	h3 {
+		text-align: center;
+	}
 
-  #tools {
-    margin-top: 1em;
-    --wrapperPadding: 1em;
-    padding: var(--wrapperPadding);
-    background-color: var(--backgroundColor);
-    box-shadow: 0 0 1em 0 black;
-    padding-bottom: 1em;
-    display: flex;
-    flex-direction: column;
-  }
+	#tools {
+		margin-top: 1em;
+		--wrapperPadding: 1em;
+		padding: var(--wrapperPadding);
+		background-color: var(--backgroundColor);
+		box-shadow: 0 0 1em 0 black;
+		padding-bottom: 1em;
+		display: flex;
+		flex-direction: column;
+	}
 
-  nav {
-    padding-bottom: var(--wrapperPadding);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 0.75em;
-  }
+	nav {
+		padding-bottom: var(--wrapperPadding);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		gap: 0.75em;
+	}
 
-  a {font-size: 1.3em}
-  a[inert] {background-color: var(--textSubColor)}
+	a {
+		font-size: 1.3em;
+	}
+	a[inert] {
+		background-color: var(--textSubColor);
+	}
 
-  #currentTool {
-    background-color: var(--backgroundSubColor);
-    flex-grow: 1;
-    overflow: auto;
-    box-shadow: inset 0 0 0.5em 0 black;
-    transition: all 350ms;
-  }
+	#currentTool {
+		background-color: var(--backgroundSubColor);
+		flex-grow: 1;
+		overflow: auto;
+		box-shadow: inset 0 0 0.5em 0 black;
+		transition: all 350ms;
+	}
 
-  @media (min-width: 70em) {
-    #tools {
-      flex-direction: row;
-      flex-grow: 1;
-      width: clamp(55em, 85vw, 70em)
-    }
+	@media (min-width: 70em) {
+		#tools {
+			flex-direction: row;
+			flex-grow: 1;
+			width: clamp(55em, 85vw, 70em);
+		}
 
-    nav {
-      flex-basis: 25%;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 0.75em;
-      padding-bottom: unset;
-      padding-right: var(--wrapperPadding);
-    }
+		nav {
+			flex-basis: 25%;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 0.75em;
+			padding-bottom: unset;
+			padding-right: var(--wrapperPadding);
+		}
 
-    #currentTool {
-      flex-basis: 75%;
-    }
-  }
+		#currentTool {
+			flex-basis: 75%;
+		}
+	}
 </style>
