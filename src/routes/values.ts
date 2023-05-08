@@ -40,8 +40,8 @@ class ValueConnection {
 const valueConnections: ValueConnection[] = [
 	new ValueConnection(
 		["Transparency", "Introspection"],
-		"Confidence is circumstantial, not compulsory",
-		"Uncertainty is the default, from which we rummage through life for evidence and patterns towards sufficient/actionable certainty. Dogmatic confidence is a reckless opiate, an infantile substitute for exposing one's truths/capacity to the unknown and accepting that these may prove insufficient"
+		"Confidence is situational, not compulsory",
+		"Uncertainty is the default, from which we rummage through life for evidence and patterns towards sufficient/actionable certainty. Dogmatic confidence is a reckless opiate, an infantile substitute for exposing one's notions/capacity to the unknown and accepting that these may prove insufficient"
 	),
 	new ValueConnection(
 		["Transparency", "Prudence"],
@@ -55,13 +55,13 @@ const valueConnections: ValueConnection[] = [
 	),
 	new ValueConnection(
 		["Transparency", "Compassion"],
-		"Don't let transparency become verbosity",
-		"Circumstances often don't permit the time/patience necessary for comprehensive, unambiguous transparency and the dialogue it's liable to prompt. Practice the requisite social awareness to regulate one's transparency based on contextual consent, prioritizing explicit consent when provided/proper"
+		"Express sincere appreciation",
+		"We spend half our waking life on labor and maintenance. As fulfilling as those obligations may sometimes be, we're predisposed to fixate on the things we lack or rather avoid, and genuine and non-indulgent gestures of gratitude help us keep our perspective/priorities in check"
 	),
 	new ValueConnection(
 		["Introspection", "Compassion"],
-		"Nurture yourself",
-		"Treat yourself from the perspective of a paragon parent/guardian: Constructively steering you(rself) towards personal growth and long-term wellbeing, while maintaining sources of comfort for times of need/rest"
+		"Be your best advocate",
+		"Relationships (interpersonal and institutional) inherently require participants to set aside some behaviors, but between civility and subservience is a multi-faceted gradient that plenty would distort to inequitable gains. Being attentive to one's own desires and priorities allows onself to better establish informed consent, thereby settling frictions much more amicably"
 	),
 	new ValueConnection(
 		["Introspection", "Discipline"],
@@ -70,23 +70,23 @@ const valueConnections: ValueConnection[] = [
 	),
 	new ValueConnection(
 		["Introspection", "Prudence"],
-		"Mind your biases",
-		"We're all vulnerable to biases, especially those who believe they're immune. Take the time to assess your judgements and assumptions for unsubstantiated, detrimental, or otherwise unchecked generalizations/distaste"
+		"Curb your preconceptions",
+		"We're all vulnerable to biases, especially those who believe they've transcended it. Take the time to assess your judgements for unprocessed distaste, and do your due dilligence to reach conclusions through as few interpersonal or cultural truisms/proxies as viable"
 	),
 	new ValueConnection(
 		["Prudence", "Compassion"],
 		"Spread your compassion equitably",
-		"Addressing the plight of the marginalized often results in grief from those who are comfortable in the status-quo and fear equalization rhetoric/measures are marginalizing them. While both groups deserve peace of mind, reactionary distress ought to not veto equity"
+		"Addressing the plight of the marginalized often results in grief from those who are comfortable in the status-quo and fear that equalization rhetoric/measures would marginalize them. While both groups deserve peace of mind, reactionary distress ought to not veto equity"
 	),
 	new ValueConnection(
 		["Prudence", "Discipline"],
-		"Don't be complicit in injustice",
-		"It's one's moral duty to, in as many cases as viable and constructive, intervene when observing unjust acts/circumstances. The world becomes a better place when we proactively make it so, and it regresses when we lose that volition"
+		"Mind your impact",
+		"When people allow themselves to litter society feels like a garbage heap, and when people allow themselves to stare indecently society feels like a meat market. One ought to be conscientious of the cumulative toll (whether personal, cultural, or environmental) that their actions would/do contribute to if others similarly indulged"
 	),
 	new ValueConnection(
 		["Discipline", "Compassion"],
 		"Be steadfast in your compassion",
-		"As intoxicating as it may be to get swept-up in angst, irreverence, indignation, or zeal, none of these mentalities are well-suited for constructive conduct between people"
+		"Angst, indignation, irreverence, and zeal, are (among) impulses which, as invigorating or legitimate as they may feel, are scarcely constructive. One ought to do their part in upholding rehabilitative equanimity, if we are to stop the cycle of becoming the monsters we believe we fight"
 	),
 ];
 
