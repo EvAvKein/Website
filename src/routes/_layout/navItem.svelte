@@ -1,17 +1,17 @@
-<a {href} class={"core_contentButton" + (nameAlwaysVisible ? " nameVisible" : "") + (ofCurrentPage ? " current" : "")}>
+<a {href} class={"core_contentButton" + (ofCurrentPage ? " current" : "")}>
 	<img src={imgSrc} alt={imgAlt} />
 	<span>{pageName}</span>
 </a>
 
 <script lang="ts">
+	import {page} from "$app/stores";
+
 	export let href: string;
 	export let imgSrc: string;
 	export let imgAlt: string;
 	export let pageName: string;
-	export let currentPagePath: string;
-	export let nameAlwaysVisible = false;
 
-	$: ofCurrentPage = href === "/" ? currentPagePath === "/" : currentPagePath.includes(href);
+	$: ofCurrentPage = href === "/" ? $page.url.pathname === "/" : $page.url.pathname.includes(href);
 </script>
 
 <style>
@@ -41,7 +41,6 @@
 		filter: var(--filterToTextSubColor);
 	}
 
-	a.nameVisible img,
 	a.current img,
 	a:hover img,
 	a:focus img,
@@ -50,7 +49,6 @@
 		transition: height 250ms;
 	}
 
-	a.nameVisible span,
 	a.current span,
 	a:hover span,
 	a:focus span,

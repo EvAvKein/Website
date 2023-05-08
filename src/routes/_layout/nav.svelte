@@ -1,46 +1,13 @@
 <nav>
-	<NavItem
-		href={"/"}
-		imgSrc={"/about.svg"}
-		imgAlt={"Non-descript person icon"}
-		pageName={"Home"}
-		{currentPagePath}
-		nameAlwaysVisible={namesAlwaysVisible}
-	/>
-	<NavItem
-		href={"/portfolio"}
-		imgSrc={"/code.svg"}
-		imgAlt={"Computer code icon"}
-		pageName={"Portfolio"}
-		{currentPagePath}
-		nameAlwaysVisible={namesAlwaysVisible}
-	/>
-	<NavItem
-		href={"/contact"}
-		imgSrc={"/contact.svg"}
-		imgAlt={"Envelope icon"}
-		pageName={"Contact"}
-		{currentPagePath}
-		nameAlwaysVisible={namesAlwaysVisible}
-	/>
+	<NavItem href={"/"} imgSrc={"/about.svg"} imgAlt={"Non-descript person icon"} pageName={"Home"} />
+	<NavItem href={"/portfolio"} imgSrc={"/code.svg"} imgAlt={"Computer code icon"} pageName={"Portfolio"} />
+	<NavItem href={"/contact"} imgSrc={"/contact.svg"} imgAlt={"Envelope icon"} pageName={"Contact"} />
 	<hr />
-	<NavItem
-		href={"/toolbox"}
-		imgSrc={"/toolbox.svg"}
-		imgAlt={"Toolbox icon"}
-		pageName={"Toolbox"}
-		{currentPagePath}
-		nameAlwaysVisible={namesAlwaysVisible}
-	/>
+	<NavItem href={"/toolbox"} imgSrc={"/toolbox.svg"} imgAlt={"Toolbox icon"} pageName={"Toolbox"} />
 </nav>
 
 <script lang="ts">
-	import {page} from "$app/stores";
 	import NavItem from "./navItem.svelte";
-
-	export let namesAlwaysVisible = false;
-
-	$: currentPagePath = $page.url.pathname;
 </script>
 
 <style>
