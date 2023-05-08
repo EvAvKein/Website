@@ -1,5 +1,5 @@
 <nav>
-	<NavItem href={"/"} imgSrc={"/about.svg"} imgAlt={"Non-descript person icon"} pageName={"Home"} />
+	<NavItem href={"/"} imgSrc={"/about.svg"} imgAlt={"Non-descript person icon"} pageName={"About"} />
 	<NavItem href={"/portfolio"} imgSrc={"/code.svg"} imgAlt={"Computer code icon"} pageName={"Portfolio"} />
 	<NavItem href={"/contact"} imgSrc={"/contact.svg"} imgAlt={"Envelope icon"} pageName={"Contact"} />
 	<hr />
