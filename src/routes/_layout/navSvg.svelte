@@ -26,6 +26,7 @@
 		height: inherit;
 		width: inherit;
 		overflow: visible;
+		pointer-events: none; /* to disable title text appearing as a tooltip on hover */
 	}
 	#top,
 	#bottom {
