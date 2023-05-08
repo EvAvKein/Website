@@ -58,14 +58,17 @@
 	:root {
 		/* filters created via https://evavkein.com/toolbox/cssFilterGenerator */
 		--textColor: #ececec;
-		--filterToTextColor: brightness(92.5%);
+		--filterToTextColor: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(442%) hue-rotate(213deg)
+			brightness(115%) contrast(85%);
 		--textSubColor: #bebebe;
-		--filterToTextSubColor: brightness(75%);
+		--filterToTextSubColor: brightness(0) saturate(100%) invert(81%) sepia(1%) saturate(0%) hue-rotate(18deg)
+			brightness(94%) contrast(93%);
 		--backgroundColor: #042657;
-		--filterToBackgroundColor: invert(13%) sepia(46%) saturate(2420%) hue-rotate(198deg) brightness(92%) contrast(105%);
+		--filterToBackgroundColor: brightness(0) saturate(100%) invert(13%) sepia(46%) saturate(2420%) hue-rotate(198deg)
+			brightness(92%) contrast(105%);
 		--backgroundSubColor: #042e68;
-		--filterTobackgroundSubColor: invert(14%) sepia(40%) saturate(3859%) hue-rotate(204deg) brightness(88%)
-			contrast(101%);
+		--filterTobackgroundSubColor: brightness(0) saturate(100%) invert(14%) sepia(40%) saturate(3859%) hue-rotate(204deg)
+			brightness(88%) contrast(101%);
 		--highlightColor: #f5cb32;
 		--filterToHighlightColor: brightness(0) saturate(100%) invert(91%) sepia(83%) saturate(7499%) hue-rotate(325deg)
 			brightness(101%) contrast(98%);
