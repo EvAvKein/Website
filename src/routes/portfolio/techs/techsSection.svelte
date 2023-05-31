@@ -9,6 +9,7 @@
 				["HTML", "/techs/html.svg"],
 				["CSS", "/techs/css.svg"],
 				["JavaScript", "/techs/javascript.svg"],
+				["JSDoc", "/techs/jsdoc.svg"],
 				["TypeScript", "/techs/typescript.svg"],
 				["Vue", "/techs/vue.svg"],
 				["Svelte & SvelteKit", "/techs/svelte.svg"],
