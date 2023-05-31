@@ -13,6 +13,8 @@
 						<img src="/browser.svg" alt="Browser window" />
 					{:else if link.type === "chrome"}
 						<img src="/chrome.svg" alt="Google Chrome" />
+					{:else if link.type === "firefox"}
+						<img src="/firefox.svg" alt="Firefox" />
 					{/if}
 				</a>
 			{/each}
@@ -26,7 +28,7 @@
 	export let name: string;
 	export let technologies: string;
 	export let description: string;
-	export let links: {type: "github" | "browser" | "chrome"; url: string}[] | undefined;
+	export let links: {type: "github" | "browser" | "chrome" | "firefox"; url: string}[] | undefined;
 </script>
 
 <style>
@@ -67,6 +69,7 @@
 	p {
 		grid-area: description;
 		margin-top: 0.25em;
+		white-space: pre-wrap;
 	}
 
 	.projectLinks {
@@ -80,8 +83,8 @@
 		gap: 0.75em;
 	}
 	.projectLinks a {
-		height: 1.75em;
-		width: 1.75em;
+		height: 1.5em;
+		width: 1.5em;
 	}
 	.projectLinks a img {
 		height: inherit;
