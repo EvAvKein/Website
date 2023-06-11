@@ -35,7 +35,7 @@
 				<h2>Where?</h2>
 				<h3>(Residence)</h3>
 				<p>
-					Currently in Israel. Thanks to my French citizenship, I'll relocate to the EU once I'm employed remotely/there
+					Recently moved to Finland. Stable/long-term residence is currently pending employment, to keep myself available for various in-office/hybrid opportunities 
 				</p>
 			</section>
 		</section>
