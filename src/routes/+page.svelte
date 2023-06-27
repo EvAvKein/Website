@@ -35,7 +35,7 @@
 				<h2>Where?</h2>
 				<h3>(Residence)</h3>
 				<p>
-					Recently moved to Finland. Stable/long-term residence is currently pending employment, to keep myself available for various in-office/hybrid opportunities 
+					Recently moved to Helsinki, Finland (from Israel, but with an EU citizenship). Currently jobseeking and open to relocating within Finland
 				</p>
 			</section>
 		</section>
