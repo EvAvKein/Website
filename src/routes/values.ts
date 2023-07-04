@@ -1,6 +1,6 @@
-type valueName = "Transparency" | "Introspection" | "Prudence" | "Discipline" | "Compassion";
+export type valueName = "Transparency" | "Introspection" | "Prudence" | "Discipline" | "Compassion";
 
-const values: [valueName, string][] = [
+export const values: [valueName, string][] = [
 	[
 		"Transparency",
 		"Safety & trust, both personal and social, require forthcoming honesty and truthfulness with one another. Transparency keeps us accountable, expedites conflict-resolution and co-operation, lays bare xenophobia's arbitrary and unpragmatic natures, and frees us from burdens of deceit",
@@ -37,7 +37,7 @@ class ValueConnection {
 	}
 }
 
-const valueConnections: ValueConnection[] = [
+export const valueConnections: ValueConnection[] = [
 	new ValueConnection(
 		["Transparency", "Introspection"],
 		"Confidence is situational, not compulsory",
@@ -89,5 +89,3 @@ const valueConnections: ValueConnection[] = [
 		"Angst, indignation, irreverence, and zeal, are (among) impulses which, as invigorating or legitimate as they may feel, are scarcely constructive. One ought to do their part in upholding rehabilitative equanimity, if we are to stop the cycle of becoming the monsters we believe we fight"
 	),
 ];
-
-export {values, valueConnections};
