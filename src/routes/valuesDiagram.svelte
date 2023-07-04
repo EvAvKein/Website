@@ -1,8 +1,8 @@
 <section>
-	<svg viewBox={`0 0 ${boxWidth} ${boxHeight}`}>
+	<svg viewBox={`0 0 ${boxX} ${boxY}`}>
 		<g
 			style={`
-      transform-origin: center ${percent(boxHeight, 53.05)}px;
+      transform-origin: center 50%;
       rotate: ${rotationDeg > 0 ? 0 - rotationDeg : Math.abs(rotationDeg)}deg;
     `}
 		>
@@ -81,48 +81,50 @@
 <script lang="ts">
 	import {fly} from "svelte/transition";
 	import SwappableContentWrapper from "../lib/swappableContentWrapper.svelte";
-	import {values, valueConnections} from "./values";
-	type value = (typeof values)[number][0];
+	import {type valueName, values, valueConnections} from "./values";
 
-	const boxWidth = 750;
-	const boxHeight = 650;
+	const boxX = 750;
+	const boxY = 650;
+	const valuesDiameter = 550;
+	const valuesRadius = valuesDiameter / 2;
+	const boxPaddingX = (boxX - valuesDiameter) / 2;
+	const boxPaddingY = (boxY - valuesDiameter) / 2;
 
-	function percent(original: number, percentage: number) {
-		return (original / 100) * percentage;
-	}
-
-	let rotationDeg = 0;
 	const rotationDegsPerStep = 360 / values.length;
+	const rotationAdjust = 90;
+	let rotationDeg = rotationAdjust;
+
 	const valueSequence = values.map((arrOfValueArrs) => arrOfValueArrs[0]);
 
-	let currentValues: value[] = [];
+	let currentValues: valueName[] = [];
 	$: currentValuePairText = !currentValues[1]
 		? null
 		: valueConnections.find(
 				(connection) => connection.values.includes(currentValues[0]) && connection.values.includes(currentValues[1])
 		  )!.text;
 
-	const polygonPoints: [number, number][] = [
-		[375, 95],
-		[612.5, 267.5],
-		[522, 547.5],
-		[228.5, 547.5],
-		[137.5, 267.5],
-	];
+	function calcValueCoordinates(valuesCount: number, subjectValueIndex: number) {
+		const angleIncrement = (2 * Math.PI) / valuesCount;
+		const angleToValue = subjectValueIndex * angleIncrement;
+		const x = valuesRadius * Math.cos(angleToValue) + valuesRadius + boxPaddingX;
+		const y = valuesRadius * Math.sin(angleToValue) + valuesRadius + boxPaddingY;
+
+		return {x, y};
+	}
+
 	const valuesMap = Object.fromEntries(
 		Object.entries(values).map(([indexString, [value, text]]) => {
-			// this is definitely a dense chunk of code, but hopefully it's readable enough. refactor suggestions welcome (tried a for-in approach with entries, it was bad in different ways (and was worse in my opinion))
 			const index = Number.parseInt(indexString);
-			return [value, {text, coords: {x: polygonPoints[index][0], y: polygonPoints[index][1]}}];
+			return [value, {text, coords: calcValueCoordinates(values.length, index)}];
 		})
-	) as {[key in value]: {text: string; coords: {x: number; y: number}}};
+	) as Record<valueName, {text: string; coords: {x: number; y: number}}>; // overriding the type because Object.fromEntries assigns keys' type as string instead of the argument's keys. seems like 'the' fix for this was rejected from TS for being "too complex", see: https://github.com/microsoft/TypeScript/issues/35745
 
-	function selectValues(selectedValues: value[]) {
+	function selectValues(selectedValues: valueName[]) {
 		currentValues = selectedValues;
 		setRotateByDiff(selectedValues);
 	}
 
-	function setRotateByDiff(selectedValues: value[]) {
+	function setRotateByDiff(selectedValues: valueName[]) {
 		const [firstValue, secondValue] = selectedValues;
 
 		let valueDeg = calcAbsoluteRotationToValue(firstValue);
@@ -137,31 +139,26 @@
 			const value1Index = valueSequence.indexOf(firstValue);
 			const value2Index = valueSequence.indexOf(secondValue);
 			if (Math.min(value1Index, value2Index) === 1 && Math.max(value1Index, value2Index) === 4) {
-				// because (with the current pentagon shape) dot connections 1-4 and 2-3 both produce a 180
+				// because, with the current pentagon shape, dot connections 1-4 and 2-3 both produce a 180
 				middleDegBetweenValues -= 180;
 			}
 
 			valueDeg = middleDegBetweenValues;
 		}
 
-		rotationDeg += calcShortestRotationToTarget(rotationDeg, valueDeg);
+		rotationDeg += calcShortestRotationToTarget(rotationDeg, valueDeg) + rotationAdjust;
 	}
 
-	function calcAbsoluteRotationToValue(selectedValues: value) {
+	function calcAbsoluteRotationToValue(selectedValues: valueName) {
 		let newValueIndex = valueSequence.indexOf(selectedValues);
 		if (newValueIndex === -1) newValueIndex = 0;
 		return newValueIndex * rotationDegsPerStep;
 	}
 
 	function calcShortestRotationToTarget(currentDeg: number, targetDeg: number) {
-		// math is not my strongsuit, but i wanted to figure out a formula by myself, and i wasted multiple days debugging/revising it just to find out that i made a critical mistake in the HTML that spoiled all attempts. this here algorithm is blatantly copied from the internet (because i just wanted to move on) and i dont currently understand it, but i believe there's probably a better way to write it and i'll return and attempt that eventually
 		let shortestRotationToTarget = targetDeg - (currentDeg % 360);
-		if (shortestRotationToTarget > 180) {
-			shortestRotationToTarget -= 360;
-		}
-		if (shortestRotationToTarget <= -180) {
-			shortestRotationToTarget += 360;
-		}
+		if (shortestRotationToTarget > 180) shortestRotationToTarget -= 360;
+		if (shortestRotationToTarget <= -180) shortestRotationToTarget += 360;
 		return shortestRotationToTarget;
 	}
 </script>
@@ -171,9 +168,6 @@
 		position: relative;
 	}
 
-	g {
-		scale: 1.1;
-	} /* a hack, admittedly. the amount of trial-and-error necessary to eliminate the need for this (especially with the coords, to keep the perfect pentagon shape) doesn't seem worth the effort */
 	g,
 	label {
 		transition: all 350ms;
