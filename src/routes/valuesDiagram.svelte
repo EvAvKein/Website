@@ -7,7 +7,9 @@
     `}
 		>
 			{#each valueConnections as connection}
+				<!-- svelte-ignore a11y-no-noninteractive-tabindex - explicit tabindex is not necessary is chrome, but is necessary in firefox (as of v114)-->
 				<line
+					tabindex="0"
 					aria-label={`Synthesis of ${connection.values[0]} and ${connection.values[1]}`}
 					x1={valuesMap[connection.values[0]].coords.x}
 					y1={valuesMap[connection.values[0]].coords.y}
