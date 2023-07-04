@@ -85,7 +85,7 @@
 
 	const boxX = 750;
 	const boxY = 650;
-	const valuesDiameter = 550;
+	const valuesDiameter = 525;
 	const valuesRadius = valuesDiameter / 2;
 	const boxPaddingX = (boxX - valuesDiameter) / 2;
 	const boxPaddingY = (boxY - valuesDiameter) / 2;
