@@ -71,6 +71,7 @@
 	a svg,
 	#navButton {
 		height: 2.5em;
+		width: auto;
 	}
 	#navButton {
 		margin-right: 0.5em;
