@@ -14,8 +14,8 @@
 			<ToolWrapper>
 				<div class="projectsCategory">
 					<Distillogue />
-					<Website />
 					<FilterJobsFeeds />
+					<Website />
 				</div>
 			</ToolWrapper>
 		{:else}
