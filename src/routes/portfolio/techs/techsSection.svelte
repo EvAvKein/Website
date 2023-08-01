@@ -16,6 +16,7 @@
 				["MongoDB", "/techs/mongoDb.svg"],
 				["Express", "/techs/express.svg"],
 				["Playwright", "/techs/playwright.svg"],
+				["Bash", "/techs/bash.svg"],
 			]}
 		/>
 	</section>
@@ -33,6 +34,7 @@
 				["Docker", "/techs/docker.svg"],
 				["Prettier", "/techs/prettier.svg"],
 				["Node.js", "/techs/nodeJs.svg"],
+				["Linux", "/techs/linux.svg"],
 			]}
 		/>
 	</section>

@@ -56,9 +56,4 @@
 	#portfolio > section + section {
 		margin-top: 1.5em;
 	}
-
-	#technologies {
-		margin: auto;
-		max-width: 45em;
-	}
 </style>
