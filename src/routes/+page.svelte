@@ -35,7 +35,8 @@
 				<h2>Where?</h2>
 				<h3>(Residence)</h3>
 				<p>
-					Recently moved to Helsinki, Finland (from Israel, but with an EU citizenship). Currently jobseeking and open to relocating within Finland
+					Recently moved to Finland (from Israel, but with an EU citizenship). Currently in Helsinki, but jobseeking and
+					open to relocating within Finland
 				</p>
 			</section>
 		</section>
