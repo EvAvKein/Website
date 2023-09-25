@@ -19,8 +19,8 @@
 				<h3>(Activities)</h3>
 				<ul>
 					<li>Programming <span>(fullstack web)</span></li>
-					<li>Video-games <span>(e.g RPGs, adventure, shooters, misc indie)</span></li>
-					<li>Online media <span>(e.g news, explainers, fandoms)</span></li>
+					<li>Video-games <span>(e.g. RPGs, adventure, shooters, misc indie)</span></li>
+					<li>Online media <span>(e.g. news, explainers, fandoms)</span></li>
 				</ul>
 			</section>
 

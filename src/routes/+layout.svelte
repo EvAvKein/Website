@@ -3,7 +3,7 @@
 <header class="core_blueprint">
 	<a href="/" class="core_contentButton">
 		<svg width="138.41" height="84" viewBox="0 0 138.41 84" xmlns="http://www.w3.org/2000/svg">
-			<!-- inlining to enable color transitions, since img imports can only be colored with filters and color-transitioning those (at least the auto-generated ones e.g https://evavkein.com/toolbox/cssFilterGenerator) without unwanted intermediate colors is prohibitively complex -->
+			<!-- inlining to enable color transitions, since img imports can only be colored with filters and color-transitioning those (at least the auto-generated ones e.g. https://evavkein.com/toolbox/cssFilterGenerator) without unwanted intermediate colors is prohibitively complex -->
 			<title>The initials E.A.K, with E and K rotated and aligned to neatly overlap with the A inbetween</title>
 			<g>
 				<path
@@ -118,7 +118,7 @@
 			flex-direction: column;
 			flex-wrap: nowrap;
 			min-width: 5em; /* there used to small page-dependent changes that caused this element to change width a bit, and i failed to figure out what was actually causing the problem or to come up with a better page-independent solution, so here these two delcarations are (because setting a static width value didn't work, for whatever wacky reason) */
-			max-width: 5em; /* when images requests fail (e.g connection issues), without this declaration the alt text causes the (now-vertical) header to take up an obscene amount of space */
+			max-width: 5em; /* when images requests fail (e.g. connection issues), without this declaration the alt text causes the (now-vertical) header to take up an obscene amount of space */
 			padding: 1em 0.5em 0;
 			overflow-x: hidden;
 		}
