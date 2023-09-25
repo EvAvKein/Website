@@ -100,7 +100,7 @@
 	}
 
 	main {
-		background-color: #402b22; /* otherwise the background is a glaring white until the background image loads */
+		background-color: #32201b; /* otherwise the background is a glaring white until the background image loads */
 		background-image: url("/wooden.svg");
 		background-size: 50vh;
 		flex-grow: 1;
