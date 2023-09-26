@@ -35,10 +35,6 @@
 </script>
 
 <style>
-	#toolbox {
-		max-width: 90vw;
-	}
-
 	h2 {
 		font-size: 3.5em;
 	}
@@ -56,8 +52,8 @@
 		--wrapperPadding: 1em;
 		padding: var(--wrapperPadding);
 		background-color: var(--backgroundColor);
+		width: clamp(21em, 85vw, 58.5em);
 		box-shadow: 0 0 1em 0 black;
-		padding-bottom: 1em;
 		display: flex;
 		flex-direction: column;
 	}
@@ -89,7 +85,6 @@
 		#tools {
 			flex-direction: row;
 			flex-grow: 1;
-			width: clamp(55em, 85vw, 70em);
 		}
 
 		nav {

@@ -31,10 +31,6 @@
 </script>
 
 <style>
-	#portfolio {
-		max-width: 55em;
-	}
-
 	h2 {
 		font-size: 3.5em;
 	}

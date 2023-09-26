@@ -51,13 +51,11 @@
 
 <style>
 	#rootPageWrapper {
-		font-size: clamp(1.25em, 2vw, 1.4em);
-		max-width: 55em;
+		font-size: 1.4em;
 	}
 
 	section.core_blueprint {
 		background-color: var(--backgroundSubColor);
-		width: fit-content;
 		margin: auto;
 		padding: 0.75em 1em;
 		box-shadow: 0 0 0.5em 0.1em black;
@@ -88,9 +86,6 @@
 		font-size: 65%;
 	}
 
-	#why {
-		width: clamp(15em, 100%, 27.5em);
-	}
 	#why p {
 		color: var(--textSubColor);
 		font-size: 0.9em;
@@ -113,7 +108,7 @@
 		margin-top: 1em;
 	}
 
-	@media (min-width: 40em) {
+	@media (min-width: 45em) {
 		section.core_blueprint {
 			margin: unset;
 		}
@@ -125,7 +120,6 @@
 		#contentGrid {
 			display: grid;
 			align-items: center;
-			justify-items: center;
 			gap: 1em;
 			grid-template-areas:
 				"who what"
@@ -134,13 +128,13 @@
 		}
 	}
 
-	@media (min-width: 67.5em) {
+	@media (min-width: 72.5em) {
 		#contentGrid {
 			grid-template-areas:
 				"why who"
 				"why what"
 				"where where";
-			grid-template-columns: 1.25fr 1fr;
+			grid-template-columns: 55% auto;
 		}
 	}
 </style>

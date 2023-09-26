@@ -6,7 +6,7 @@
 
 <style>
 	h1 {
-		font-size: clamp(3.5em, 11vw, 5em);
+		font-size: clamp(3.5em, 10vw, 5em);
 		color: var(--highlightColor);
 		user-select: none;
 		display: flex;

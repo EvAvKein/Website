@@ -48,6 +48,7 @@
 	#page {
 		background-color: var(--backgroundColor);
 		padding: clamp(0.75em, 1vw, 1.5em);
+		max-width: 60.5em;
 		border-radius: 0.25em;
 		box-shadow: 0 0 0.5em 0.1em black;
 	}
