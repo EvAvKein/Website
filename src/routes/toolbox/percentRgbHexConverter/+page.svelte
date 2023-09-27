@@ -29,7 +29,7 @@
 				>the original converter by Joshua Miron</a
 			>
 			(and his permission), this wouldn't be here.<br />
-			All I've done is adapt Joshua's code for Svelte & Typescript, and style & refactor a bit per my own preferences.
+			All I've done is adapt Joshua's code for Svelte & Typescript, and style & refactor a bit per my own preferences
 		</p>
 	</section>
 </ToolWrapper>
