@@ -192,6 +192,7 @@
 
 	label {
 		position: absolute;
+		font-size: 0.95em; /* only needed with monospace font, to prevent end of "introspection" label from being clipped. (could've instead allowed overflow from <svg>, but that looked bad)*/
 		cursor: pointer;
 		opacity: 0.075;
 		transform-origin: left;

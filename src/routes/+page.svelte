@@ -108,7 +108,7 @@
 		margin-top: 1em;
 	}
 
-	@media (min-width: 45em) {
+	@media (min-width: 50em) {
 		section.core_blueprint {
 			margin: unset;
 		}
@@ -119,22 +119,47 @@
 
 		#contentGrid {
 			display: grid;
-			align-items: center;
 			gap: 1em;
 			grid-template-areas:
 				"who what"
 				"why why"
 				"where where";
 		}
+
+		#who,
+		#what {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+
+		ul {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+		}
+
+		#why {
+			width: 30em;
+			justify-self: center;
+		}
 	}
 
-	@media (min-width: 72.5em) {
+	@media (min-width: 80em) {
 		#contentGrid {
+			align-items: unset;
 			grid-template-areas:
 				"why who"
 				"why what"
 				"where where";
-			grid-template-columns: 55% auto;
+			grid-template-columns: 60% auto;
+		}
+
+		#why {
+			width: unset;
+			justify-self: unset;
 		}
 	}
 </style>

@@ -2,6 +2,7 @@
 	<link rel="icon" href={headFavicon} />
 	<title>{headTitle}</title>
 	<meta name="description" content={headDescription} />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Fira+Code" />
 </svelte:head>
 
 <div id="pageWrapper">
@@ -48,7 +49,7 @@
 	#page {
 		background-color: var(--backgroundColor);
 		padding: clamp(0.75em, 1vw, 1.5em);
-		max-width: 60.5em;
+		max-width: 67.5em;
 		border-radius: 0.25em;
 		box-shadow: 0 0 0.5em 0.1em black;
 	}
@@ -86,7 +87,7 @@
 		margin: 0;
 		min-height: 100%;
 		color: var(--textColor);
-		font-family: sans-serif;
+		font-family: "Fira Code", monospace;
 		letter-spacing: 0.03em;
 		text-underline-offset: 0.1em;
 		font-size: clamp(0.9em, 2.5vw, 1.1em);

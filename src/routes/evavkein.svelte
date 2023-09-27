@@ -6,6 +6,8 @@
 
 <style>
 	h1 {
+		font-family: "Fredericka the Great", serif;
+		font-weight: unset;
 		font-size: clamp(3.5em, 10vw, 5em);
 		color: var(--highlightColor);
 		user-select: none;

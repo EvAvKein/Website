@@ -117,8 +117,8 @@
 		header {
 			flex-direction: column;
 			flex-wrap: nowrap;
-			min-width: 5em; /* there used to small page-dependent changes that caused this element to change width a bit, and i failed to figure out what was actually causing the problem or to come up with a better page-independent solution, so here these two delcarations are (because setting a static width value didn't work, for whatever wacky reason) */
-			max-width: 5em; /* when images requests fail (e.g. connection issues), without this declaration the alt text causes the (now-vertical) header to take up an obscene amount of space */
+			min-width: 6em; /* there used to small page-dependent changes that caused this element to change width a bit, and i failed to figure out what was actually causing the problem or to come up with a better page-independent solution, so here these two delcarations are (because setting a static width value didn't work, for whatever wacky reason) */
+			max-width: 6em; /* when images requests fail (e.g. connection issues), without this declaration the alt text causes the (now-vertical) header to take up an obscene amount of space */
 			padding: 1em 0.5em 0;
 			overflow-x: hidden;
 		}
