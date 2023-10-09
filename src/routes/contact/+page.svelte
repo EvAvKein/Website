@@ -4,37 +4,11 @@
 >
 	<section id="contact">
 		<h2>Contact</h2>
-		{#if typeof notifDesirability !== "boolean"}
-			<form>
-				<LabelledInput id={"contactFormTitle"} label={"Title (optional)"} bind:value={title} />
-				<LabelledInput
-					id={"contactFormBody"}
-					type={"textarea"}
-					label={"Body"}
-					bind:value={body}
-					textareaMinLineHeight={10}
-				/>
-				<LabelledInput id={"contactFormEmail"} label={"Email"} bind:value={email} />
-
-				{#if body && email}
-					<div id="submitWrapper" transition:slide>
-						<button transition:fly={{y: -100}} class="core_backgroundButton" type="button" on:click={submitForm}
-							>Send</button
-						>
-					</div>
-				{/if}
-			</form>
-		{/if}
-
-		<Notification bind:text={notifText} desirablityStyle={notifDesirability} baseDuration={null} />
-
 		<span>
-			{#if notifDesirability !== false}
-				...or email me at
-			{/if}
+			Email me at
 			<button class="core_contentButton" on:click={copyEmail}>
 				<address>{myEmailAddress}</address>
-			</button>
+			</button>!
 		</span>
 		<Notification bind:text={emailCopyNotice} desirablityStyle={true} />
 	</section>
@@ -43,42 +17,15 @@
 <script lang="ts">
 	import Core from "../_core.svelte";
 	import {onMount} from "svelte";
-	import {slide, fly} from "svelte/transition";
-	import {apiFetch} from "../../helpers/apiFetch";
-	import LabelledInput from "../../lib/labelledInput.svelte";
 	import Notification from "../../lib/notification.svelte";
 
 	let myEmailAddress = "";
-	onMount(() => (myEmailAddress = "evavkein@gmail.com")); // adding via JS to mitigate scraping
 	let emailCopyNotice = "";
+	onMount(() => (myEmailAddress = "evavkein@gmail.com")); // adding via JS to mitigate scraping
 	function copyEmail() {
 		navigator.clipboard.writeText(myEmailAddress).then(() => {
 			emailCopyNotice = "Address copied to clipboard!";
 		});
-	}
-
-	let title = "";
-	let body = "";
-	let email = "";
-
-	let notifText = "";
-	let notifDesirability = undefined as boolean | undefined;
-
-	function submitForm() {
-		notifText = "Processing...";
-		notifDesirability = undefined;
-
-		apiFetch("POST", "/submitContactForm", {title: title, body: body, email: email})
-			.then((response: {outcome: boolean}) => {
-				if (response.outcome) throw response;
-
-				notifText = "Message sent! I usually reply within a day";
-				notifDesirability = true;
-			})
-			.catch(() => {
-				notifText = "Message submission failed, you'll have to email me instead";
-				notifDesirability = false;
-			});
 	}
 </script>
 
@@ -96,10 +43,6 @@
 
 	h2 {
 		font-size: 2.5em;
-	}
-
-	form button {
-		margin-top: 1em;
 	}
 
 	span {
