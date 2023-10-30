@@ -29,7 +29,6 @@
 				["Visual Studio Code", "/techs/vsCode.svg"],
 				["Chrome DevTools", "/techs/chromeDevtools.svg"],
 				["GitHub", "/techs/github.svg"],
-				["Figma", "/techs/figma.svg"],
 				["Git", "/techs/git.svg"],
 				["Docker", "/techs/docker.svg"],
 				["Prettier", "/techs/prettier.svg"],
