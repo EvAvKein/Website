@@ -13,6 +13,7 @@
 		{#if selectedCategory === "current"}
 			<ToolWrapper>
 				<div class="projectsCategory">
+					<Dialplan />
 					<Distillogue />
 					<FilterJobsFeeds />
 					<Website />
@@ -31,6 +32,7 @@
 <script lang="ts">
 	import ToolWrapper from "../../../lib/swappableContentWrapper.svelte";
 
+	import Dialplan from "./items/dialplan.svelte";
 	import Distillogue from "./items/distillogue.svelte";
 	import Website from "./items/website.svelte";
 	import FilterJobsFeeds from "./items/filterJobsFeeds.svelte";
