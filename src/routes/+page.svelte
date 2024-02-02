@@ -5,11 +5,11 @@
 		<section id="contentGrid">
 			<section id="who" class="core_blueprint">
 				<h2>Who?</h2>
-				<h3>(Demographics)</h3>
+				<h3>(Characteristics)</h3>
 				<ul>
 					<li>Progressive leftie <span>(deriving from Utilitarianism)</span></li>
 					<li>Neuroatypical <span>(HFASD & GAD & ADD)</span></li>
-					<li>Cis/agender guy <span>(he/they)</span></li>
+					<li>Cis/agender guy <span>(he/him)</span></li>
 					<li>Senior Gen-Z</li>
 				</ul>
 			</section>
@@ -19,8 +19,9 @@
 				<h3>(Activities)</h3>
 				<ul>
 					<li>Programming <span>(fullstack web)</span></li>
-					<li>Video-games <span>(e.g. RPGs, adventure, shooters, misc indie)</span></li>
-					<li>Online media <span>(e.g. news, explainers, fandoms)</span></li>
+					<li>Video-games <span>(e.g. RPGs, adventure, shooters, indie)</span></li>
+					<li>Misc media <span>(e.g. sci-fi, news, explainers, fandoms)</span></li>
+					<li>Local events <span>(e.g. software-related talks)</span></li>
 				</ul>
 			</section>
 
@@ -33,10 +34,10 @@
 
 			<section id="where" class="core_blueprint">
 				<h2>Where?</h2>
-				<h3>(Residence)</h3>
+				<h3>(Residence & Work)</h3>
 				<p>
-					Recently moved to Finland (from Israel, but with an EU citizenship). Currently in Helsinki, but jobseeking and
-					open to relocating within Finland
+					Living in Finland since summer 2023. Currently residing and jobseeking in Helsinki (open to in-office, hybrid,
+					and remote)!
 				</p>
 			</section>
 		</section>
