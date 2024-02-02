@@ -18,7 +18,6 @@
 				["PostgreSQL", "/techs/postgres.svg"],
 				["Express", "/techs/express.svg"],
 				["Playwright", "/techs/playwright.svg"],
-				["Bash", "/techs/bash.svg"],
 			]}
 		/>
 	</section>
@@ -33,7 +32,6 @@
 				["GitHub", "/techs/github.svg"],
 				["Git", "/techs/git.svg"],
 				["Docker", "/techs/docker.svg"],
-				["Prettier", "/techs/prettier.svg"],
 				["Node.js", "/techs/nodeJs.svg"],
 				["Linux", "/techs/linux.svg"],
 			]}
