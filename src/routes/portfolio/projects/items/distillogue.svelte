@@ -9,10 +9,6 @@
 			type: "github",
 			url: "https://github.com/EvAvKein/distillogue",
 		},
-		{
-			type: "browser",
-			url: "https://distillogue.com",
-		},
 	]}
 />
 
