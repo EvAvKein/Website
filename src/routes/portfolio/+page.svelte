@@ -17,8 +17,8 @@
 		<section id="resume" class="core_blueprint">
 			<h3>Resumé</h3>
 			<p>
-				The summary is that I've done civil service and community management, you're welcome to contact me for the
-				resumé file with all its usual details
+				The summary is that I've led a community management team and volunteered for civil service at a library, you're
+				welcome to contact me for the full CV document!
 			</p>
 		</section>
 	</section>
@@ -51,5 +51,9 @@
 	}
 	#portfolio > section + section {
 		margin-top: 1.5em;
+	}
+
+	#resume h3 {
+		margin-bottom: 0;
 	}
 </style>
