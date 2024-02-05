@@ -14,7 +14,6 @@
 			<ToolWrapper>
 				<div class="projectsCategory">
 					<Dialplan />
-					<Distillogue />
 					<FilterJobsFeeds />
 					<Website />
 				</div>
@@ -22,6 +21,7 @@
 		{:else}
 			<ToolWrapper>
 				<div class="projectsCategory">
+					<Distillogue />
 					<Warehouse />
 				</div>
 			</ToolWrapper>
@@ -33,9 +33,9 @@
 	import ToolWrapper from "../../../lib/swappableContentWrapper.svelte";
 
 	import Dialplan from "./items/dialplan.svelte";
-	import Distillogue from "./items/distillogue.svelte";
-	import Website from "./items/website.svelte";
 	import FilterJobsFeeds from "./items/filterJobsFeeds.svelte";
+	import Website from "./items/website.svelte";
+	import Distillogue from "./items/distillogue.svelte";
 	import Warehouse from "./items/warehouse.svelte";
 
 	let selectedCategory: "current" | "archive" = "current";

@@ -3,7 +3,7 @@
 	logoAlt={"Icon of chemistry flask, with bubbling liquids, hung on a stand"}
 	name={"Distillogue"}
 	technologies={"Vue, TypeScript, Express, MongoDB, Playwright, Docker"}
-	description={"The configurable discussion platform. Currently shelved in favor of other projects"}
+	description={"A configurable discussion platform. Development and hosted is discontinued."}
 	links={[
 		{
 			type: "github",
