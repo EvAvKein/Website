@@ -1,5 +1,5 @@
 <section id="techs">
-	<section>
+	<section id="languages">
 		<h4>
 			<Tooltip text={"Languages"} tooltip={"...and frameworks, libraries, etc"} />
 		</h4>
@@ -22,7 +22,7 @@
 		/>
 	</section>
 	<hr />
-	<section>
+	<section id="tools">
 		<h4>Tools</h4>
 		<TechsBox
 			bind:selectedTech
@@ -58,6 +58,13 @@
 <style>
 	#techs {
 		display: flex;
+	}
+
+	#languages,
+	#tools {
+		display: flex;
+		flex-direction: column;
+		/* TechsBox component has flex-grow which relies on these */
 	}
 
 	h4 {

@@ -22,10 +22,12 @@
 
 <style>
 	section {
+		flex-grow: 1; /* for current parent component */
 		padding: 0.5em;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
+		align-items: center;
 		gap: 0.5em;
 	}
 
