@@ -139,7 +139,7 @@
 			display: flex;
 			flex-direction: column;
 			flex-wrap: nowrap;
-			justify-content: space-evenly;
+			justify-content: space-around;
 		}
 
 		#why {
