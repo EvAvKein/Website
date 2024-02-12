@@ -16,7 +16,7 @@
 </section>
 
 <script lang="ts">
-	export let techsByNameAndSrc: [string, string][]; // structured like that because it's concise and readable when passed as prop (but i'm open to alternatives that don't sacrifice this component's readability for it)
+	export let techsByNameAndSrc: [string, string][]; // structured like that because it's concise and readable when passed as prop
 	export let selectedTech: string | null = null;
 </script>
 
