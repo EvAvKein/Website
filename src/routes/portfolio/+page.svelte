@@ -1,6 +1,6 @@
 <Core
 	headTitle="EvAvKein: Portfolio"
-	headDescription="Eve Aviv Keinan's programming portfolio page; including summaries with links to his projects, lists of the techs he has experience with, and information regarding his resumé"
+	headDescription="Eve Aviv Keinan's programming portfolio page; including summaries with links to his projects, lists of the techs he has experience with, and information regarding his CV"
 >
 	<section id="portfolio">
 		<h2>Portfolio</h2>
@@ -14,8 +14,8 @@
 			<Projects />
 		</section>
 
-		<section id="resume" class="core_blueprint">
-			<h3>Resumé</h3>
+		<section id="cv" class="core_blueprint">
+			<h3>CV</h3>
 			<p>
 				The summary is that I've led a community management team and volunteered for civil service at a library, you're
 				welcome to contact me for the full CV document!
@@ -53,7 +53,7 @@
 		margin-top: 1.5em;
 	}
 
-	#resume h3 {
+	#cv h3 {
 		margin-bottom: 0;
 	}
 </style>
