@@ -17,6 +17,7 @@
 				["MongoDB", "/techs/mongoDb.svg"],
 				["PostgreSQL", "/techs/postgres.svg"],
 				["Express", "/techs/express.svg"],
+				["Jest", "/techs/jest.svg"],
 				["Playwright", "/techs/playwright.svg"],
 			]}
 		/>
