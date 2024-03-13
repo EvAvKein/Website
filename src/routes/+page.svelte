@@ -21,7 +21,7 @@
 					<li>Programming <span>(fullstack web)</span></li>
 					<li>Video-games <span>(e.g. RPGs, adventure, shooters, indie)</span></li>
 					<li>Misc media <span>(e.g. sci-fi, news, explainers, fandoms)</span></li>
-					<li>Local events <span>(e.g. software-related talks)</span></li>
+					<li>Local events <span>(e.g. software-engineering talks)</span></li>
 				</ul>
 			</section>
 
