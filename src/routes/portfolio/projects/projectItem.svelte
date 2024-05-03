@@ -87,7 +87,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
-		gap: 0.75rem;
 	}
 	.projectLinks a {
 		box-sizing: content-box;
