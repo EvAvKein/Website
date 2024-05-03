@@ -7,7 +7,7 @@
 		<a href={`mailto:${myEmail}`}><address>{myEmail}</address></a>
 		<hr />
 		<span>LinkedIn</span>
-		<a href={myLinkedIn} target="_blank">{myLinkedIn.replace("https://", "")}</a>
+		<a href={myLinkedInLink} target="_blank">{myLinkedInText}</a>
 	</section>
 </Core>
 
@@ -16,10 +16,15 @@
 	import {onMount} from "svelte";
 
 	let myEmail = "";
-	let myLinkedIn = "";
+
+	// split into two instead of `replace`ing in the template because latter caused mobile-only page-rendering error
+	let myLinkedInLink = "";
+	let myLinkedInText = "";
 	onMount(() => {
 		myEmail = "evavkein@gmail.com";
-		myLinkedIn = "https://linkedin.com/in/evavkein";
+
+		myLinkedInLink = "https://linkedin.com/in/evavkein";
+		myLinkedInText = myLinkedInLink.replace("https://", "");
 	}); // adding via JS to mitigate scraping
 </script>
 
