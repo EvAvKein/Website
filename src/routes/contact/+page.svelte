@@ -7,7 +7,7 @@
 		<a href={`mailto:${myEmail}`}><address>{myEmail}</address></a>
 		<hr />
 		<span>LinkedIn</span>
-		<a href={myLinkedIn} target="_blank">{myLinkedIn.replace("https://", "")}</a>
+		<a href={myLinkedIn} target="_blank">{myLinkedIn}</a>
 	</section>
 </Core>
 
