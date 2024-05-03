@@ -7,7 +7,7 @@
 		<a href={`mailto:${myEmail}`}><address>{myEmail}</address></a>
 		<hr />
 		<span>LinkedIn</span>
-		<a href={myLinkedIn}>{myLinkedIn}</a>
+		<a href={myLinkedIn} target="_blank">{myLinkedIn}</a>
 	</section>
 </Core>
 
@@ -19,7 +19,7 @@
 	let myLinkedIn = "";
 	onMount(() => {
 		myEmail = "evavkein@gmail.com";
-		myLinkedIn = "linkedin.com/in/evavkein";
+		myLinkedIn = "https://linkedin.com/in/evavkein";
 	}); // adding via JS to mitigate scraping
 </script>
 
