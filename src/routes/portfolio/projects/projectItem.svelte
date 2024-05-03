@@ -75,7 +75,8 @@
 
 	p {
 		grid-area: description;
-		margin-top: 0.25rem;
+		align-self: center;
+		margin-top: 0.5rem;
 		white-space: pre-wrap;
 	}
 
@@ -84,6 +85,7 @@
 		border-left: 0.1rem solid color-mix(in srgb, var(--textSubColor), transparent 75%);
 		padding-left: 0.25rem;
 		margin-left: 1rem;
+		height: inherit;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
