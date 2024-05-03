@@ -43,12 +43,12 @@
 	.notification {
 		width: fit-content;
 		text-align: center;
-		font-size: 1em;
-		padding: 0.3em;
+		font-size: 1rem;
+		padding: 0.3rem;
 		color: var(--textColor);
 		background-color: #797979;
-		border-inline: 0.2em solid #505050;
-		margin: 0.75em auto 0.75em;
+		border-inline: 0.2rem solid #505050;
+		margin: 0.75rem auto 0.75rem;
 	}
 	.notification.negative {
 		border-color: #ff0000;

@@ -19,7 +19,7 @@ export const values: [valueName, string][] = [
 	],
 	[
 		"Compassion",
-		"Earthly sentients share similar fundamental needs for wellbeing, which are much easier and more sustainable to fulfill through co-operation than competition. Ego and xenophobia are an injury to all, perpetrators included, and we can cumulatively help to mend these wounds through compassionate appreciation for our fellow beings",
+		"Earthly sentients share similar fundamental needs for wellbeing, and there's no justifiable distinction by which to exclude any from equitable care. Ego and xenophobia are an injury to all, perpetrators included, and we can cumulatively help to mend these wounds through compassionate appreciation for our fellow beings",
 	],
 ];
 

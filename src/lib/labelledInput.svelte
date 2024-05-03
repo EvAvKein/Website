@@ -1,6 +1,6 @@
 <div>
 	{#if type === "textarea"}
-		<textarea style={`min-height: ${(textareaMinLineHeight || 1) * 1.15}em`} {id} bind:value placeholder=" " />
+		<textarea style={`min-height: ${(textareaMinLineHeight || 1) * 1.15}rem`} {id} bind:value placeholder=" " />
 	{:else if type === "text"}
 		<input type="text" {id} bind:value placeholder=" " />
 	{/if}
@@ -23,10 +23,11 @@
 
 	label {
 		position: absolute;
-		top: 1.35em;
+		top: 1.45em;
 		left: 0;
 		color: var(--textSubColor);
 		margin-left: 0.5em;
+		line-height: 1.1em;
 		cursor: text;
 		transition: transform 250ms;
 		white-space: nowrap;
@@ -38,10 +39,11 @@
 		background-color: var(--backgroundSubColor);
 		width: 100%;
 		box-sizing: border-box;
-		border-left: 0.225em solid var(--textSubColor);
+		border-left: 0.2em solid var(--textSubColor);
 		margin-top: 1.3em;
 		padding-left: 0.2em;
-		box-shadow: 0 0 0.25em 0.1em black;
+		box-shadow: 0 0 0.25rem 0.1rem black;
+		transition: border-width 150ms;
 	}
 	textarea {
 		resize: vertical;
@@ -49,11 +51,11 @@
 
 	input:focus + label,
 	textarea:focus + label {
-		color: var(--highlightColor);
+		background-color: color-mix(in srgb, var(--textSubColor), transparent 85%);
 	}
 	input:focus,
 	textarea:focus {
-		border-color: var(--highlightColor);
+		border-width: 0.5rem;
 		outline: none;
 	}
 

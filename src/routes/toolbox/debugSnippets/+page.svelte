@@ -1,6 +1,6 @@
 <ToolWrapper>
 	<section>
-		<h4>Log Every Focus</h4>
+		<h3>Log Every Focus</h3>
 		<code
 			>{`document.querySelector("body")
       .addEventListener("focusin", (event) => {
@@ -8,10 +8,10 @@
       });`}</code
 		>
 		<hr />
-		<h4>Highlight Element Boxes</h4>
-		<code>{"* {box-shadow: 0 0 0 0.1em rgb(255 0 0 / 40%) !important}"}</code>
+		<h3>Highlight Element Boxes</h3>
+		<code>{"* {box-shadow: 0 0 0 0.1rem rgb(255 0 0 / 40%) !important}"}</code>
 		<hr />
-		<h4>Delayed debugging freeze</h4>
+		<h3>Delayed debugging freeze</h3>
 		<code>{"setTimeout(() => {debugger}, 5000)"}</code>
 	</section>
 </ToolWrapper>
@@ -22,11 +22,11 @@
 
 <style>
 	section {
-		padding: 1em;
+		padding: 1rem;
 	}
 
-	h4 {
-		font-size: 1.1em;
+	h3 {
+		font-size: 1.1rem;
 		text-decoration: underline;
 	}
 
@@ -34,11 +34,12 @@
 		display: block;
 		color: var(--textSubColor);
 		white-space: pre;
-		margin-top: 0.5em;
+		margin-top: 0.5rem;
+		user-select: all;
 	}
 
 	hr {
 		border-color: var(--textSubColor);
-		margin: 1em 0 0.5em;
+		margin: 1rem 0 0.5rem;
 	}
 </style>

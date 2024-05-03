@@ -11,7 +11,7 @@
 	>{text}<!--
   comment prevents extra space character
 -->{#if activated}
-		<div class="tooltip core_blueprint" in:slide={{duration: 300}} out:slide={{duration: 250}} bind:this={tooltipElem}>
+		<div class="tooltip" in:slide={{duration: 300}} out:slide={{duration: 250}} bind:this={tooltipElem}>
 			{tooltip}
 		</div>
 	{/if}
@@ -79,11 +79,12 @@
 		outline: none;
 		user-select: text;
 		font-weight: inherit;
-		text-decoration: underline 0.1em dashed var(--highlightSubColor);
-		transition: color 350ms;
+		background-color: transparent;
+		text-decoration: underline 0.1rem dashed var(--textSubColor);
+		transition: background-color 350ms;
 	}
 	.tooltipSubject.activated {
-		color: var(--highlightColor);
+		background-color: color-mix(in srgb, var(--textSubColor), transparent 85%);
 	}
 
 	.tooltip {
@@ -94,10 +95,11 @@
 		font-size: 0.9rem;
 		color: var(--textColor);
 		background-color: var(--backgroundSubColor);
+		border: 0.05rem solid color-mix(in srgb, var(--textSubColor), transparent 66%);
 		z-index: 999999999;
 		padding: 0.4rem;
 		border-radius: 0.1rem;
-		box-shadow: 0 0 0.25rem 0.1rem black;
+		box-shadow: 0 0 0.1rem 0.1rem black;
 
 		font-weight: initial;
 		text-decoration: initial;

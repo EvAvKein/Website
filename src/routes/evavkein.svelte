@@ -6,16 +6,18 @@
 
 <style>
 	h1 {
-		font-family: "Fredericka the Great", serif;
+		font-family: "Share Tech Mono", monospace;
 		font-weight: unset;
-		font-size: clamp(3.5em, 10vw, 5em);
-		color: var(--highlightColor);
+		border-bottom: 0.25rem dashed var(--accentColor);
+		font-size: inherit;
+		font-weight: bold;
+		color: var(--accentColor);
 		user-select: none;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 0 0.3em;
-		transition: gap 750ms ease-in-out;
+		transition: gap 750ms ease-in-out, height 350ms;
 	}
 	.extra {
 		display: inline-block;

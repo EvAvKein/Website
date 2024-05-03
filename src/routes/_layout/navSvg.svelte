@@ -1,5 +1,5 @@
 <svg class:activated viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-	<title>A sidebar icon</title>
+	<desc>A sidebar icon</desc>
 	<g id="top">
 		<circle cx="5" cy="10" r="5" fill="white" />
 		<rect x="5" y="5" width="50" height="10" fill="white" />
@@ -23,10 +23,10 @@
 
 <style>
 	svg {
-		height: inherit;
+		height: 2.75rem;
 		width: inherit;
 		overflow: visible;
-		pointer-events: none; /* to disable title text appearing as a tooltip on hover */
+		transition: transform 250ms;
 	}
 	#top,
 	#bottom {
@@ -37,6 +37,10 @@
 	}
 	#bottom {
 		transform-origin: bottom left;
+	}
+
+	svg.activated {
+		transform: translateX(10%);
 	}
 	.activated #top {
 		transform: rotate(21deg);

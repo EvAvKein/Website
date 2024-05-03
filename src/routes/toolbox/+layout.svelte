@@ -3,17 +3,20 @@
 	headDescription="Eve Aviv Keinan's toolbox page; including a variety of utilities he found useful"
 >
 	<section id="toolbox">
-		<h2>Toolbox</h2>
-		<h3>Utilities I found useful</h3>
-		<section id="tools" class="core_blueprint">
+		<section id="tools">
 			<nav>
 				{#each tools as tool}
-					<a href={"/toolbox/" + tool.id} class="core_backgroundButton" inert={tool.id === currentToolId || null}
-						>{tool.name}</a
+					<a
+						href={"/toolbox/" + tool.id}
+						class={"core_borderButton" +
+							(tool.id === currentToolId
+								? " inert" /* < class is a workaround, the actual attribute somehow only toggles between "inert" (no attribute value) or no attribute */
+								: "")}
+						inert={tool.id === currentToolId}>{tool.name}</a
 					>
 				{/each}
 			</nav>
-			<section id="currentTool" class="core_blueprint">
+			<section id="currentTool">
 				<slot />
 			</section>
 		</section>
@@ -31,29 +34,17 @@
 		new Tool("Percent-RGB-Hex Converter", "percentRgbHexConverter"),
 	];
 
-	$: currentToolId = $page.url.pathname.replace("/toolbox/", "");
+	$: currentToolId = $page.url.pathname.replace("/toolbox/", "").replace("/", "");
 </script>
 
 <style>
-	h2 {
-		font-size: 3.5em;
-	}
-	h3 {
-		font-size: 2em;
-		color: var(--textSubColor);
-	}
-	h2,
-	h3 {
-		text-align: center;
-	}
-
 	#tools {
-		margin-top: 1em;
-		--wrapperPadding: 1em;
+		margin: 1rem auto 0;
+		--wrapperPadding: 1rem;
 		padding: var(--wrapperPadding);
-		background-color: var(--backgroundColor);
-		width: clamp(21em, 85vw, 58.5em);
-		box-shadow: 0 0 1em 0 black;
+		background-color: var(--backgroundSubColor);
+		width: clamp(21rem, 85vw, 58.5rem);
+		box-shadow: 0 0 1rem 0 black;
 		display: flex;
 		flex-direction: column;
 	}
@@ -63,25 +54,26 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
-		gap: 0.75em;
+		gap: 0.75rem;
 	}
 
 	a {
-		font-size: 1.3em;
+		font-size: 1.3rem;
+		text-align: center;
 	}
 	a[inert] {
 		background-color: var(--textSubColor);
 	}
 
 	#currentTool {
-		background-color: var(--backgroundSubColor);
+		background-color: var(--backgroundColor);
 		flex-grow: 1;
 		overflow: auto;
-		box-shadow: inset 0 0 0.5em 0 black;
+		box-shadow: inset 0 0 0.5rem 0 black;
 		transition: all 350ms;
 	}
 
-	@media (min-width: 70em) {
+	@media (min-width: 70rem) {
 		#tools {
 			flex-direction: row;
 			flex-grow: 1;
@@ -91,7 +83,7 @@
 			flex-basis: 25%;
 			flex-direction: column;
 			justify-content: flex-start;
-			gap: 0.75em;
+			gap: 0.75rem;
 			padding-bottom: unset;
 			padding-right: var(--wrapperPadding);
 		}

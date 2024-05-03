@@ -17,9 +17,9 @@
 	}
 
 	p {
-		font-size: 1.5em;
-		padding: 1em 0.5em;
+		font-size: 1.5rem;
+		padding: 1rem 0.5rem;
 		text-align: center;
-		gap: 0.25em;
+		gap: 0.25rem;
 	}
 </style>

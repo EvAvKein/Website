@@ -3,22 +3,22 @@
 	headDescription="Eve Aviv Keinan's programming portfolio page; including summaries with links to his projects, lists of the techs he has experience with, and information regarding his CV"
 >
 	<section id="portfolio">
-		<h2>Portfolio</h2>
-		<section id="technologies" class="core_blueprint">
-			<h3>Technologies</h3>
-			<Techs />
+		<section id="technologies">
+			<h2>Technologies</h2>
+			<TechStack bind:selectedTechs />
 		</section>
 
-		<section id="projects" class="core_blueprint">
-			<h3>Projects</h3>
-			<Projects />
+		<section id="projects">
+			<h2>Projects</h2>
+			<Projects bind:selectedTechs />
 		</section>
 
-		<section id="cv" class="core_blueprint">
-			<h3>CV</h3>
+		<section id="cv">
+			<h2>CV</h2>
 			<p>
-				The summary is that I've led a community management team and volunteered for civil service at a library, you're
-				welcome to contact me for the full CV document!
+				The summary is that - programming aside - I've led a community management team and volunteered for civil service
+				at a library.<br />
+				You're welcome to contact me for the proper CV document!
 			</p>
 		</section>
 	</section>
@@ -26,34 +26,72 @@
 
 <script lang="ts">
 	import Core from "../_core.svelte";
-	import Techs from "./techs/techsSection.svelte";
+	import TechStack from "./techs/techsSection.svelte";
 	import Projects from "./projects/projectsSection.svelte";
+	import type {techsList} from "./techs/techs.ts";
+
+	let selectedTechs: techsList = [];
 </script>
 
 <style>
-	h2 {
-		font-size: 3.5em;
-	}
-	h3 {
-		font-size: 3em;
-	}
-	h2,
-	h3 {
-		text-align: center;
-		margin-bottom: 0.25em;
+	#portfolio {
+		height: 100%;
+		max-width: 120rem;
+		margin: auto;
 	}
 
-	#portfolio > section {
-		background-color: var(--backgroundSubColor);
-		border-radius: 0.25em;
-		padding: 0.5em 1em 0.5em;
-		box-shadow: 0 0 0.5em 0.1em black;
+	h2 {
+		font-size: 2.75rem;
+	}
+	h2 {
+		text-align: center;
+		margin-bottom: 0.25rem;
+	}
+
+	#technologies {
+		grid-area: techs;
+	}
+	#projects {
+		grid-area: projs;
+	}
+	#cv {
+		grid-area: cv;
 	}
 	#portfolio > section + section {
-		margin-top: 1.5em;
+		margin-top: 1.5rem;
 	}
 
-	#cv h3 {
+	#cv h2 {
 		margin-bottom: 0;
+	}
+
+	#cv p {
+		max-width: 45rem;
+		margin-inline: auto;
+		padding-block: 0.5rem 1rem;
+	}
+
+	@media (min-width: 70rem) {
+		#portfolio > section + section {
+			margin-top: 0;
+		}
+
+		#portfolio {
+			display: grid;
+			grid-template-areas:
+				"projs techs"
+				"cv cv";
+			grid-template-columns: auto clamp(27.5rem, 42.5%, 50rem);
+			gap: 1rem;
+		}
+
+		#projects {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#projects > :nth-child(2) {
+			flex-grow: 1;
+		}
 	}
 </style>

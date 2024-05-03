@@ -1,38 +1,42 @@
 <Core headTitle="EvAvKein" headDescription="The home page for Eve Aviv Keinan's website">
 	<div id="rootPageWrapper">
-		<EvAvKein />
+		<div id="evavkeinWrapper">
+			<EvAvKein />
+		</div>
 
 		<section id="contentGrid">
-			<section id="who" class="core_blueprint">
-				<h2>Who?</h2>
-				<h3>(Characteristics)</h3>
-				<ul>
-					<li>Progressive leftie <span>(deriving from Utilitarianism)</span></li>
-					<li>Neuroatypical <span>(HFASD & GAD & ADD)</span></li>
-					<li>Cis/agender guy <span>(he/him)</span></li>
-					<li>Senior Gen-Z</li>
-				</ul>
-			</section>
+			<div id="whoWhat">
+				<section id="who">
+					<h2>Who?</h2>
+					<h3>(Characteristics)</h3>
+					<ul>
+						<li>Amiable leftist <span>(deriving from Utilitarianism)</span></li>
+						<li>Neuroatypical <span>(triple-diagnosed, adapted so they're not evident)</span></li>
+						<li>Cis/agender guy <span>(he/him)</span></li>
+						<li>Senior Gen-Z</li>
+					</ul>
+				</section>
 
-			<section id="what" class="core_blueprint">
-				<h2>What?</h2>
-				<h3>(Activities)</h3>
-				<ul>
-					<li>Programming <span>(fullstack web)</span></li>
-					<li>Video-games <span>(e.g. RPGs, adventure, shooters, indie)</span></li>
-					<li>Misc media <span>(e.g. sci-fi, news, explainers, fandoms)</span></li>
-					<li>Local events <span>(e.g. software-engineering talks)</span></li>
-				</ul>
-			</section>
+				<section id="what">
+					<h2>What?</h2>
+					<h3>(Activities)</h3>
+					<ul>
+						<li>Programming <span>(web, frontend & backend)</span></li>
+						<li>Video games <span>(e.g. rhythm-action, shooters, role-playing, indie)</span></li>
+						<li>Misc media <span>(e.g. sci-fi, news, explainers, fandoms)</span></li>
+						<li>Local events <span>(e.g. software-engineering talks)</span></li>
+					</ul>
+				</section>
+			</div>
 
-			<section id="why" class="core_blueprint">
+			<section id="why">
 				<h2>Why?</h2>
 				<h3>(Values)</h3>
 				<ValuesDiagram />
-				<p>(Select any value or connection)</p>
+				<p>(Select a value or connect two)</p>
 			</section>
 
-			<section id="where" class="core_blueprint">
+			<section id="where">
 				<h2>Where?</h2>
 				<h3>(Residence & Work)</h3>
 				<p>
@@ -52,34 +56,28 @@
 
 <style>
 	#rootPageWrapper {
-		font-size: 1.4em;
-	}
-
-	section.core_blueprint {
-		background-color: var(--backgroundSubColor);
 		margin: auto;
-		padding: 0.75em 1em;
-		box-shadow: 0 0 0.5em 0.1em black;
-	}
-	section.core_blueprint + section.core_blueprint {
-		margin-top: 1em;
+		max-width: 65rem;
+		font-size: 1.3rem;
 	}
 
+	#evavkeinWrapper {
+		font-size: 4rem;
+	}
 	h2 {
-		font-size: 2em;
+		font-size: 2.75rem;
 	}
 	h3 {
-		font-size: 1.25em;
+		font-size: 1.75rem;
 		color: var(--textSubColor);
-		margin-bottom: 0.5em;
+		margin-bottom: 0.5rem;
 	}
 
 	ul {
 		margin: 0;
 	}
-
 	li + li {
-		margin-top: 0.25em;
+		margin-top: 0.25rem;
 	}
 
 	li span {
@@ -87,48 +85,67 @@
 		font-size: 65%;
 	}
 
-	#why p {
-		color: var(--textSubColor);
-		font-size: 0.9em;
-		text-align: center;
+	#contentGrid {
+		margin: 1rem auto 0;
+		padding-bottom: 0.5rem;
+	}
+	#contentGrid > section {
+		margin-top: 0.75rem;
 	}
 
+	#whoWhat {
+		grid-area: whoWhat;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
 	#why {
 		grid-area: why;
+		max-width: 40rem;
+		margin: auto;
 	}
-	#who {
-		grid-area: who;
-	}
-	#what {
-		grid-area: what;
+	#why p {
+		color: var(--textSubColor);
+		font-size: 0.9rem;
+		text-align: center;
 	}
 	#where {
 		grid-area: where;
 	}
-	#contentGrid {
-		margin-top: 1em;
+	#where p {
+		font-size: 1.2rem;
 	}
 
-	@media (min-width: 50em) {
-		section.core_blueprint {
-			margin: unset;
-		}
+	#who,
+	#what,
+	#why,
+	#where {
+		background-color: var(--backgroundSubColor);
+		padding: 0.75rem 1.25rem 0.75rem;
+		box-shadow: 0 0 0.5rem 0.1rem black;
+	}
 
-		section.core_blueprint + section.core_blueprint {
-			margin-top: 0;
-		}
-
+	@media (min-width: 50rem) {
 		#contentGrid {
 			display: grid;
-			gap: 1em;
+			align-items: unset;
 			grid-template-areas:
-				"who what"
-				"why why"
-				"where where";
+				"why whoWhat"
+				"where whoWhat";
+			grid-template-columns: 55% auto;
+		}
+		#contentGrid,
+		#whoWhat {
+			gap: 1rem;
+		}
+
+		#contentGrid > section {
+			margin-top: unset;
 		}
 
 		#who,
 		#what {
+			flex-grow: 1;
 			display: flex;
 			flex-direction: column;
 			flex-wrap: nowrap;
@@ -143,19 +160,25 @@
 		}
 
 		#why {
-			width: 30em;
-			justify-self: center;
+			margin: unset;
 		}
 	}
 
-	@media (min-width: 80em) {
+	@media (min-width: 80rem) {
+		#rootPageWrapper {
+			max-width: 80rem;
+		}
+
 		#contentGrid {
-			align-items: unset;
 			grid-template-areas:
-				"why who"
-				"why what"
+				"why whoWhat"
+				"why whoWhat"
 				"where where";
-			grid-template-columns: 60% auto;
+			grid-template-columns: 50% auto;
+		}
+		#contentGrid,
+		#whoWhat {
+			gap: 1.5rem;
 		}
 
 		#why {

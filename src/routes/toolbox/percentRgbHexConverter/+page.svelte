@@ -89,28 +89,34 @@
 
 <style>
 	#converterWrapper {
-		font-size: 1.25em;
+		font-size: 1.25rem;
 		text-align: center;
-		padding: 1em;
+		padding: 1rem;
 	}
 
 	#conversionInputs {
-		margin-top: 0.4em;
+		margin-top: 0.4rem;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
-		gap: 0.5em 1em;
+		gap: 0.5rem 1rem;
 	}
 	label {
 		white-space: nowrap;
+		padding-right: 0.25rem;
 	}
+	label:hover,
+	label:focus-within {
+		background-color: var(--backgroundSubColor);
+	}
+
 	input {
 		color: var(--textColor);
 		background-color: var(--backgroundSubColor);
-		box-shadow: 0 0 0.5em 0em black;
-		width: 3em;
-		padding: 0.25em;
-		border-radius: 0.5em;
+		box-shadow: 0 0 0.5rem 0rem black;
+		width: 4rem;
+		padding: 0.25rem;
+		border-radius: 0.5rem;
 	}
 	input::placeholder {
 		color: var(--textSubColor);
@@ -118,22 +124,18 @@
 	input:invalid {
 		background-color: firebrick;
 	}
-	input:focus,
-	input:hover {
-		box-shadow: 0 0 0.25em 0.15em var(--highlightSubColor);
-	}
 	label span {
-		font-size: 0.85em;
+		font-size: 0.85rem;
 		color: var(--textSubColor);
 	}
 
 	hr {
 		border-color: var(--textSubColor);
-		margin-block: 1em;
+		margin-block: 1rem;
 	}
 
 	p {
-		line-height: 1.3em;
+		line-height: 1.3rem;
 	}
 
 	a {

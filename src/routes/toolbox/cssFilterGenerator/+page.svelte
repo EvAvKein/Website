@@ -4,7 +4,7 @@
 			<div id="inputWrapper">
 				<LabelledInput label="Hex Value" id="hexInput" bind:value={inputText} />
 			</div>
-			<button class="core_backgroundButton" on:click={execute}>Generate Filter</button>
+			<button class="core_borderButton" on:click={execute}>Generate Filter</button>
 		</section>
 		{#if errorText}
 			<div id="notifWrapper">
@@ -14,11 +14,11 @@
 
 		<div id="sampleWrapper">
 			<div>
-				<h4>Target Color</h4>
+				<h3>Target Color</h3>
 				<div class="sample" style={"background-color: " + hexTargetAsRgb} />
 			</div>
 			<div>
-				<h4>Generated Filter</h4>
+				<h3>Generated Filter</h3>
 				<div class="sample" style={"filter: " + filterAttempt} />
 			</div>
 		</div>
@@ -104,26 +104,26 @@
 
 <style>
 	#tool {
-		padding: 1em;
+		padding: 1rem;
 	}
 
 	#tool > * {
-		font-size: 1.5em;
+		font-size: 1.5rem;
 		text-align: center;
 		margin: auto;
 	}
 
 	#inputSection {
 		display: flex;
-		font-size: 1.5em;
+		font-size: 1.5rem;
 		align-items: flex-end;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: 1em;
+		gap: 1rem;
 	}
 
 	#inputWrapper {
-		max-width: 6em;
+		max-width: 10rem;
 	}
 
 	#inputWrapper + button {
@@ -131,12 +131,12 @@
 	}
 
 	#notifWrapper {
-		font-size: 1.25em;
+		font-size: 1.25rem;
 	}
 
-	h4 {
+	h3 {
 		text-align: center;
-		margin-bottom: 0.25em;
+		margin-bottom: 0.25rem;
 	}
 
 	#sampleWrapper {
@@ -144,18 +144,18 @@
 		display: flex;
 		width: fit-content;
 		background-color: white;
-		padding: 0.5em clamp(0.5em, 2.5vw, 1em) 1em;
-		margin-block: 1em 0.25em;
-		border-radius: 0.5em;
-		gap: clamp(0.75em, 2vw, 1.5em);
+		padding: 0.5rem clamp(0.5rem, 2.5vw, 1rem) 1rem;
+		margin-block: 1rem 0.25rem;
+		border-radius: 0.5rem;
+		gap: clamp(0.75rem, 2vw, 1.5rem);
 	}
 
 	.sample {
 		display: block;
 		background-color: #000;
-		height: 3em;
+		height: 3rem;
 		margin: auto;
-		border-radius: 0.5em;
+		border-radius: 0.5rem;
 	}
 
 	code {
@@ -164,17 +164,17 @@
 	}
 
 	#initialColorDisclaimer {
-		font-size: 1.1em;
-		margin-top: 0.5em;
+		font-size: 1.1rem;
+		margin-top: 0.5rem;
 	}
 
 	#tool > hr {
-		margin: 1em;
+		margin: 1rem;
 	}
 
 	#filterCodeCredit {
-		font-size: 1.25em;
-		line-height: 1.4em;
+		font-size: 1.25rem;
+		line-height: 1.4rem;
 	}
 
 	#filterCodeCredit a {

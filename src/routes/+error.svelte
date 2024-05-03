@@ -27,12 +27,12 @@
 
 <style>
 	main {
-		margin-top: 0.5em;
+		margin-top: 0.5rem;
 		text-align: center;
 	}
 
 	hr {
 		border-color: var(--textSubColor);
-		margin: 0.5em 0.5em 1.25em;
+		margin: 0.5rem 0.5rem 1.25rem;
 	}
 </style>

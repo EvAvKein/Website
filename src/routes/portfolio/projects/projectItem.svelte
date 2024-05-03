@@ -1,12 +1,15 @@
-<article class="core_blueprint">
-	<img class="logoImg" src={logoSrc} alt={logoAlt} />
+<article>
+	<img class="projImg" src={logoSrc} alt={logoAlt} />
 	<h3>{name}</h3>
-	<h4>{technologies}</h4>
+	<div class="projectTechs core_contentButton">
+		<TechSelectionButton techs={techsList} bind:selectedTechs>{technologies}</TechSelectionButton>
+	</div>
+
 	<p>{description}</p>
 	{#if links}
 		<section class="projectLinks">
 			{#each links as link}
-				<a href={link.url} class="core_contentButton">
+				<a href={link.url} target="_blank" class="core_contentButton">
 					{#if link.type === "github"}
 						<img src="/techs/github.svg" alt="GitHub" />
 					{:else if link.type === "browser"}
@@ -23,19 +26,22 @@
 </article>
 
 <script lang="ts">
+	import TechSelectionButton from "../techs/TechSelectionButton.svelte";
+	import type {techsList} from "../techs/techs";
+
 	export let logoSrc: string;
 	export let logoAlt: string;
 	export let name: string;
 	export let technologies: string;
+	export let techsList: techsList;
+	export let selectedTechs: techsList;
 	export let description: string;
 	export let links: {type: "github" | "browser" | "chrome" | "firefox"; url: string}[] | undefined;
 </script>
 
 <style>
 	article {
-		background-color: var(--backgroundSubColor);
-		padding: 0.5em;
-		border-radius: 0.25em;
+		border-radius: 0.25rem;
 		display: grid;
 		grid-template-columns: min-content 1fr min-content;
 		grid-template-rows: min-content min-content 1fr;
@@ -43,48 +49,51 @@
 			"logo name links"
 			"logo techs links"
 			"description description links";
-		box-shadow: 0 0 0.25em 0.1em black;
 	}
 
-	.logoImg {
+	.projImg {
 		grid-area: logo;
-		height: 3em;
+		height: 3rem;
 		width: auto;
-		margin-right: 0.35em;
+		margin-right: 0.35rem;
 		align-self: center;
 	}
 
 	h3 {
 		grid-area: name;
-		font-size: 1.75em;
+		font-size: 1.75rem;
 	}
 
-	h4 {
+	.projectTechs {
 		grid-area: techs;
-		font-size: 1.1em;
-		color: var(--textSubColor);
-		font-weight: normal;
+		width: fit-content;
+		font-size: 0.9rem;
+		color: var(--textColor);
+		text-decoration: underline dashed var(--textSubColor) 0.05em;
+		text-underline-offset: 0.3rem;
 	}
 
 	p {
 		grid-area: description;
-		margin-top: 0.25em;
+		margin-top: 0.25rem;
 		white-space: pre-wrap;
 	}
 
 	.projectLinks {
 		grid-area: links;
-		border-left: 0.2em solid var(--textSubColor);
-		padding-left: 0.4em;
-		margin-left: 1em;
+		border-left: 0.1rem solid color-mix(in srgb, var(--textSubColor), transparent 75%);
+		padding-left: 0.25rem;
+		margin-left: 1rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
-		gap: 0.75em;
+		gap: 0.75rem;
 	}
 	.projectLinks a {
-		height: 1.5em;
-		width: 1.5em;
+		box-sizing: content-box;
+		height: 1.5rem;
+		width: 1.5rem;
+		padding: 0.5rem;
 	}
 	.projectLinks a img {
 		height: inherit;

@@ -11,7 +11,7 @@
 	}}
 >
 	<div
-		class="innerWrapper core_blueprint"
+		class="innerWrapper"
 		role="presentation"
 		in:fly={{
 			duration: swipeDuration,
@@ -46,7 +46,7 @@
 	}
 
 	.innerWrapper {
-		box-shadow: 0 0 0.25em 0.1em black;
+		box-shadow: 0 0 0.25rem 0.1rem black;
 		overflow: auto;
 	}
 </style>
