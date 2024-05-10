@@ -1,6 +1,6 @@
 <Core
 	headTitle="EvAvKein: Toolbox"
-	headDescription="Eve Aviv Keinan's toolbox page; including a variety of utilities he found useful"
+	headDescription="Eve Aviv Keinan's toolbox page; including a variety of programming-related utilities"
 >
 	<section id="toolbox">
 		<section id="tools">

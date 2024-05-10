@@ -1,6 +1,6 @@
 <Core
 	headTitle="EvAvKein: Portfolio"
-	headDescription="Eve Aviv Keinan's programming portfolio page; including summaries with links to his projects, lists of the techs he has experience with, and information regarding his CV"
+	headDescription="Eve Aviv Keinan's programming portfolio page; including project summaries with links, categorized lists of tech experience, and information regarding the CV"
 >
 	<section id="portfolio">
 		<section id="technologies">

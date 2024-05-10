@@ -1,7 +1,4 @@
-<Core
-	headTitle="EvAvKein: 404"
-	headDescription="Eve Aviv Keinan's website's error/404 page; including the site's navigation list"
->
+<Core headTitle="EvAvKein: 404" headDescription="Eve Aviv Keinan's error page; including the site's navigation list">
 	<main>
 		{#if offline}
 			<h1>Error: No connection!</h1>

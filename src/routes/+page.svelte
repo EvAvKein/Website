@@ -1,4 +1,7 @@
-<Core headTitle="EvAvKein" headDescription="The home page for Eve Aviv Keinan's website">
+<Core
+	headTitle="EvAvKein"
+	headDescription="The home page for Eve Aviv Keinan's website; including answers to the questions 'who', 'what', 'why', and 'where'"
+>
 	<div id="rootPageWrapper">
 		<div id="evavkeinWrapper">
 			<EvAvKein />

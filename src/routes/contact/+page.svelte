@@ -1,6 +1,6 @@
 <Core
 	headTitle="EvAvKein: Contact"
-	headDescription="Eve Aviv Keinan's contact page; including a contact form and his email address"
+	headDescription="Eve Aviv Keinan's contact page; including email address and a link to a LinkedIn profile"
 >
 	<section id="contact">
 		<span>Email</span>
