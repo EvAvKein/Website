@@ -45,6 +45,26 @@
 					/>
 					<hr />
 					<Project
+						logoSrc={"/eak.svg"}
+						logoAlt={"The initials E.A.K, with E & K aligned and rotated to neatly overlap with the A inbetween"}
+						name={"This Website"}
+						description={"My personal & portfolio website"}
+						bind:selectedTechs
+						technologies={"SvelteKit, TypeScript, Vercel"}
+						techsList={["HTML", "CSS", "JavaScript", "TypeScript", "Svelte"]}
+						links={[
+							{
+								type: "github",
+								url: "https://github.com/EvAvKein/website",
+							},
+						]}
+					/>
+				</div>
+			</ToolWrapper>
+		{:else}
+			<ToolWrapper>
+				<div class="projectsCategory">
+					<Project
 						logoSrc={"/filterJobsFeeds.svg"}
 						logoAlt={"Icon of papers titled 'Job' dropped inside a filter"}
 						name={"Filter Jobs Feeds"}
@@ -68,26 +88,6 @@
 						]}
 					/>
 					<hr />
-					<Project
-						logoSrc={"/eak.svg"}
-						logoAlt={"The initials E.A.K, with E & K aligned and rotated to neatly overlap with the A inbetween"}
-						name={"This Website"}
-						description={"My personal & portfolio website"}
-						bind:selectedTechs
-						technologies={"SvelteKit, TypeScript, Vercel"}
-						techsList={["HTML", "CSS", "JavaScript", "TypeScript", "Svelte"]}
-						links={[
-							{
-								type: "github",
-								url: "https://github.com/EvAvKein/website",
-							},
-						]}
-					/>
-				</div>
-			</ToolWrapper>
-		{:else}
-			<ToolWrapper>
-				<div class="projectsCategory">
 					<Project
 						logoSrc={"/distillogue.svg"}
 						logoAlt={"Icon of chemistry flask, with bubbling liquids, hung on a stand"}
