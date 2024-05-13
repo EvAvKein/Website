@@ -142,6 +142,10 @@
 			gap: 1rem;
 		}
 
+		#evavkeinWrapper {
+			font-size: 5rem;
+		}
+
 		#contentGrid > section {
 			margin-top: unset;
 		}
