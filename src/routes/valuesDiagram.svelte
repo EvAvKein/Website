@@ -1,4 +1,4 @@
-<section>
+<section class:interacted>
 	<svg
 		viewBox={`0 0 ${boxX} ${boxY}`}
 		bind:this={svg}
@@ -127,8 +127,11 @@
 		})
 	) as Record<valueName, {text: string; coords: {x: number; y: number}}>; // overriding the type because Object.fromEntries assigns keys' type as string instead of the argument's keys. seems like 'the' fix for this was rejected from TS for being "too complex", see: https://github.com/microsoft/TypeScript/issues/35745
 
+	let interacted: boolean = false;
+
 	function selectValues(selectedValues: valueName[]) {
 		currentValues = selectedValues;
+		interacted = true;
 		setLineByValues(selectedValues);
 		setRotateByDiff(selectedValues);
 	}
@@ -302,11 +305,24 @@
 		width: inherit;
 		border-radius: 50%;
 		background-color: transparent;
-		border: 0.2rem dashed var(--textColor);
+		border: 0.25rem dashed var(--textColor);
 		transition: background-color 350ms;
 	}
 
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	section:not(.interacted) .dragCircle {
+		animation: 10s linear infinite normal spin;
+	}
+
 	.valueLabel:hover + .dragCircle,
+	.dragCircle:hover,
 	.dragCircle:focus {
 		border-width: 0.3rem;
 	}
