@@ -16,6 +16,35 @@
 			<ToolWrapper>
 				<div class="projectsCategory">
 					<Project
+						logoSrc={"/work-in-progress.svg"}
+						logoAlt={"Construction area cone icon"}
+						name={"[NOT YET PUBLIC]"}
+						description={"Developing an app, website, and shared backend (as the Founding Engineer/CTO of pre-seed startup). We'll publicly advertise the concept closer to launch, techs list incomplete"}
+						bind:selectedTechs
+						technologies={"React Native, TypeScript, Express, MongoDB, Jest & Playwright, Docker"}
+						techsList={[
+							"HTML",
+							"CSS",
+							"JavaScript",
+							"TypeScript",
+							"JSDoc",
+							"React",
+							"NodeJS",
+							"Express",
+							"MongoDB",
+							"Jest",
+							"Playwright",
+							"Docker",
+						]}
+						links={[
+							{
+								type: "github",
+								url: "https://github.com/EvAvKein/dialplan",
+							},
+						]}
+					/>
+					<hr />
+					<Project
 						logoSrc={"/dialplan.svg"}
 						logoAlt={"The words Dial Plan, in an old-tech font"}
 						name={"Dialplan"}
