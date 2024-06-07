@@ -16,9 +16,9 @@
 		<section id="cv">
 			<h2>CV</h2>
 			<p>
-				The summary is that - programming aside - I've led a community management team and volunteered for civil service
-				at a library.<br />
-				You're welcome to contact me for the proper CV document!
+				I'm currently serving as volunteer Founding Fullstack Engineer at a pre-seed startup, I've been developing web
+				projects over the last 3.5 years, and previously led a community management team.<br />
+				You're welcome to contact me for the full & proper CV document!
 			</p>
 		</section>
 	</section>
