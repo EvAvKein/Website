@@ -36,12 +36,7 @@
 							"Playwright",
 							"Docker",
 						]}
-						links={[
-							{
-								type: "github",
-								url: "https://github.com/EvAvKein/dialplan",
-							},
-						]}
+						links={undefined}
 					/>
 					<hr />
 					<Project
