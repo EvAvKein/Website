@@ -16,6 +16,22 @@
 			<ToolWrapper>
 				<div class="projectsCategory">
 					<Project
+						logoSrc={"/hive.png"}
+						logoAlt={"Hive Helsinki's logo"}
+						name={"Hive Helsinki - Piscine"}
+						description={"Code from my participation in Hive Helsinki's 4-week selection process, including my first exposure to programming with C"}
+						bind:selectedTechs
+						technologies={"C, Vim"}
+						techsList={["C", "Vim"]}
+						links={[
+							{
+								type: "github",
+								url: "https://github.com/EvAvKein/hive_piscine_july2024",
+							},
+						]}
+					/>
+					<hr />
+					<Project
 						logoSrc={"/work-in-progress.svg"}
 						logoAlt={"Construction area cone icon"}
 						name={"[NOT YET PUBLIC]"}
