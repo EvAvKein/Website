@@ -44,7 +44,7 @@
 							"JavaScript",
 							"TypeScript",
 							"JSDoc",
-							"React",
+							"React Native",
 							"NodeJS",
 							"Express",
 							"MongoDB",

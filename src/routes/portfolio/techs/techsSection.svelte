@@ -1,5 +1,5 @@
 <section>
-	<Category title="Frontend" techs={["HTML", "CSS", "React", "Vue", "Svelte"]} bind:selectedTechs />
+	<Category title="Frontend" techs={["HTML", "CSS", "React", "React Native", "Vue", "Svelte"]} bind:selectedTechs />
 	<hr />
 	<Category title="Fullstack" techs={["JavaScript", "JSDoc", "TypeScript"]} bind:selectedTechs />
 	<hr />

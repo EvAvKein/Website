@@ -5,6 +5,7 @@ export const techs = [
 	"JSDoc",
 	"TypeScript",
 	"React",
+	"React Native",
 	"Vue",
 	"Svelte",
 	"PostgreSQL",
