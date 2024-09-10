@@ -2,6 +2,7 @@
 	<svg
 		viewBox={`0 0 ${boxX} ${boxY}`}
 		bind:this={svg}
+		role="presentation"
 		on:mousedown={handler.grabStart}
 		on:touchstart={handler.grabStart}
 		on:mousemove={handler.grabMove}
@@ -36,10 +37,10 @@
 					>
 						{name}
 					</div>
-					<!-- svelte-ignore a11y-no-noninteractive-tabindex - it's interactable, actually -->
 					<div
 						bind:this={dragCircles[index]}
 						class="dragCircle"
+						role="button"
 						id={name}
 						tabindex="0"
 						class:selected={currentValues.includes(name)}
