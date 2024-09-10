@@ -21,6 +21,7 @@ export const techs = [
 	"GitHub",
 	"Git",
 	"Docker",
+	"Expo",
 	"NodeJS",
 	"Linux",
 	"Bash",
