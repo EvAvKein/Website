@@ -32,12 +32,12 @@
 					/>
 					<hr />
 					<Project
-						logoSrc={"/work-in-progress.svg"}
-						logoAlt={"Construction area cone icon"}
-						name={"[NOT YET PUBLIC]"}
-						description={"Developing an app, website, and shared backend (as the Founding Engineer/CTO of pre-seed startup). We'll publicly advertise the concept closer to launch, techs list incomplete"}
+						logoSrc={"/private.svg"}
+						logoAlt={"Book with lock icon"}
+						name={"Redacted App Demo"}
+						description={"Demo app developed while serving as Founding Engineer of pre-seed startup"}
 						bind:selectedTechs
-						technologies={"React Native, TypeScript, Express, MongoDB, Jest & Playwright, Docker"}
+						technologies={"React Native, Expo, TypeScript"}
 						techsList={[
 							"HTML",
 							"CSS",
@@ -45,12 +45,7 @@
 							"TypeScript",
 							"JSDoc",
 							"React Native",
-							"NodeJS",
-							"Express",
-							"MongoDB",
-							"Jest",
-							"Playwright",
-							"Docker",
+							"Expo",
 						]}
 						links={undefined}
 					/>
