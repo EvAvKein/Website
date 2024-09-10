@@ -16,9 +16,10 @@
 		<section id="cv">
 			<h2>CV</h2>
 			<p>
-				I'm currently serving as volunteer Founding Fullstack Engineer at a pre-seed startup, I've been developing web
-				projects over the last 3.5 years, and previously led a community management team.<br />
-				You're welcome to contact me for the full & proper CV document!
+				Currently due to be begin studies at Hive Helsinki after an intensive 4-selection process.
+				I've previously served as Founding Fullstack Engineer at a pre-seed startup and been developing web
+				projects over the last 3.5 years.<br />
+				You're welcome to contact me for the proper CV document!
 			</p>
 		</section>
 	</section>
@@ -66,7 +67,7 @@
 	}
 
 	#cv p {
-		max-width: 45rem;
+		max-width: 55rem;
 		margin-inline: auto;
 		padding-block: 0.5rem 1rem;
 	}
