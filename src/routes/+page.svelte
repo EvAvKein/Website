@@ -43,8 +43,7 @@
 				<h2>Where?</h2>
 				<h3>(Residence & Work)</h3>
 				<p>
-					Living in Finland since summer 2023. Currently residing and jobseeking in Helsinki (open to in-office, hybrid,
-					and remote)!
+					Living in Finland since summer 2023, soon to be studying at Hive Helsinki and open to work!
 				</p>
 			</section>
 		</section>
