@@ -34,7 +34,7 @@
 					<Project
 						logoSrc={"/private.svg"}
 						logoAlt={"Book with lock icon"}
-						name={"Redacted App Demo"}
+						name={"Startup App Demo"}
 						description={"Demo app developed while serving as Founding Engineer of pre-seed startup"}
 						bind:selectedTechs
 						technologies={"React Native, Expo, TypeScript"}
