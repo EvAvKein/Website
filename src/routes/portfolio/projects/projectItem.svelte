@@ -8,21 +8,21 @@
 	<p>{description}</p>
 	{#if links}
 		<section class="linksWrapper">
-		<section class="linksFlex">
-			{#each links as link}
-				<a href={link.url} target="_blank" class="core_contentButton">
-					{#if link.type === "github"}
-						<img src="/techs/github.svg" alt="GitHub" />
-					{:else if link.type === "browser"}
-						<img src="/browser.svg" alt="Browser window" />
-					{:else if link.type === "chrome"}
-						<img src="/chrome.svg" alt="Google Chrome" />
-					{:else if link.type === "firefox"}
-						<img src="/firefox.svg" alt="Firefox" />
-					{/if}
-				</a>
-			{/each}
-		</section>
+			<section class="linksFlex">
+				{#each links as link}
+					<a href={link.url} target="_blank" class="core_contentButton">
+						{#if link.type === "github"}
+							<img src="/techs/github.svg" alt="GitHub" />
+						{:else if link.type === "browser"}
+							<img src="/browser.svg" alt="Browser window" />
+						{:else if link.type === "chrome"}
+							<img src="/chrome.svg" alt="Google Chrome" />
+						{:else if link.type === "firefox"}
+							<img src="/firefox.svg" alt="Firefox" />
+						{/if}
+					</a>
+				{/each}
+			</section>
 		</section>
 	{/if}
 </article>
