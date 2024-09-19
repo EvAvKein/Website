@@ -12,6 +12,7 @@
 >
 	<div
 		class="innerWrapper"
+		class:shadowless
 		role="presentation"
 		in:fly={{
 			duration: swipeDuration,
@@ -31,6 +32,7 @@
 	import {slide, fly} from "svelte/transition";
 
 	export let maintainParentHeight = false;
+	export let shadowless = false;
 
 	const swipeDuration = 250;
 	const swipeDistance = 750;
@@ -48,5 +50,9 @@
 	.innerWrapper {
 		box-shadow: 0 0 0.25rem 0.1rem black;
 		overflow: auto;
+	}
+
+	.shadowless {
+		box-shadow: none;
 	}
 </style>
