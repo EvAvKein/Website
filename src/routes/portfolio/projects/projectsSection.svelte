@@ -1,189 +1,61 @@
 <section id="projectsSection">
 	<section id="categoryButtons">
-		<button
-			on:click={() => (selectedCategory = "current")}
-			class={"core_borderButton" + (selectedCategory === "current" ? " inert" : "")}
-			inert={selectedCategory === "current"}>Current</button
-		>
-		<button
-			on:click={() => (selectedCategory = "archive")}
-			class={"core_borderButton" + (selectedCategory === "archive" ? " inert" : "")}
-			inert={selectedCategory === "archive"}>Archive</button
-		>
+		{#each filters as filter}
+			<button 
+				on:click={() => (currentFilter = filter)}
+				class={"core_borderButton" + (currentFilter === filter ? " inert" : "")}
+				inert={currentFilter === filter}>{filter}</button
+			>
+		{/each}
 	</section>
-	<div id="projectsList">
-		{#if selectedCategory === "current"}
-			<ToolWrapper>
-				<div class="projectsCategory">
-					<Project
-						logoSrc={"/hive.png"}
-						logoAlt={"Hive Helsinki's logo"}
-						name={"Hive Helsinki - Piscine"}
-						description={"Code from my participation in Hive Helsinki's 4-week selection process, including my first exposure to programming with C"}
-						bind:selectedTechs
-						technologies={"C, Vim"}
-						techsList={["C", "Vim"]}
-						links={[
-							{
-								type: "github",
-								url: "https://github.com/EvAvKein/hive_piscine_july2024",
-							},
-						]}
-					/>
-					<hr />
-					<Project
-						logoSrc={"/private.svg"}
-						logoAlt={"Book with lock icon"}
-						name={"Startup App Demo"}
-						description={"Demo app developed while serving as Founding Engineer of pre-seed startup"}
-						bind:selectedTechs
-						technologies={"React Native, Expo, TypeScript"}
-						techsList={[
-							"HTML",
-							"CSS",
-							"JavaScript",
-							"TypeScript",
-							"JSDoc",
-							"React Native",
-							"Expo",
-						]}
-						links={undefined}
-					/>
-					<hr />
-					<Project
-						logoSrc={"/dialplan.svg"}
-						logoAlt={"The words Dial Plan, in an old-tech font"}
-						name={"Dialplan"}
-						description={"Scheduling invitations service for call centers"}
-						bind:selectedTechs
-						technologies={"React, TypeScript, Express, PostgreSQL, Jest & Playwright, Docker"}
-						techsList={[
-							"HTML",
-							"CSS",
-							"JavaScript",
-							"TypeScript",
-							"React",
-							"NodeJS",
-							"Express",
-							"PostgreSQL",
-							"Jest",
-							"Playwright",
-							"Docker",
-							"Bash",
-						]}
-						links={[
-							{
-								type: "github",
-								url: "https://github.com/EvAvKein/dialplan",
-							},
-						]}
-					/>
-					<hr />
-					<Project
-						logoSrc={"/eak.svg"}
-						logoAlt={"The initials E.A.K, with E & K aligned and rotated to neatly overlap with the A inbetween"}
-						name={"This Website"}
-						description={"My personal & portfolio website"}
-						bind:selectedTechs
-						technologies={"SvelteKit, TypeScript, Vercel"}
-						techsList={["HTML", "CSS", "JavaScript", "TypeScript", "Svelte"]}
-						links={[
-							{
-								type: "github",
-								url: "https://github.com/EvAvKein/website",
-							},
-						]}
-					/>
-				</div>
-			</ToolWrapper>
-		{:else}
-			<ToolWrapper>
-				<div class="projectsCategory">
-					<Project
-						logoSrc={"/filterJobsFeeds.svg"}
-						logoAlt={"Icon of papers titled 'Job' dropped inside a filter"}
-						name={"Filter Jobs Feeds"}
-						description={"Browser extension for filtering jobs feeds through blacklisting text"}
-						bind:selectedTechs
-						technologies={"HTML, CSS, JavaScript, JSDoc"}
-						techsList={["HTML", "CSS", "JavaScript", "JSDoc"]}
-						links={[
-							{
-								type: "github",
-								url: "https://github.com/EvAvKein/FilterJobsFeeds",
-							},
-							{
-								type: "chrome",
-								url: "https://chrome.google.com/webstore/detail/filter-jobs-feeds/edebgnaafidhaiepkjknfmdonoagkjhe",
-							},
-							{
-								type: "firefox",
-								url: "https://addons.mozilla.org/en-CA/firefox/addon/filter-jobs-feeds",
-							},
-						]}
-					/>
-					<hr />
-					<Project
-						logoSrc={"/distillogue.svg"}
-						logoAlt={"Icon of chemistry flask, with bubbling liquids, hung on a stand"}
-						name={"Distillogue"}
-						description={"Forum platform with configurable interactions"}
-						bind:selectedTechs
-						technologies={"Vue, TypeScript, Express, MongoDB, Playwright, Docker"}
-						techsList={[
-							"HTML",
-							"CSS",
-							"JavaScript",
-							"TypeScript",
-							"Vue",
-							"NodeJS",
-							"Express",
-							"MongoDB",
-							"Playwright",
-							"Docker",
-							"Bash",
-						]}
-						links={[
-							{
-								type: "github",
-								url: "https://github.com/EvAvKein/distillogue",
-							},
-						]}
-					/>
-					<hr />
-					<Project
-						logoSrc={"/warehouse.svg"}
-						logoAlt={"Crate icon"}
-						name={"Warehouse"}
-						description={'A slot-based inventory management interface, inspired by those of various "sandbox" video-games'}
-						bind:selectedTechs
-						technologies={"HTML, CSS, JavaScript"}
-						techsList={["HTML", "CSS", "JavaScript"]}
-						links={[
-							{type: "github", url: "https://github.com/EvAvKein/Warehouse"},
-							{type: "browser", url: "https://warehouse.evavkein.com"},
-						]}
-					/>
-				</div>
-			</ToolWrapper>
-		{/if}
-	</div>
+	{#key currentFilter}
+		<SwapWrapper shadowless={true}>
+			<div id="projectsList">
+				{#each filteredProjects as project, index}
+								{#if index}
+									<hr />
+								{/if}
+								{#if currentFilter === "All" || project.categories.includes(currentFilter)}
+									<ProjectItem
+										logoSrc={project.logoSrc}
+										logoAlt={project.logoAlt}
+										name={project.name}
+										description={project.description}
+										technologies={project.technologies}
+										techsList={project.techsList}
+										links={project.links}
+										bind:selectedTechs
+									/>
+								{/if}
+				{/each}
+			</div>
+		</SwapWrapper>
+	{/key}
 </section>
 
 <script lang="ts">
-	import ToolWrapper from "../../../lib/swappableContentWrapper.svelte";
-	import Project from "./projectItem.svelte";
+	import {fly, scale} from "svelte/transition";
+	import ProjectItem from "./projectItem.svelte";
+	import {projects, projectCategories} from "./projects";
 	import type {techsList} from "../techs/techs";
+	import SwapWrapper from "$lib/swappableContentWrapper.svelte";
 
 	export let selectedTechs: techsList;
-	let selectedCategory: "current" | "archive" = "current";
+
+	const filters = ["All", ...projectCategories] as const;
+	let currentFilter: (typeof filters)[number] = "All";
+
+	$: filteredProjects =
+		currentFilter === "All"
+			? projects
+			: projects.filter((project) => 
+					project.categories.includes(currentFilter as typeof projectCategories[number])
+				);
 </script>
 
 <style>
 	#projectsSection {
 		flex-grow: 1; /* for interaction with parent component */
-		display: flex;
-		flex-direction: column;
 	}
 
 	#categoryButtons {
@@ -208,21 +80,16 @@
 	}
 
 	#projectsList {
-		flex-grow: 1;
-		background-color: var(--backgroundColor);
-		overflow: hidden;
-		box-shadow: inset 0 0 0.5rem 0.1rem black;
-	}
-
-	.projectsCategory {
+		margin-top: 0.5rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
 		padding: 0.75rem 0.5rem;
 		gap: 0.25rem;
+		flex-grow: 1;
+		background-color: var(--backgroundColor);
 	}
 
-	.projectsCategory hr {
+	hr {
 		border: 0.1rem solid color-mix(in srgb, var(--textSubColor), transparent 50%);
 		width: 100%;
 	}

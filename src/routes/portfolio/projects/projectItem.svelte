@@ -7,7 +7,8 @@
 
 	<p>{description}</p>
 	{#if links}
-		<section class="projectLinks">
+		<section class="linksWrapper">
+		<section class="linksFlex">
 			{#each links as link}
 				<a href={link.url} target="_blank" class="core_contentButton">
 					{#if link.type === "github"}
@@ -22,6 +23,7 @@
 				</a>
 			{/each}
 		</section>
+		</section>
 	{/if}
 </article>
 
@@ -32,18 +34,19 @@
 	export let logoSrc: string;
 	export let logoAlt: string;
 	export let name: string;
+	export let description: string;
 	export let technologies: string;
 	export let techsList: techsList;
-	export let selectedTechs: techsList;
-	export let description: string;
 	export let links: {type: "github" | "browser" | "chrome" | "firefox"; url: string}[] | undefined;
+
+	export let selectedTechs: techsList;
 </script>
 
 <style>
 	article {
 		border-radius: 0.25rem;
 		display: grid;
-		grid-template-columns: min-content 1fr min-content;
+		grid-template-columns: min-content 1fr max-content;
 		grid-template-rows: min-content min-content 1fr;
 		grid-template-areas:
 			"logo name links"
@@ -80,23 +83,33 @@
 		white-space: pre-wrap;
 	}
 
-	.projectLinks {
+	.linksWrapper {
 		grid-area: links;
 		border-left: 0.1rem solid color-mix(in srgb, var(--textSubColor), transparent 75%);
 		padding-left: 0.25rem;
 		margin-left: 1rem;
 		height: inherit;
 		display: flex;
+		align-items: center;
+	}
+
+	.linksFlex {
+		height: 5.5rem;
+		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: 0.5rem;
 	}
-	.projectLinks a {
+
+	.linksFlex a {
 		box-sizing: content-box;
 		height: 1.5rem;
 		width: 1.5rem;
 		padding: 0.5rem;
 	}
-	.projectLinks a img {
+
+	.linksFlex a img {
 		height: inherit;
 		width: inherit;
 	}

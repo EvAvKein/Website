@@ -12,16 +12,6 @@
 			<h2>Projects</h2>
 			<Projects bind:selectedTechs />
 		</section>
-
-		<section id="cv">
-			<h2>CV</h2>
-			<p>
-				Currently due to be begin studies at Hive Helsinki after an intensive 4-selection process.
-				I've previously served as Founding Fullstack Engineer at a pre-seed startup and been developing web
-				projects over the last 3.5 years.<br />
-				You're welcome to contact me for the proper CV document!
-			</p>
-		</section>
 	</section>
 </Core>
 
@@ -55,22 +45,10 @@
 	#projects {
 		grid-area: projs;
 	}
-	#cv {
-		grid-area: cv;
-	}
 	#portfolio > section + section {
 		margin-top: 1.5rem;
 	}
 
-	#cv h2 {
-		margin-bottom: 0;
-	}
-
-	#cv p {
-		max-width: 55rem;
-		margin-inline: auto;
-		padding-block: 0.5rem 1rem;
-	}
 
 	@media (min-width: 70rem) {
 		#portfolio > section + section {
@@ -80,15 +58,17 @@
 		#portfolio {
 			display: grid;
 			grid-template-areas:
-				"projs techs"
-				"cv cv";
-			grid-template-columns: auto clamp(27.5rem, 42.5%, 50rem);
-			gap: 1rem;
+				"projs techs";
+			grid-template-columns: auto clamp(30rem, 45%, 55rem);
+		}
+		
+		#projects {
+			overflow-y: scroll;
+			padding-right: 1.5rem;
 		}
 
-		#projects {
-			display: flex;
-			flex-direction: column;
+		#technologies {
+			padding-left: 1.5rem;
 		}
 
 		#projects > :nth-child(2) {
