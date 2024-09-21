@@ -1,4 +1,4 @@
-export type routeK = "/" | "/portfolio" | "/contact" | "/toolbox";
+export type routeK = "/" | "/portfolio" | "/toolbox";
 
 interface routeData {
 	name: string;
@@ -16,11 +16,6 @@ export const routes = {
 		name: "Portfolio",
 		imgSrc: "/code.svg",
 		imgAlt: "Computer code icon",
-	},
-	"/contact": {
-		name: "Contact",
-		imgSrc: "/contact.svg",
-		imgAlt: "Envelope icon",
 	},
 	"/toolbox": {
 		name: "Toolbox",

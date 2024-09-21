@@ -37,7 +37,6 @@
 		<div>
 			<NavItem route={"/"} current={currentPath === "/"} />
 			<NavItem route={"/portfolio"} current={currentPath === "/portfolio"} />
-			<NavItem route={"/contact"} current={currentPath === "/contact"} />
 		</div>
 		<hr />
 		<div>
