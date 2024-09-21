@@ -17,7 +17,7 @@ export class Project {
 
 export const projects: Project[] = [
 	new Project(
-		"/hive.png",
+		"/projects/hive.png",
 		"Hive Helsinki's logo",
 		"Hive Helsinki - Piscine",
 		"Code from my participation in Hive Helsinki's 4-week selection process, including my first exposure to programming with C",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
 		["Frontend"],
 	),
 	new Project(
-		"/dialplan.svg",
+		"/projects/dialplan.svg",
 		"The words Dial Plan, in an old-tech font",
 		"Dialplan",
 		"Scheduling invitations service for call centers",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
 		["Frontend"],
 	),
 	new Project(
-		"/filterJobsFeeds.svg",
+		"/projects/filterJobsFeeds.svg",
 		"Icon of papers titled 'Job' dropped inside a filter",
 		"Filter Jobs Feeds",
 		"Browser extension for filtering jobs feeds through blacklisting text",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
 		["Frontend"],
 	),
 	new Project(
-		"/distillogue.svg",
+		"/projects/distillogue.svg",
 		"Icon of chemistry flask, with bubbling liquids, hung on a stand",
 		"Distillogue",
 		"Forum platform with configurable interactions",
@@ -123,7 +123,7 @@ export const projects: Project[] = [
 		["Fullstack"],
 	),
 	new Project(
-		"/warehouse.svg",
+		"/projects/warehouse.svg",
 		"Crate icon",
 		"Warehouse",
 		'A slot-based inventory management interface, inspired by those of various "sandbox" video-games',
