@@ -37,6 +37,15 @@
 					Living in Finland since summer 2023, soon to be studying at Hive Helsinki and also open to other opportunities!
 				</p>
 			</section>
+
+			<section id="email">
+				<ContactLink
+					logoSrc="/contact.svg"
+					logoAlt="Envelope"
+					text="evavkein@gmail.com"
+					url="mailto:evavkein@gmail.com"
+				/>
+			</section>
 		</section>
 	</div>
 </Core>
@@ -44,13 +53,17 @@
 <script lang="ts">
 	import Core from "./_core.svelte";
 	import EvAvKein from "./evavkein.svelte";
+	import ContactLink from "$lib/contactLink.svelte";
 </script>
 
 <style>
 	#rootPageWrapper {
 		margin: auto;
-		max-width: 65rem;
+		max-width: 75rem;
 		font-size: 1.3rem;
+		height: inherit;
+		display: flex;
+		flex-direction: column;
 	}
 
 	#evavkeinWrapper {
@@ -78,6 +91,7 @@
 	}
 
 	#contentGrid {
+		flex-grow: 1;
 		margin: 1rem auto 0;
 		padding-bottom: 0.5rem;
 	}
@@ -100,6 +114,12 @@
 		font-size: 1.2rem;
 	}
 
+	#email {
+		grid-area: email;
+		display: flex;
+		justify-content: center;
+	}
+
 	#who,
 	#what,
 	#where {
@@ -113,9 +133,11 @@
 			display: grid;
 			align-items: unset;
 			grid-template-areas:
-				"why whoWhat"
-				"where whoWhat";
+				"who what"
+				"where where"
+				"email email";
 			grid-template-columns: 55% auto;
+			grid-template-rows: auto auto 1fr;
 		}
 		#contentGrid {
 			gap: 1rem;
@@ -144,21 +166,9 @@
 			flex-wrap: nowrap;
 			justify-content: space-around;
 		}
-	}
 
-	@media (min-width: 80rem) {
-		#rootPageWrapper {
-			max-width: 80rem;
-		}
-
-		#contentGrid {
-			grid-template-areas:
-				"who what"
-				"where where";
-			grid-template-columns: 50% auto;
-		}
-		#contentGrid {
-			gap: 1.5rem;
+		#email {
+			align-items: end;
 		}
 	}
 </style>
