@@ -8,7 +8,6 @@
 		</div>
 
 		<section id="contentGrid">
-			<div id="whoWhat">
 				<section id="who">
 					<h2>Who?</h2>
 					<h3>(Characteristics)</h3>
@@ -30,14 +29,6 @@
 						<li>Local events <span>(e.g. software-engineering talks)</span></li>
 					</ul>
 				</section>
-			</div>
-
-			<section id="why">
-				<h2>Why?</h2>
-				<h3>(Values)</h3>
-				<ValuesDiagram />
-				<p>(Select a value or connect two)</p>
-			</section>
 
 			<section id="where">
 				<h2>Where?</h2>
@@ -53,7 +44,6 @@
 <script lang="ts">
 	import Core from "./_core.svelte";
 	import EvAvKein from "./evavkein.svelte";
-	import ValuesDiagram from "./valuesDiagram.svelte";
 </script>
 
 <style>
@@ -95,22 +85,14 @@
 		margin-top: 0.75rem;
 	}
 
-	#whoWhat {
-		grid-area: whoWhat;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
+	#who {
+		grid-area: who;
 	}
-	#why {
-		grid-area: why;
-		max-width: 40rem;
-		margin: auto;
+	
+	#what {
+		grid-area: what;
 	}
-	#why p {
-		color: var(--textSubColor);
-		font-size: 0.9rem;
-		text-align: center;
-	}
+
 	#where {
 		grid-area: where;
 	}
@@ -120,7 +102,6 @@
 
 	#who,
 	#what,
-	#why,
 	#where {
 		background-color: var(--backgroundSubColor);
 		padding: 0.75rem 1.25rem 0.75rem;
@@ -136,8 +117,7 @@
 				"where whoWhat";
 			grid-template-columns: 55% auto;
 		}
-		#contentGrid,
-		#whoWhat {
+		#contentGrid {
 			gap: 1rem;
 		}
 
@@ -164,10 +144,6 @@
 			flex-wrap: nowrap;
 			justify-content: space-around;
 		}
-
-		#why {
-			margin: unset;
-		}
 	}
 
 	@media (min-width: 80rem) {
@@ -177,19 +153,12 @@
 
 		#contentGrid {
 			grid-template-areas:
-				"why whoWhat"
-				"why whoWhat"
+				"who what"
 				"where where";
 			grid-template-columns: 50% auto;
 		}
-		#contentGrid,
-		#whoWhat {
+		#contentGrid {
 			gap: 1.5rem;
-		}
-
-		#why {
-			width: unset;
-			justify-self: unset;
 		}
 	}
 </style>
