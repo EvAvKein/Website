@@ -12,6 +12,15 @@
 			<h2>Projects</h2>
 			<Projects bind:selectedTechs />
 		</section>
+
+		<div id="link_edIn">
+			<ContactLink
+				logoSrc="/linkedin.svg"
+				logoAlt="The LinkedIn logo"
+				text="/evavkein"
+				url="https://www.linkedin.com/in/evavkein/"
+			/>
+		</div>
 	</section>
 </Core>
 
@@ -19,6 +28,7 @@
 	import Core from "../_core.svelte";
 	import TechStack from "./techs/techsSection.svelte";
 	import Projects from "./projects/projectsSection.svelte";
+	import ContactLink from "$lib/contactLink.svelte";
 	import type {techsList} from "./techs/techs.ts";
 
 	let selectedTechs: techsList = [];
@@ -49,6 +59,14 @@
 		margin-top: 1.5rem;
 	}
 
+	#link_edIn {
+		grid-area: link_edIn;
+		border-top: 0.05rem solid color-mix(in srgb, var(--textColor), transparent 60%);;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		display: flex;
+		justify-content: center;
+	}
 
 	@media (min-width: 70rem) {
 		#portfolio > section + section {
@@ -58,8 +76,10 @@
 		#portfolio {
 			display: grid;
 			grid-template-areas:
-				"projs techs";
+				"projs techs"
+				"projs link_edIn";
 			grid-template-columns: auto clamp(30rem, 45%, 55rem);
+			grid-template-rows: 1fr auto;
 		}
 		
 		#projects {
@@ -73,6 +93,10 @@
 
 		#projects > :nth-child(2) {
 			flex-grow: 1;
+		}
+
+		#link_edIn {
+			padding-bottom: 0;
 		}
 	}
 </style>
