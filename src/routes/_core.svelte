@@ -30,6 +30,7 @@
     CORE STYLES
   \~~~~~~~~~~~~*/
 	:root {
+		color-scheme: dark;
 		/* filters created via https://evavkein.com/toolbox/cssFilterGenerator */
 		--textColor: #d4d4d4;
 		--filterToTextColor: brightness(0) saturate(100%) invert(92%) sepia(0%) saturate(1234%) hue-rotate(198deg)
