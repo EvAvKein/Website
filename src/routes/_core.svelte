@@ -2,7 +2,7 @@
 	<link rel="icon" href={headFavicon} />
 	<title>{headTitle}</title>
 	<meta name="description" content={headDescription} />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Fira+Code" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Fira+Code&family=Noto+Color+Emoji&display=swap" />
 </svelte:head>
 
 <SwappableContentWrapper maintainParentHeight={true}>
@@ -60,7 +60,7 @@
 		margin: 0;
 		min-height: 100%;
 		color: var(--textColor);
-		font-family: "Fira Code", monospace;
+		font-family: "Fira Code", "Noto Color Emoji", monospace;
 		letter-spacing: 0.03rem;
 		text-underline-offset: 0.1rem;
 	}
