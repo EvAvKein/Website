@@ -12,21 +12,21 @@
 					<h2>Who?</h2>
 					<h3>(Characteristics)</h3>
 					<ul>
+						<li>Cis/agender guy <span>(he/they)</span></li>
 						<li>Amiable leftist <span>(deriving from Utilitarianism)</span></li>
-						<li>Neuroatypical <span>(triple-diagnosed, adapted so they're not evident)</span></li>
-						<li>Cis/agender guy <span>(he/him)</span></li>
-						<li>Senior Gen-Z</li>
+						<li>Neuroatypical <span>(triple-diagnosed but aren't evident)</span></li>
+						<li>Senior gen-Z</li>
 					</ul>
 				</section>
 
 				<section id="what">
 					<h2>What?</h2>
-					<h3>(Activities)</h3>
+					<h3>(Interests)</h3>
 					<ul>
-						<li>Programming <span>(web, frontend & backend)</span></li>
-						<li>Video games <span>(e.g. rhythm-action, shooters, role-playing, indie)</span></li>
-						<li>Misc media <span>(e.g. sci-fi, news, explainers, fandoms)</span></li>
+						<li>Programming <span>(fullstack web, C)</span></li>
+						<li>Humanities <span>(e.g. equity, philosophy, communication)</span></li>
 						<li>Local events <span>(e.g. software-engineering talks)</span></li>
+						<li>Recurring hobbies <span>(e.g. video-games, crocheting, sci-fi, badminton, D&D, design)</span></li>
 					</ul>
 				</section>
 
@@ -34,7 +34,7 @@
 				<h2>Where?</h2>
 				<h3>(Residence & Work)</h3>
 				<p>
-					Living in Finland since summer 2023, soon to be studying at Hive Helsinki and also open to other opportunities!
+					Finland since summer 2023, soon studying at Hive Helsinki and also open to other opportunities!
 				</p>
 			</section>
 
@@ -82,7 +82,7 @@
 		margin: 0;
 	}
 	li + li {
-		margin-top: 0.25rem;
+		margin-top: 0.5rem;
 	}
 
 	li span {
@@ -92,7 +92,7 @@
 
 	#contentGrid {
 		flex-grow: 1;
-		margin: 1rem auto 0;
+		margin: 0.5rem;
 		padding-bottom: 0.5rem;
 	}
 	#contentGrid > section {
@@ -102,9 +102,25 @@
 	#who {
 		grid-area: who;
 	}
+	@counter-style whoList {
+		system: fixed;
+		symbols: "👨‍🦲" "🌱" "🧠" "🧑‍💻";
+		suffix: " ";
+	}
+	#who ul {
+		list-style-type: whoList;
+	}
 	
 	#what {
 		grid-area: what;
+	}
+	@counter-style whatList {
+		system: cyclic;
+		symbols: "💻" "🤝" "🎟️" "🎨";
+		suffix: " ";
+	}
+	#what ul {
+		list-style-type: whatList;
 	}
 
 	#where {
@@ -136,7 +152,7 @@
 				"who what"
 				"where where"
 				"email email";
-			grid-template-columns: 55% auto;
+			grid-template-columns: 1fr 1fr;
 			grid-template-rows: auto auto 1fr;
 		}
 		#contentGrid {
