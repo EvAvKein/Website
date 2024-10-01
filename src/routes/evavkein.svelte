@@ -8,7 +8,6 @@
 	h1 {
 		font-family: "Share Tech Mono", monospace;
 		font-weight: unset;
-		border-bottom: 0.25rem dashed var(--accentColor);
 		font-size: inherit;
 		font-weight: bold;
 		color: var(--accentColor);
