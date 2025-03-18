@@ -19,14 +19,14 @@ export const projects: Project[] = [
 	new Project(
 		"/projects/hive.png",
 		"Hive Helsinki's logo",
-		"Hive Helsinki - Piscine",
-		"Code from my participation in Hive Helsinki's 4-week selection process, including my first exposure to programming with C",
-		"C, Vim",
-		["C", "Vim"],
+		"Studies at Hive Helsinki",
+		"Low-level code from my projects at Hive Helsinki - reimplementing shell functionalities, a 2D game without a game engine, manual multi-threading, and more!",
+		"C, GDB",
+		["C", "GDB"],
 		[
 			{
 				type: "github",
-				url: "https://github.com/EvAvKein/hive_piscine_july2024",
+				url: "https://github.com/EvAvKein/hive_all",
 			},
 		],
 		["C"],
