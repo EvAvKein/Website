@@ -12,6 +12,7 @@ export const techs = [
 	"MongoDB",
 	"Express",
 	"C",
+	"GDB",
 	"Jest",
 	"Playwright",
 	"Visual Studio Code",

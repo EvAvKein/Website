@@ -5,7 +5,7 @@
 	<hr />
 	<Category title="Backend" techs={["NodeJS", "Express", "MongoDB", "PostgreSQL", "C"]} bind:selectedTechs />
 	<hr />
-	<Category title="Testing" techs={["Jest", "Playwright"]} bind:selectedTechs />
+	<Category title="Testing" techs={["Jest", "Playwright", "GDB"]} bind:selectedTechs />
 	<hr />
 	<Category title="Deployment" techs={["Bash", "Docker", "Expo"]} bind:selectedTechs />
 	<hr />
