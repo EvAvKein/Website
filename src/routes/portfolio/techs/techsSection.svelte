@@ -3,7 +3,9 @@
 	<hr />
 	<Category title="Fullstack" techs={["JavaScript", "JSDoc", "TypeScript"]} bind:selectedTechs />
 	<hr />
-	<Category title="Backend" techs={["NodeJS", "Express", "MongoDB", "PostgreSQL", "C"]} bind:selectedTechs />
+	<Category title="Backend" techs={["NodeJS", "Express", "MongoDB", "PostgreSQL"]} bind:selectedTechs />
+	<hr />
+	<Category title="Systems" techs={["C", "C++"]} bind:selectedTechs />
 	<hr />
 	<Category title="Testing" techs={["Jest", "Playwright", "GDB"]} bind:selectedTechs />
 	<hr />
@@ -11,7 +13,7 @@
 	<hr />
 	<Category
 		title="Development"
-		techs={["Visual Studio Code", "Vim", "GitHub", "Git", "Linux", "Figma", "Chrome Devtools"]}
+		techs={["NeoVim", "Visual Studio Code", "GitHub", "Git", "Linux", "Figma", "Chrome Devtools"]}
 		bind:selectedTechs
 	/>
 </section>

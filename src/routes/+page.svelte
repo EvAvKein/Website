@@ -23,7 +23,7 @@
 					<h2>What?</h2>
 					<h3>(Interests)</h3>
 					<ul>
-						<li>Programming <span>(fullstack web, C)</span></li>
+						<li>Programming <span>(fullstack web, C++)</span></li>
 						<li>Humanities <span>(e.g. equity, philosophy, communication)</span></li>
 						<li>Local events <span>(e.g. software-engineering talks)</span></li>
 						<li>Recurring hobbies <span>(e.g. video-games, crocheting, sci-fi, badminton, D&D, design)</span></li>

@@ -1,6 +1,6 @@
 import type {techsList} from "../techs/techs";
 
-export const projectCategories = ["Fullstack", "Frontend", "C"] as const;
+export const projectCategories = ["Fullstack", "Frontend", "C and C++"] as const;
 
 export class Project {
 	constructor(
@@ -20,16 +20,16 @@ export const projects: Project[] = [
 		"/projects/hive.png",
 		"Hive Helsinki's logo",
 		"Studies at Hive Helsinki",
-		"Low-level code from my projects at Hive Helsinki - reimplementing shell functionalities, a 2D game without a game engine, manual multi-threading, and more!",
-		"C, GDB",
-		["C", "GDB"],
+		"Systems programing at Hive Helsinki - implementing raytracing, creating a Linux shell, a 2D game without an engine, manual multi-threading, and more!",
+		"C, C++, GDB",
+		["C", "C++", "GDB"],
 		[
 			{
 				type: "github",
 				url: "https://github.com/EvAvKein/hive_all",
 			},
 		],
-		["C"],
+		["C", "C++"],
 	),
 	new Project(
 		"/private.svg",
