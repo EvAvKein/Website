@@ -10,11 +10,11 @@
 		<section id="contentGrid">
 				<section id="who">
 					<h2>Who?</h2>
-					<h3>(Characteristics)</h3>
+					<h3>(Identities)</h3>
 					<ul>
 						<li>Cis/agender guy <span>(he/they)</span></li>
-						<li>Amiable leftist <span>(deriving from Utilitarianism)</span></li>
-						<li>Neuroatypical <span>(triple-diagnosed but aren't evident)</span></li>
+						<li>Progressive <span>(vegan, accessibility-minded, etc. Deriving from Utilitarianism)</span></li>
+						<li>Neuroatypical <span>(triple-diagnosed, advantages outshining support needs)</span></li>
 						<li>Senior gen-Z</li>
 					</ul>
 				</section>
@@ -23,10 +23,10 @@
 					<h2>What?</h2>
 					<h3>(Interests)</h3>
 					<ul>
-						<li>Programming <span>(fullstack web, C++)</span></li>
-						<li>Humanities <span>(e.g. equity, philosophy, communication)</span></li>
-						<li>Local events <span>(e.g. software-engineering talks)</span></li>
-						<li>Recurring hobbies <span>(e.g. video-games, crocheting, sci-fi, badminton, D&D, design)</span></li>
+						<li>Programming <span>(e.g. web, C++, Linux, Vim)</span></li>
+						<li>Humanities <span>(e.g. communications, philosophy, equity)</span></li>
+						<li>Community-building <span>(e.g.  supporting, volunteering, organizing)</span></li>
+						<li>Recurring hobbies <span>(e.g. video-games, crocheting, sci-fi, D&D, music)</span></li>
 					</ul>
 				</section>
 
@@ -34,7 +34,7 @@
 				<h2>Where?</h2>
 				<h3>(Residence & Work)</h3>
 				<p>
-					Finland since summer 2023, currently studying and leading the student association at Hive Helsinki - also open to other opportunities!
+					Finland since summer 2023 - currently studying at Hive Helsinki, leading Hive's student association, and open to other opportunities!
 				</p>
 			</section>
 
@@ -116,7 +116,7 @@
 	}
 	@counter-style whatList {
 		system: cyclic;
-		symbols: "💻" "🤝" "🎟️" "🎨";
+		symbols: "💻" "🤝" "🫂" "🧶";
 		suffix: " ";
 	}
 	#what ul {
