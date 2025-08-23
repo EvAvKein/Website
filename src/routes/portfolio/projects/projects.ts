@@ -29,7 +29,7 @@ export const projects: Project[] = [
 				url: "https://github.com/EvAvKein/hive_all",
 			},
 		],
-		["C", "C++"],
+		["C and C++"]
 	),
 	new Project(
 		"/private.svg",
