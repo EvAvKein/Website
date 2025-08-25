@@ -13,8 +13,8 @@
 					<h3>(Identities)</h3>
 					<ul>
 						<li>Cis/agender guy <span>(he/they)</span></li>
-						<li>Progressive <span>(vegan, accessibility-minded, etc. Deriving from Utilitarianism)</span></li>
-						<li>Neuroatypical <span>(triple-diagnosed, advantages outshining support needs)</span></li>
+						<li>Progressive <span>(vegan, accessibility-minded, etc)</span></li>
+						<li>Neuroatypical <span>(triple-diagnosed - few support needs, many advantages)</span></li>
 						<li>Senior gen-Z</li>
 					</ul>
 				</section>
@@ -25,7 +25,7 @@
 					<ul>
 						<li>Programming <span>(e.g. web, C++, Linux, Vim)</span></li>
 						<li>Humanities <span>(e.g. communications, philosophy, equity)</span></li>
-						<li>Community-building <span>(e.g.  supporting, volunteering, organizing)</span></li>
+						<li>Community-building <span>(e.g. volunteering, organizing, supporting)</span></li>
 						<li>Recurring hobbies <span>(e.g. video-games, crocheting, sci-fi, D&D, music)</span></li>
 					</ul>
 				</section>
