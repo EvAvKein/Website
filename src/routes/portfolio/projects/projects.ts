@@ -1,6 +1,6 @@
 import type {techsList} from "../techs/techs";
 
-export const projectCategories = ["Fullstack", "Frontend", "C and C++"] as const;
+export const projectCategories = ["Fullstack", "Frontend", "Systems"] as const;
 
 export class Project {
 	constructor(
@@ -10,8 +10,8 @@ export class Project {
 		public description: string,
 		public technologies: string,
 		public techsList: techsList,
-		public links: {type: "github" | "browser" | "chrome" | "firefox"; url: string}[] | undefined,
 		public categories: (typeof projectCategories)[number][],
+		public link: string | null,
 	) {}
 }
 
@@ -23,13 +23,8 @@ export const projects: Project[] = [
 		"Systems programing at Hive Helsinki - implementing raytracing, creating a Linux shell, a 2D game without an engine, manual multi-threading, and more!",
 		"C, C++, GDB",
 		["C", "C++", "GDB"],
-		[
-			{
-				type: "github",
-				url: "https://github.com/EvAvKein/hive_all",
-			},
-		],
-		["C and C++"]
+		["Systems"],
+		"https://github.com/EvAvKein/hive_all",
 	),
 	new Project(
 		"/private.svg",
@@ -38,8 +33,8 @@ export const projects: Project[] = [
 		"Demo app developed while serving as Founding Engineer of pre-seed startup",
 		"React Native, Expo, TypeScript",
 		["HTML", "CSS", "JavaScript", "TypeScript", "JSDoc", "React Native", "Expo"],
-		undefined,
 		["Frontend"],
+		null
 	),
 	new Project(
 		"/projects/dialplan.svg",
@@ -61,13 +56,8 @@ export const projects: Project[] = [
 			"Docker",
 			"Bash",
 		],
-		[
-			{
-				type: "github",
-				url: "https://github.com/EvAvKein/dialplan",
-			},
-		],
 		["Fullstack"],
+		"https://github.com/EvAvKein/dialplan",
 	),
 	new Project(
 		"/eak.svg",
@@ -76,13 +66,8 @@ export const projects: Project[] = [
 		"My personal & portfolio website",
 		"SvelteKit, TypeScript, Vercel",
 		["HTML", "CSS", "JavaScript", "TypeScript", "Svelte"],
-		[
-			{
-				type: "github",
-				url: "https://github.com/EvAvKein/website",
-			},
-		],
 		["Frontend"],
+		"https://github.com/EvAvKein/website",
 	),
 	new Project(
 		"/projects/filterJobsFeeds.svg",
@@ -91,21 +76,8 @@ export const projects: Project[] = [
 		"Browser extension for filtering jobs feeds through blacklisting text",
 		"HTML, CSS, JavaScript, JSDoc",
 		["HTML", "CSS", "JavaScript", "JSDoc"],
-		[
-			{
-				type: "github",
-				url: "https://github.com/EvAvKein/FilterJobsFeeds",
-			},
-			{
-				type: "chrome",
-				url: "https://chrome.google.com/webstore/detail/filter-jobs-feeds/edebgnaafidhaiepkjknfmdonoagkjhe",
-			},
-			{
-				type: "firefox",
-				url: "https://addons.mozilla.org/en-CA/firefox/addon/filter-jobs-feeds",
-			},
-		],
 		["Frontend"],
+		"https://github.com/EvAvKein/FilterJobsFeeds",
 	),
 	new Project(
 		"/projects/distillogue.svg",
@@ -114,13 +86,8 @@ export const projects: Project[] = [
 		"Forum platform with configurable interactions",
 		"Vue, TypeScript, Express, MongoDB, Playwright, Docker",
 		["HTML", "CSS", "JavaScript", "TypeScript", "Vue", "NodeJS", "Express", "MongoDB", "Playwright", "Docker", "Bash"],
-		[
-			{
-				type: "github",
-				url: "https://github.com/EvAvKein/distillogue",
-			},
-		],
 		["Fullstack"],
+		"https://github.com/EvAvKein/distillogue",
 	),
 	new Project(
 		"/projects/warehouse.svg",
@@ -129,10 +96,7 @@ export const projects: Project[] = [
 		'A slot-based inventory management interface, inspired by those of various "sandbox" video-games',
 		"HTML, CSS, JavaScript",
 		["HTML", "CSS", "JavaScript"],
-		[
-			{type: "github", url: "https://github.com/EvAvKein/Warehouse"},
-			{type: "browser", url: "https://warehouse.evavkein.com"},
-		],
 		["Frontend"],
+		"https://github.com/EvAvKein/Warehouse",
 	),
 ];

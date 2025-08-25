@@ -23,7 +23,7 @@
 										description={project.description}
 										technologies={project.technologies}
 										techsList={project.techsList}
-										links={project.links}
+										link={project.link}
 										bind:selectedTechs
 									/>
 								{/if}
@@ -34,7 +34,6 @@
 </section>
 
 <script lang="ts">
-	import {fly, scale} from "svelte/transition";
 	import ProjectItem from "./projectItem.svelte";
 	import {projects, projectCategories} from "./projects";
 	import type {techsList} from "../techs/techs";
